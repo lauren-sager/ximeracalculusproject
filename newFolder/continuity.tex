@@ -1,4 +1,5 @@
 \documentclass{ximera}
+\usepackage{multicol}
 
 \title{Continuity Activity}
 \author{MATH 425: Calculus I}
@@ -27,7 +28,9 @@
         \item If $f$ is not continuous at $x=c$, then either $f(c)$ is undefined or $\lim_{x\rightarrow c}f(x)$ does not exist.\\
         We think this statement is true / false\\
         Justification (explain with words, a table, an equation or graph, OR provide a counterexample, if applicable):
-        \item Which statements in part (a) through (e) match the following graphs: 
+        \item Which statements in part (a) through (e) match the following graphs:
+        
+      
         \begin{image}
         \begin{tikzpicture}
   \begin{axis}[
@@ -52,15 +55,23 @@
       blue
     ] {x + 3};
 
-       % White-filled "open" circle at (3,6)
-    \addplot[
-      only marks,
-      mark=o,
-      mark size=2.5pt,
-      line width=1pt,
-      draw=blue,
-      fill=white
-    ] coordinates {(3,6)};
+   % White-filled dot
+\addplot[
+  only marks,
+  mark=*,
+  mark size=2.5pt,
+  draw=none,
+  fill=white
+] coordinates {(3,6)};
+
+% Blue ring on top
+\addplot[
+  only marks,
+  mark=o,
+  mark size=2.5pt,
+  line width=1pt,
+  draw=blue
+] coordinates {(3,6)};
    
 
     % Filled dot at (3,2) for the defined value y=2 when x=3
@@ -76,13 +87,72 @@
     \node[anchor=west, blue]  at (axis cs:3,2) {$\;\;(3,2)$};
 
   \end{axis}
+  
 \end{tikzpicture}
+
+\end{image}
+    Graph A\\
+    
+\begin{image}
+        \begin{tikzpicture}
+  \begin{axis}[
+    axis lines=middle,
+    xlabel={$x$},
+    ylabel={$y$},
+    xmin=-5, xmax=7,
+    ymin=-2, ymax=8,
+    grid=both,
+    minor tick num=1,
+    enlargelimits=false,
+    ticklabel style={font=\small},
+    every axis x label/.style={at={(current axis.right of origin)}, anchor=west},
+    every axis y label/.style={at={(current axis.above origin)}, anchor=south},
+  ]
+
+    % y = x + 3 for all x (we’ll mark the hole at x=3 explicitly)
+    \addplot[
+      domain=-5:7,
+      samples=200,
+      thick,
+      blue
+    ] {x + 3};
+
+    % White-filled dot
+\addplot[
+  only marks,
+  mark=*,
+  mark size=2.5pt,
+  draw=none,
+  fill=white
+] coordinates {(3,6)};
+
+% Blue ring on top
+\addplot[
+  only marks,
+  mark=o,
+  mark size=2.5pt,
+  line width=1pt,
+  draw=blue
+] coordinates {(3,6)};
+   
+
+    % Optional: labels near the special points
+    \node[anchor=west, blue] at (axis cs:3,6) {$\;\;(3,6)$};
+    %\node[anchor=west, blue]  at (axis cs:3,2) {$\;\;(3,2)$};
+
+  \end{axis}
+ 
+\end{tikzpicture}
+
         \end{image}
+        Graph B\\
+
         We think graph A matches with ...\\
         We think graph B matches with ... \\
         (Question modified from Straumanis et al., \textit{Calculus I: A Guided Inquiry}, 2014.)
     \end{enumerate}
 \end{exercise}
+
 \begin{exercise}
     Give an example of a single function $f(x)$ such that satisfies the following four characteristics:\\
     \begin{enumerate} 
