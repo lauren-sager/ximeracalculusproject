@@ -1,0 +1,108 @@
+\documentclass{ximera}
+
+\title{Function Transformations Activity}
+\author{MATH 425: Calculus I}
+
+\begin{document}
+\begin{abstract}
+    Working with the peers in your group, solve the following problems. Make sure to show and justify all your work. Make sure everyone in the group understands the solution and participates. Be prepared to report your answers to the whole class. 
+\end{abstract}
+\maketitle
+
+
+In this activity you will learn about the basic transformations we can apply to a function.  This activity is based on a Desmos activity by Dr. David Benson.
+
+\begin{exercise}
+
+Take a moment or two to familiarize yourself with the graph of the absolute value function $y=|x|$. 
+\begin{center}
+\desmos{ebip7asxmj}{800}{600}
+\end{center}
+
+Note that the ``corner'' of the function is at the the origin, the point $(0,0)$.
+
+We will apply these ideas to other functions, but this function makes it easy to see what is going on.
+ 
+Given any real number $c$, there are several ways $c$ can interact with our function $f(x)$.  \begin{enumerate}
+    \item $f(x)+c$
+    \item $f(x+c)$
+    \item $cf(x)$
+    \item $f(cx)$
+\end{enumerate}
+
+Each of these will transform the graph of $f(x)$ in different ways.  Let's discover how each transformation behaves.  
+
+Before we proceed, notice that the first two transformations involve addition, whereas the latter two transformations involve multiplication.  Also, note that the first and third transformation alter the output and the second and fourth transformations alter the input.  
+
+\begin{enumerate}
+    \item Transformation 1: $f(x)+c$.  Use the slider for $c$ on Desmos to investigate transformation 1.  Describe in words what the transformation $f(x)+c$ does to the graph of $f(x)$.  Be specific about what happens with positive and negative values of $c$.
+    \begin{center}
+      \desmos{3d8w2iohrr}{800}{600}
+    \end{center}
+    \vspace{3in}
+    \item Transformation 2: $f(x+c)$.  Use the slider for $c$ on Desmos to investigate transformation 2.  Describe in words what the transformation $f(x+c)$ does to the graph of $f(x)$.  Be specific about what happens with positive and negative values of $c$.
+    \begin{center}
+      \desmos{qnnzogbjsw}{800}{600}
+    \end{center}
+    \vspace{2in}
+    \item Transformation 3: $cf(x)$.  Use the slider for $c$ on Desmos to investigate transformation 3.  Describe in words what the transformation $cf(x)$ does to the graph of $f(x)$.  Be specific about what happens with positive and negative values of $c$.
+    \begin{center}
+      \desmos{49wel3zutx}{800}{600}
+    \end{center}
+    \vspace{2in}
+    \item Transformation 4: $f(cx)$. Use the slider for $c$ on Desmos (slide 9) to investigate transformation 4.  Describe in words what the transformation $f(cx)$ does to the graph of $f(x)$.  Be specific about what happens with positive and negative values of $c$.\\
+    \begin{center}
+      \desmos{cruhitjk7c}{800}{600}
+    \end{center}
+    \vspace{3in}
+    Let's take a closer look at those last two transformations with a different function, $g(x)= \frac{1}{x}+x^3$.  Use the sliders for $n$ on Desmos  to investigate the effects of transformation 3 and 4 on $g(x)$.  
+    \begin{center}
+      \desmos{lbcucgkkkq}{800}{600}
+    \end{center}
+    \item What is the difference between $g(cx)$ and $cg(x)$? Think horizontal and vertical.
+    \vspace{3in}\\
+    Now that we have a baseline to work with, let's explore other functions and think about some terms we'll be using this semester. 
+    \item Play with the values of $c$ for each transformation on slide 15 for $f(x)=x^{4}+2x^{3}-13x^{2}-14x+24$.  Pay close attention to the zeroes, hills and valleys. (Click on the circle next to each transformation's equation to turn on the graph.) 
+    \begin{center}
+      \desmos{6tk3sbszev}{800}{600}
+    \end{center}
+    \begin{enumerate}
+        \item Recall that zeroes of a function (also called "roots" or x-intercepts) are the inputs where the function value is 0.  What are the x-values of the zeroes of the function?
+        \vspace{2in}
+        \item What happens to the function's zeroes when $y=2f(x)$?  (Hint: Either think about what you discovered previously, or go back to the previous slide and experiment.)
+        \vspace{2in}
+        \item What happens to the zeroes of the function when $y=f(x)+3$?
+        \vspace{2in}
+        \item What happens to the zeroes of the function when $y=f(2x)$?
+        \vspace{2in}\\
+   Extension: Let's return to our $f(x)$ graph for a minute. 
+        \item Where is $f(x)$ increasing?  Where is it decreasing?  (You may need to estimate on some of these points.)
+        \vspace{2in}
+        \item What do the "hills" and "valleys" represent?  Do they have a connection with your increasing/decreasing intervals? 
+    \end{enumerate}
+\end{enumerate}
+    \end{exercise}
+    
+    \begin{exercise}
+    When you complete the function transformations activity, here are a few additional practice problems to work on:
+    \begin{enumerate}
+        \item If $h(x)=\frac{3x^2+4}{x-2}$, find $h(2)$. Also find and simplify $h(x+h)$.
+        \item Sketch a graph of $g(x)=\frac{x-2}{x-3}$.  What is the domain of $g(x)$?  Use your graph to make an educated guess at the range. 
+        \item The rule $f(x)$ is given by the following table.  Is $f(x)$ a function?  Why or why not?\\
+        \begin{tabular}{c|c}
+            x & f(x)  \\ \hline
+            1 & -4 \\
+            2 & -3 \\
+            0 & -4 \\
+            -1 & 3 \\
+            2 & 1
+        \end{tabular}
+    \end{enumerate}
+\end{exercise}
+
+
+
+
+
+
+\end{document}
