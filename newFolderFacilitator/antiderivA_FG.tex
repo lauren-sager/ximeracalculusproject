@@ -1,18 +1,17 @@
 \documentclass{ximera}
 
-\title{Antiderivative Activity - Deceleration Variant Solution Guide}
+\title{Antiderivative Activity - Acceleration Variant Facilitator Guide  }
 \author{MATH 425: Calculus I}
 
 \begin{document}
 \begin{abstract}
-  Working with the peers in your group, solve the following problems. Make sure to show and justify all your work. Make sure everyone in the group understands the solution and participates. Be prepared to report your answers to the whole class. 
+    Working with the peers in your group, solve the following problems. Make sure to show and justify all your work. Make sure everyone in the group understands the solution and participates. Be prepared to report your answers to the whole class. 
+    %A default abstract of an almost empty course.
 \end{abstract}
 \maketitle
 
-
-\begin{exercise}
-
-A car travels at $51.333 \frac{ft}{s}$ when the brakes are applied, causing a constant deceleration of $17\frac{ft}{s^2}$.  Assume that the moment the brakes are applied is time $0$.  
+  \begin{exercise}
+    A car travels at $51.333 \frac{ft}{s}$ when the gas pedal is applied, causing a constant acceleration of $17\frac{ft}{s^2}$.  Assume that the moment the gas pedal is applied is time $0$.  
     \begin{enumerate}
         \item[A.] On the graphs below, sketch a graph that show the acceleration of the car with respect to time. (Hint: The $x$-axis on the graphs should be time, which we will call $t$ instead of $x$.) 
         
@@ -20,32 +19,36 @@ A car travels at $51.333 \frac{ft}{s}$ when the brakes are applied, causing a co
         
         \item[C.] Sketch the \textit{shape} of the graph that shows the position (or location, not to be confused with distance traveled) of the car with respect to time. (To simplify your graph, assume that at the time the gas pedal is applied, the position of the car is 0.) \\
         
-
+        \textcolor{orange}{ Note that these graphs are very specifically not given with any axes to allow for maximum flexibility for students.  Students should be clear about the choices they are making.}
         \begin{image}
-            \includegraphics{AntiderivDSMMP_1A.png}
+          \includegraphics{AntiderivASMMP_1A.png}
         \end{image}
-        A. Acceleration B. Velocity C. Position
-        
+        \hspace{.5in} A. Acceleration \hspace{1in} B. Velocity \hspace{1.3in} C. Position
         \item[D.] Find an equation for the velocity $v(t)$ of the car at time $t$.  Does your sketch in part B match your equation?  (Check: What are the units of the result?) \\
-        \textcolor{blue}{ $v(t)=51.333-17t$ (Units: $\frac{ft}{sec}-\frac{ft}{sec^2}{(sec)}=\frac{ft}{sec}$)}\\
+        \textcolor{blue}{ $v(t)=51.333+17t$ (Units: $\frac{ft}{sec}+\frac{ft}{sec^2}{(sec)}=\frac{ft}{sec}$}\\
+        \textcolor{orange}{ Many students want to use the formulas they have learned in a physics class to find this function.  This intuition can be used to lead students to see they end up with the antiderivative of the acceleration $a(t)=17$ with initial condition $v(0)=51.333$.\\
+        The check here is meant to help students check their work \textit{and} understanding.  On the one hand, checking their units can confirm that a process is correct or not.  On the other hand, this check also helps students notice that the derivative units correspond with the physical units in terms of rates of change.}
         
         \item[E.] Find an equation for the position $s(t)$ of the car at time $t$, assuming that the car starts at position 0 at time $t=0$. Does your sketch in part C (approximately) match your equation? (Check: what are the units of the result?)\\
-        \textcolor{blue}{ $s(t)=51.333t-\frac{17}{2}t^2$ (Check: $\frac{ft}{sec}(sec)-\frac{ft}{sec}(sec)^2=ft$) }\\
+        \textcolor{blue}{ $s(t)=51.333t+\frac{17}{2}t^2$ (Check: $\frac{ft}{sec}(sec)+\frac{ft}{sec}(sec)^2=ft$ }\\
+        \textcolor{orange}{ Students will still likely want to use formulas from physics. Try to use this intuition to now to see how this function is the antiderivative of the $v(t)$ function with initial condition $s(0)=0$.}
         
-        \item[F.] Using your equations from part D and E, determine how far the car travels by the time when the velocity has reached $0 \frac{ft}{sec}$ (namely, the car has come to a stop).\\
-        \textcolor{blue}{ $v(t)=0$ so $0=51.333-17t$\\
-        Solve for $t$: $51.333=17t$, or $t\approx 3.02$ seconds \\
-        The car hits $0 \frac{ft}{sec}$ at $t=3.02$ seconds.  We sub this into $s(t)$ to learn how far the car has traveled:\\
-        $s(3.02)=51.333(3.02)-\frac{17}{2}(3.02)^2\approx77.50$ feet.}\\
+        \item[F.] Using your equations from part D and E, determine how far the car travels by the time when the velocity has reached $100\frac{ft}{s}$.\\
+        \textcolor{blue}{ $v(t)=100$ so $100=51.333+17t$\\
+        Solve for $t$: $48.667=17t$, or $t\approx 2.86$ seconds \\
+        The car hits $100 \frac{ft}{sec}$ at $t=2.86$ seconds.  We sub this into $s(t)$ to learn how far the car has traveled:\\
+        $s(2.86)=51.333(2.86)+\frac{17}{2}(2.86)^2\approx216.34$ feet.}\\
+        \textcolor{orange}{ The problem statement suggests that both answers from D and E are required for this problem, but keep an eye out for students who only solve for $t$, and don't go back to find the distance.}
     \end{enumerate}
-\end{exercise} 
+  \end{exercise}
+
     
-    \begin{exercise}
-        
+  \begin{exercise}
     A ball is tossed vertically in such a way that its velocity function is given by $v(t)=32-32t$, where $t$ is measured in seconds and $v$ in feet per second. Assume that this function is valid for $0\leq t\leq2$.
     \begin{enumerate}
         \item[A.] For what values of $t$ is the velocity of the ball positive?  What does this tell you about the motion of the ball on this interval of time values?\\
         \textcolor{blue}{ $32-32t>0$ when $32t<32$, or $0\leq t<1$.  This means that the ball is moving upwards from $t=0$ until $t=1$.}\\
+        \textcolor{orange}{ A graph would be another way to find this solution.  Remind students that they have multiple options to solve such a problem especially in a situation where a calculator or graphing software is not available.}
         
         \item[B.] Find an antiderivative (indefinite integral), $s$, of $v$ that satisfies $s(0)=0$.\\
         \textcolor{blue}{ $s(t)=\int v(t)dt=32t-16t^2+c$\\
@@ -57,12 +60,12 @@ A car travels at $51.333 \frac{ft}{s}$ when the brakes are applied, causing a co
         $s(\frac12)=32(\frac12)-16(\frac12)^2=12$\\
         $s(1)-s(\frac12)=16-12=4$ ft\\
         This value is the change in position from $t=\frac12$ sec to $t=1$ sec: the ball moves 4 feet over this interval.}
-        
         \item[D.] Using the graph of $v(t)$ provided below, find the exact area under the velocity curve between $t=\frac12$ and $t=1$.  What is the meaning of the value you find? 
         \textcolor{blue}{ $v(\frac{1}{2})=32-16=16$\\
         Area$=\frac12bh=\frac12(\frac12)(16)=4$ ft\\
         This value also represents the change in the position of the ball from $t=\frac12$ sec to $t=1$ sec.}
-       
+        \textcolor{orange}{ The point here is that the area under the velocity curve is the same as the net distance travelled.  Depending on when this activity is used (and students' past calculus experience), they may already know the Fundamental Theorem of Calculus and this may be obvious to them. Other students may need more help making this connection.}
+        
         \begin{image}
             \includegraphics{AntiderivSMMPtask2.png}
         \end{image}
@@ -84,3 +87,6 @@ A car travels at $51.333 \frac{ft}{s}$ when the brakes are applied, causing a co
 \end{exercise}
 
 \end{document}
+
+
+

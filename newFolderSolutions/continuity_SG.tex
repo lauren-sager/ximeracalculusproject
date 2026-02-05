@@ -1,7 +1,7 @@
 \documentclass{ximera}
 
 
-\title{Continuity Activity}
+\title{Continuity Activity Solution Guide}
 \author{MATH 425: Calculus I}
 
 \begin{document}
@@ -14,20 +14,47 @@
      Decide if each of the five given statements is true or false.  If the statement is false, provide a counterexample: sketch a graph of a function showing that the statement is false.  Then use another representation: a table, a symbolic equation, and/or words to explain why the graph you sketched disproves the statement. 
     \begin{enumerate}
         \item If $\lim_{x\rightarrow c}f(x)=f(c)$, then $f$ is continuous at $x=c$.  \\
-        We think this statement is true / false\\
-        Justification (explain with words, a table, an equation or graph, OR provide a counterexample, if applicable):
+        We think this statement is \textcolor{blue}{true}\\
+        Justification (explain with words, a table, an equation or graph, OR provide a counterexample, if applicable):\\
+        \textcolor{blue}{ This is the definition of a continuous function.  }
         \item If $f$ is not continuous at $x=c$, then $f(c)\neq \lim_{x\rightarrow c}f(x)$.\\
-        We think this statement is true / false\\
-        Justification (explain with words, a table, an equation or graph, OR provide a counterexample, if applicable):
+        We think this statement is \textcolor{blue}{true}\\
+        Justification (explain with words, a table, an equation or graph, OR provide a counterexample, if applicable):\\
+        \textcolor{blue}{Assuming that the function is not continous at $x=c$ means that either 
+          \begin{enumerate}
+            \item $f(c)$ is not defined 
+            \item $\lim_{x\rightarrow c} f(x)$ DNE OR
+            \item $\lim_{x\rightarrow c} f(x)\neq f(c)$ (but both are defined). 
+          \end{enumerate}
+          In all three cases, we know that $f(c)\neq \lim_{x\rightarrow c}f(x)$ (things that are not defined cannot be equal).}
         \item If $f$ is not continuous at $x=c$, then $f(c)$ is undefined.\\
-        We think this statement is true / false\\
-        Justification (explain with words, a table, an equation or graph, OR provide a counterexample, if applicable):
+        We think this statement is \textcolor{blue}{false}\\
+        Justification (explain with words, a table, an equation or graph, OR provide a counterexample, if applicable):\\
+        \textcolor{blue}{Counterexample (any function with a jump or removable continuity with a point defined for $f(c)$ will work):\\
+        \[f(x)=\begin{cases}
+        x+1 & x>1\\
+        x & x\leq 1
+        \end{cases}\]
+        $f(1)=1$, which is defined, but the function jumps at $x=1$.}
         \item If $f$ is not continuous at $x=c$, then $\lim_{x\rightarrow c}f(x)$ does not exist.\\
-        We think this statement is true / false\\
-        Justification (explain with words, a table, an equation or graph, OR provide a counterexample, if applicable):
+        We think this statement is \textcolor{blue}{false}\\
+        Justification (explain with words, a table, an equation or graph, OR provide a counterexample, if applicable):\\
+        \textcolor{blue}{ Counterexample (any function with a removable discontinuity will do):
+        \[f(x)=\frac{x}{x(x-1)}\]
+        $f(0)$ is undefined because of division by 0, so $f(x)$ is not continuous at $x=0$, but 
+        \[\lim_{x\rightarrow 0}\frac{x}{x(x-1)}=\lim_{x\rightarrow 0}\frac{1}{x-1}=\frac{1}{-1}=-1\] exists.}
         \item If $f$ is not continuous at $x=c$, then either $f(c)$ is undefined or $\lim_{x\rightarrow c}f(x)$ does not exist.\\
-        We think this statement is true / false\\
+        We think this statement is \textcolor{blue}{false}\\
         Justification (explain with words, a table, an equation or graph, OR provide a counterexample, if applicable):
+        \textcolor{blue}{Couterexample: (Any function with a removable discontinuity with an additional defined point for the discontinuity would work.)
+        \[f(x)=
+        \begin{cases}
+         x+1 &  x\neq 2\\
+         -2 & x=2
+        \end{cases}\]
+        We have that $f$ is not continuous at $x=2$, but $f(2)=-2$ and $\lim_{x\rightarrow 2}x+1=3$, so both are defined.}
+        
+
         \item Which statements in part (a) through (e) match the following graphs:
         
       
@@ -147,8 +174,8 @@
         \end{image}
         Graph B\\
 
-        We think graph A matches with ...\\
-        We think graph B matches with ... \\
+        We think graph A matches with ... \textcolor{blue}{statement e}\\
+        We think graph B matches with ... \textcolor{blue{statement d}}\\
         (Question modified from Straumanis et al., \textit{Calculus I: A Guided Inquiry}, 2014.)
     \end{enumerate}
 \end{exercise}
@@ -165,5 +192,8 @@
     (Hint: A symbolic equation is not the only way to represent a function.  A sketch of a graph may be an easier representation to use here.)\\
     (Questions modified from Boelkins, et al., \textit{Active Calculus}, 1st ed.)
 \end{exercise}
+
+
+
 
 \end{document}

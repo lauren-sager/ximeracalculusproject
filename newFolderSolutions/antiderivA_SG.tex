@@ -18,18 +18,18 @@
         \item[B.] On the graphs below, sketch a graph the shows the velocity of the car with respect to time. 
         \item[C.] Sketch the \textit{shape} of the graph that shows the position (or location, not to be confused with distance traveled) of the car with respect to time. (To simplify your graph, assume that at the time the gas pedal is applied, the position of the car is 0.) \\
         \begin{image}
-            \includegraphics{AntiderivSMMPtask1.png}
+            \includegraphics{AntiderivASMMP_1A.png}
            
         \end{image}
         A. Acceleration  B. Velocity  C. Position
         \item[D.] Find an equation for the velocity $v(t)$ of the car at time $t$.  Does your sketch in part B match your equation?  (Check: What are the units of the result?) \\
-        {\color{blue} $v(t)=51.333+17t$ (Units: $\frac{ft}{sec}+\frac{ft}{sec^2}{(sec)}=\frac{ft}{sec}$}\\
+        \textcolor{blue}{ $v(t)=51.333+17t$ (Units: $\frac{ft}{sec}+\frac{ft}{sec^2}{(sec)}=\frac{ft}{sec}$)}\\
 
         \item[E.] Find an equation for the position $s(t)$ of the car at time $t$, assuming that the car starts at position 0 at time $t=0$. Does your sketch in part C (approximately) match your equation?  (Check: What are the units of the result?) \\
-        {\color{blue} $s(t)=51.333t+\frac{17}{2}t^2$ (Check: $\frac{ft}{sec}(sec)+\frac{ft}{sec}(sec)^2=ft$ }\\
+        \textcolor{blue}{ $s(t)=51.333t+\frac{17}{2}t^2$ (Check: $\frac{ft}{sec}(sec)+\frac{ft}{sec}(sec)^2=ft$) }\\
 
         \item[F.] Using your equations from part D and E, determine how far the car travels by the time when the velocity has reached $100\frac{ft}{s}$. \\
-        {\color{blue} $v(t)=100$ so $100=51.333+17t$\\
+        \textcolor{blue}{ $v(t)=100$ so $100=51.333+17t$\\
         Solve for $t$: $48.667=17t$, or $t\approx 2.86$ seconds \\
         The car hits $100 \frac{ft}{sec}$ at $t=2.86$ seconds.  We sub this into $s(t)$ to learn how far the car has traveled:\\
         $s(2.86)=51.333(2.86)+\frac{17}{2}(2.86)^2\approx216.34$ feet.}\\
@@ -39,21 +39,21 @@
     A ball is tossed vertically in such a way that its velocity function is given by $v(t)=32-32t$, where $t$ is measured in seconds and $v$ in feet per second. Assume that this function is valid for $0\leq t\leq2$.
     \begin{enumerate}
         \item[A.] For what values of $t$ is the velocity of the ball positive?  What does this tell you about the motion of the ball on this interval of time values? \\
-        {\color{blue} $32-32t>0$ when $32t<32$, or $0\leq t<1$.  This means that the ball is moving upwards from $t=0$ until $t=1$.}\\
+        \textcolor{blue}{ $32-32t>0$ when $32t<32$, or $0\leq t<1$.  This means that the ball is moving upwards from $t=0$ until $t=1$.}\\
 
         \item[B.] Find an antiderivative (indefinite integral), $s$, of $v$ that satisfies $s(0)=0$.\\
-        {\color{blue} $s(t)=\int v(t)dt=32t-16t^2+c$\\
+        \textcolor{blue}{ $s(t)=\int v(t)dt=32t-16t^2+c$\\
         $s(0)=32(0)-16(0)^2+c=0$ implies $c=0$.\\
         $s(t)=32t-16t^2$ for $0\leq t\leq2$}\\
 
         \item[C.] Compute the value of $s(1)-s(\frac12)$.  What is the meaning of the value you find?\\
-        {\color{blue} $s(1)=32(1)-16(1)^2=16$\\
+        \textcolor{blue}{ $s(1)=32(1)-16(1)^2=16$\\
         $s(\frac12)=32(\frac12)-16(\frac12)^2=12$\\
         $s(1)-s(\frac12)=16-12=4$ ft\\
         This value is the change in position from $t=\frac12$ sec to $t=1$ sec: the ball moves 4 feet over this interval.}
 
         \item[D.] Using the graph of $v(t)$ provided below, find the exact area under the velocity curve between $t=\frac12$ and $t=1$.  What is the meaning of the value you find? \\
-        {\color{blue} $v(\frac{1}{2})=32-16=16$\\
+        \textcolor{blue}{ $v(\frac{1}{2})=32-16=16$\\
         Area$=\frac12bh=\frac12(\frac12)(16)=4$ ft\\
         This value also represents the change in the position of the ball from $t=\frac12$ sec to $t=1$ sec.}
 
@@ -61,14 +61,14 @@
             \includegraphics{AntiderivSMMPtask2.png}
         \end{image}
         \item[E.] Answer the same questions as in C and D, but instead using the interval $[0,1]$.\\
-         {\color{blue} $s(0)=32(0)-16(0)^2=0$\\
+         \textcolor{blue}{ $s(0)=32(0)-16(0)^2=0$\\
         $s(1)=16$\\
         $s(1)-s(0)=16-0=16$ feet\\
         This means that over the first second, the position of the ball changes by 16 feet.\\
         The area in the triangle is $A=\frac12bh=\frac12(1)(32)=16$ which also represents that the position of the ball changes 16 feet in the first second.}
 
         \item[F.] What is the value of $s(2)-s(0)$?  What does this result tell you about the flight of the ball?  How is this value connected to the provided graph of $v(t)$? \\
-        {\color{blue} $s(2)=32(2)-16(2)^2=64-64=0$\\
+        \textcolor{blue}{ $s(2)=32(2)-16(2)^2=64-64=0$\\
         $s(0)=0$\\
         $s(2)-s(0)=0-0=0$ This means that the net change in position of the ball is 0 over the two seconds.  We can envision this in context by saying the ball has gone up and returned to where it started from 0 seconds to 2 seconds. \\
         The area under the graph will be $16-16=0$, which matches our calculation for $s(2)-s(0)$.}
