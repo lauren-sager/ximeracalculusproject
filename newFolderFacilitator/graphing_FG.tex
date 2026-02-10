@@ -9,6 +9,16 @@
 \end{abstract}
 \maketitle
 
+\textbf{Student Learning Objectives}
+  Students will be able to:
+  \begin{itemize}
+    \item Identify and classify critical points of a function from its derivative.
+    \item Create a sign diagram for a function from its derivative.
+    \item Sketch a function's general shape from its derivative.
+    \item Identify inflection points and concavity from the second derivative.
+  \end{itemize}
+\textbf{Prerequisite Knowledge} This activity expects students to have knowledge of the first and second derivative tests, and how the first and second derivatives relate to increasing/decreasing and concavity of functions, respectively.  
+
 
 \begin{exercise}
     Determine if any of the following statements are true or false.  Explain your reasoning. (If your answer is false, an example may be enough explanation.  If your answer is true, an example is not enough.)
@@ -19,14 +29,16 @@
         \item At every point $c$ where $h'(c)$ is zero or does not exist, the function $h$ has a relative maximum or minimum.\\
         This statement is \textcolor{blue}{FALSE} because \dots\\
         \textcolor{blue}{Counterexample: $f(x)=x^{\frac{1}{3}}$ has no relative minimum or maximum values.\\
-        $f'(x)=\frac{1}{3}x^{-\frac23}$, and $f'(0)$ does not exist.  However, this is not a relative maximum or minimum of the function.}
+        $f'(x)=\frac{1}{3}x^{-\frac23}$, and $f'(0)$ does not exist.  However, this is not a relative maximum or minimum of the function.}\\
+        \textcolor{orange}{These problems are likely to still confuse students.  We are not expecting full proofs from students, but they should be explaining their answer.  If students are still stuck, try swapping to an "always-sometimes-never" framing of the question.  This may help students identify cases where the second statement, in particular, fails.}
     \end{enumerate}
 \end{exercise}
 
 \begin{exercise}
     Suppose that $g(x)$ is a function that is continuous for every value of $x\neq 2$ whose first derivative is 
     $$g'(x)=\frac{(x+4)(x-1)(2x-2)}{x-2}.$$
-    Further, note that $g$ has a vertical asymptote at $x=2$. 
+    Further, note that $g$ has a vertical asymptote at $x=2$. \\
+    \textcolor{orange}{This problem walks the line of trying to make sure students are getting more complicated examples than just polynomials and not being \textit{too} complicated.  However, we've been told many times that students struggle with this question.  Consider giving extra support on this question, or if you'd prefer that students get through more quickly, drop the division by $x-2$ and the asymptote.}
     \begin{enumerate}
         \item Determine all critical numbers of $g(x)$.\\
         \textcolor{blue}{We need to set $g'(x)=0$ and find any values where $g'$ does not exist. \\
@@ -49,7 +61,8 @@
           $x=-4$ is a local maximum.  No local minimum, since $x=2$ is an asymptote.
         }
         \item Does $g$ have a global maximum?  Global minimum?  Justify your claims.\\
-        \textcolor{blue}{Having an asymptote means that on at least one side of the asymptote the function is approaching infinity.  Based on the sign diagram, the function is increasing as it approaches 2 from the left (namely, going to $-\infty$). Therefore, it cannot have a global min.  The function is also increasing to $\infty$ as x gets larger after $x=2$, so there is no global max. }
+        \textcolor{blue}{Having an asymptote means that on at least one side of the asymptote the function is approaching infinity.  Based on the sign diagram, the function is increasing as it approaches 2 from the left (namely, going to $-\infty$). Therefore, it cannot have a global min.  The function is also increasing to $\infty$ as x gets larger after $x=2$, so there is no global max. }\\
+        \textcolor{blue}{This question will likely stretch students.  For groups that are very stuck, suggest they sketch the graph first and then return to this question.}
         \item Sketch a possible graph of $y=g(x)$. (Focus on shape rather than exact points included on the graph.)
         \begin{image}
           \includegraphics{graphing1A.png}
@@ -113,9 +126,11 @@
       Concave up on $(-\infty,-2)$ and concave down on $(-2,0)$ and $(0,\infty)$.
       }
     \item Suppose you are given the information that $g'(-2)=0$.  Is there a local maximum, local minumum, or neither for the function $g$ at this critical number, or is it impossible to say?  why?\\
-    \textcolor{blue}{The second derivative test is inconclusive here, as $g''(-2)=0$.  We cannot tell from this whether we have a max, min or neither.  However, we know that $g'(x)$ will have a local max at $x=-2$, as its derivative $g''$ changes sign at this point.  Therefore, $g'$ will not change signs at $x=-2$ and therefore cannot be a local max or min.}
+    \textcolor{blue}{The second derivative test is inconclusive here, as $g''(-2)=0$.  We cannot tell from this whether we have a max, min or neither.  However, we know that $g'(x)$ will have a local max at $x=-2$, as its derivative $g''$ changes sign at this point.  Therefore, $g'$ will not change signs at $x=-2$ and therefore cannot be a local max or min.}\\
+    \textcolor{orange}{This is another question meant to stretch students' understanding.  Most will only get that the 2nd derivative test is inconclusive.  This is a reasonable answer for students and what would be expected on an exam/quiz.  The further reasoning is a good thing to prompt groups that are ahead or strong in their understanding to think more about.}
     \item Assuming that $g''(x)$ is a polynomial (and that all important behavior of $g''$ is seen in the graph above). what degree polynomial do you think $g(x)$ is?  Why?\\
-    \textcolor{blue}{It appears that $g''$ is a third degree (cubic) polynomial, so $g'$ would be 4th degree, and $g$ itself would be 5th degree.}
+    \textcolor{blue}{It appears that $g''$ is a third degree (cubic) polynomial, so $g'$ would be 4th degree, and $g$ itself would be 5th degree.}\\
+    \textcolor{orange}{This is a little preview of the idea of antiderivatives, which will be coming soon!}
     \end{enumerate}
    
 \end{exercise}
