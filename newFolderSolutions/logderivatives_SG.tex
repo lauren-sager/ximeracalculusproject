@@ -1,0 +1,67 @@
+\documentclass{ximera}
+
+\title{Logarithmic Derivatives Activity Solution Guide}
+\author{MATH 425: Calculus I}
+
+\begin{document}
+\begin{abstract}
+    Working with the peers in your group, solve the following problems. Make sure to show and justify all your work. Make sure everyone in the group understands the solution and participates. Be prepared to report your answers to the whole class. 
+\end{abstract}
+\maketitle
+
+
+\begin{exercise}
+    The mass of radioactive elements decaying in a sample can be modeled by 
+      $$m(t)=m_0e^{kt},$$
+    where $k$ is a negative constant and $m_0$ signifies the initial mass of the sample.  Strontium-90 has a half life of 28 days.  A sample of Strontium-90 has and intial mass of 50 mg.
+    \begin{enumerate}
+        \item Explain the meaning of ``a half-life of 28 days'' in this context.\\
+        \textcolor{blue}{ A half life of 28 days means that every 28 days, the amount of Strontium-90 cuts in half.  If we have 50 mg to start, after 28 days, 25 mg will remain.}
+        \item Determine the constants $m_0$ and $k$ for this Strontium-90 sample.  Then find an equation for the mass remaining after $t$ days.  (This equation is a decay function.)\\
+        \textcolor{blue}{We are given $m(28)=25$, $m_0=50$, $t=28$, and we need to solve for $k$.\\
+        \[25=50e^{28k}\]
+        \[\frac12=e^{28k}\]
+        \[\ln(\frac12)=28k\]
+        \[k=\frac{\ln{\frac12}}{28}\]
+        Equation for mass remaining after $t$ days: $m(t)=50e^{\frac{\ln(1/2)}{28}t}$}
+        \item How long does it take the sample to decay to a mass of 2mg?\\
+        \textcolor{blue}{
+            \[2=50e^{\frac{\ln(1/2)}{28}t}\]
+            \[\frac{1}{25}=e^{\frac{\ln(1/2)}{28}t}\]
+            \[\ln(\frac{1}{25})=\frac{\ln(1/2)}{28}t\]
+            \[t=\ln(\frac{1}{25})(\frac{28}{\ln(1/2)})\approx 130.03 \text{ days}\]
+        }
+        \item Take the derivative of your decay function from part b.  What does this derivative represent?  Explain.\\
+        \textcolor{blue}{\[m'(t)=50e^{\frac{\ln(1/2)}{28}t}(\frac{\ln(1/2)}{28})\] \\
+        The derivative represents the rate of change of the mass of the Strontium in the sample.}
+        \item Evaluate the derivative of the decay function at the time from part c.  What does the result represent?\\
+        \textcolor{blue}{\[m'(\ln(\frac1{25})(\frac{28}{\ln(1/2)}))=50e^{\frac{\ln(1/2)}{28}(\ln(\frac1{25})(\frac{28}{\ln(1/2)}))}(\frac{\ln(1/2)}{28})\]
+        \[=50(frac1{25})(\frac{\ln(1/2)}{28})\approx-0.0495\]
+        This is the rate of change of the Strontium mass when there is 2mg remaining: it is losing approximately 0.05 mg per day at this moment.}
+    \end{enumerate}
+\end{exercise}
+
+\begin{exercise}
+    A logistic growth model of population growth reflects the fact that some populations cannot grow without bound, such as populations with limited resources like space and food.\\
+    This equation give an example of a simple logistic growth model:
+      $$P(t)=\frac{MP_0}{P_0+(M-P_0)e^{-Mt}}, \,\,\,\,\,\,\,\, M,P_0 \text{ with } M>P_0,$$
+    where $t$ is measured in years and has domain $[0,\infty)$.
+    \begin{enumerate}
+        \item To understand what the constant $P_0$ represents, evaluate $P(t)$ at $t=0$.  In other words, find $P(0)$.\\
+        \textcolor{blue}{\[P(0)=\frac{MP_0}{P_0+(M-P_0)e^{-M(0)}}=\frac{MP_0}{P_0+(M-P_0)(1)}=\frac{MP_0}{P_0+M-P_0}=\frac{MP_0}{M}=P_0\]\\
+        $P_0$ represents the initial population.}
+        \item To understand what the constant $M$ represents, find $\lim_{t\rightarrow\infty}P(t)$.  Why do you think we often refer to the constant $M$ as the ``carrying capacity'' of the model?\\
+        \textcolor{blue}{\[\lim_{t\rightarrow \infty} P(t)=\lim_{t\rightarrow \infty} \frac{MP_0}{P_0+(M-P_0)e^{-Mt}}=\frac{MP_0}{P_0+(M-P_0)(0)}=\frac{MP_0}{P_0}=M\]\\
+        Note that $\lim_{t\rightarrow \infty}e^{-Mt}=\lim_{t\rightarrow \infty}\frac{1}{e^{Mt}}=0$ (the denominator is growing without bound).\\
+        $M$ makes sense as the carrying capacity as this is the value the function trends towards as time passes.}
+        \item Compute $P'(t)$.\\
+        \textcolor{blue}{\[P'(t)=\]}
+        \item What would $P'(t)$ equal if $P(0)=M$? Does this make sense given what the model represents?
+        \item Write a story about a population that might be described by this model.
+        \item What would happen if $P_o\geq M$?
+    \end{enumerate}
+\end{exercise}
+
+
+
+\end{document}
