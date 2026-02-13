@@ -19,7 +19,8 @@
         Figure 1.\\
     \end{center}
     \begin{enumerate}
-        \item Describe the relationships between the corner $x$ and the box's volume in words.  For example, how do you expect the volume to change based on the size of $x$?
+        \item Describe the relationships between the corner $x$ and the box's volume in words.  For example, how do you expect the volume to change based on the size of $x$?\\
+        \textcolor{blue}{This is a more complicated relationship than it may seem.  As the corner gets bigger, the box gets deeper.  However, the bottom of the box then gets smaller.  For small $x$, the volume will increase as $x$ grows, but this is not consistent across all values of $x$, as can be seen in the applet.}
         \item Explore this Geogebra applet: (\href{https://www.geogebra.org/classic/nypGxGTg}{https://www.geogebra.org/classic/nypGxGTg})
         \begin{center}
           \geogebra{nypGxGTg}{1200}{600}
@@ -31,11 +32,30 @@
             (2) & (2)\\
             (3) & (3)\\
         \end{tabular}
-        \item Explore the Geogebra applet again with paper dimensions 11"x13".  What does the graph reprsent?
-        \item What do the $x$-axis and $y$-axis represent? 
-        \item How is the volume formula constructed?  What is the domain?
-        \item What are the critical points on the graph? What do the critical points mean in context?
-        \item What does the maximum volume mean in terms of context?
+        \item Explore the Geogebra applet again with paper dimensions 11"x13".  What does the graph reprsent?\\
+        \textcolor{blue}{The graph represents the volume of the box, with respect to the corner size ($x$).}
+        \item What do the $x$-axis and $y$-axis represent? \\
+        \textcolor{blue}{The $x$-axis represents the length of the corner sides, while the $y$-axis respresents the volume of the box.}
+        \item How is the volume formula constructed?  What is the domain?\\
+        \textcolor{blue}{\[V(x)=x(13-2x(11-2x))\]
+        The volume is the length after cutting out the corner $(13-2x)$ times the width after cutting out the corner $(11-2x)$ time the height $x$ (comes from the amount folded up).\\
+        The length of $x$ cannot be longer than half the shortest side: 5.5 inches, and cannot be less than 0.}
+        \item What are the critical points on the graph?\\
+        \textcolor{blue}{
+            \[V(x)=x(11-2x)(13-2x)=(11x-2x^2)(13-2x)=4x^3-48x^2+143x\]
+            \[V'(x)=12x^2-96x+143\]
+            \[12x^2-96x+143=0\]
+            \[x=\frac{96\pm\sqrt{(-96)^2-4(12)(143)}}{2(12)}\approx 1.98,6.02\]
+            $6.02$ is not in the domain of the function (this would create a corner longer than half the 11'' side). \\
+            The endpoints $x=0,5$ are also critical points.\\
+            So all critical points are $x=0,1.98,5.5$.
+        }
+        \item Classify the critical points as local maximum, minimum or neither.\\
+        \textcolor{\[V(0)=0\]
+        \[V(1.98)=126.01\]
+        \[V(5.5)=0\]}
+        \item What does the maximum volume mean in terms of context?\\
+        \textcolor{This is the largest box that will hold the most volume ($126.01in^2$) created from the given paper.}
     \end{enumerate}
     Adapted from Moore \& Carlson (2012) \textit{Students' Images of Problem Contexts when Solving Applied Problems}.
 \end{exercise}
