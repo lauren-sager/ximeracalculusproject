@@ -1,6 +1,6 @@
 \documentclass{ximera}
 
-\title{Logarithmic Derivatives Activity Solution Guide}
+\title{Logarithmic Derivatives Activity Facilitator Guide}
 \author{MATH 425: Calculus I}
 
 \begin{document}
@@ -9,6 +9,16 @@
 \end{abstract}
 \maketitle
 
+\textbf{Student Learning Objectives}\\
+Students will be able to:
+\begin{itemize}
+    \item Use given function operations (algebra, evaluation, limits) to determine the values and meanings of variables in a given application function.
+    \item Take derivatives of exponential functions and describe the meaning of these functions at a point.
+    \item Solve problems involving exponential functions.
+\end{itemize}
+\textbf{Prerequisite Knowledge:} This activity expects students to have knowledge of exponential functions, and how to use logarithms to solve exponential functions.  It is also expected that students will be able to evaluate and take limits involving exponential functions.  This is not an activity that requires logarithmic differentiation, although it can be used on either task (to varying degrees of usefulness).  If you are assigning this activity after covering logarithmic differentiation, you may want to suggest students try these derivatives using this method.  \\
+\\
+These tasks can be done in either order.  Students may be more or less interested in one task than the other, so they can start with either, if you prefer.
 
 \begin{exercise}
     The mass of radioactive elements decaying in a sample can be modeled by 
@@ -16,14 +26,16 @@
     where $k$ is a negative constant and $m_0$ signifies the initial mass of the sample.  Strontium-90 has a half life of 28 days.  A sample of Strontium-90 has and intial mass of 50 mg.
     \begin{enumerate}
         \item Explain the meaning of ``a half-life of 28 days'' in this context.\\
-        \textcolor{blue}{ A half life of 28 days means that every 28 days, the amount of Strontium-90 cuts in half.  If we have 50 mg to start, after 28 days, 25 mg will remain.}
+        \textcolor{blue}{ A half life of 28 days means that every 28 days, the amount of Strontium-90 cuts in half.  If we have 50 mg to start, after 28 days, 25 mg will remain.}\\
+        \textcolor{orange}{Depending on students' background, they may have more or less knowledge of the halflife of a substance.  If students do not have a good handle on it, it's ok to define this for them, but you should start by asking questions and trying to get students to figure it out for themselves. We have included this question here to make decoding the question and building the equation in part (b) easier.}
         \item Determine the constants $m_0$ and $k$ for this Strontium-90 sample.  Then find an equation for the mass remaining after $t$ days.  (This equation is a decay function.)\\
         \textcolor{blue}{We are given $m(28)=25$, $m_0=50$, $t=28$, and we need to solve for $k$.\\
         \[25=50e^{28k}\]
         \[\frac12=e^{28k}\]
         \[\ln(\frac12)=28k\]
         \[k=\frac{\ln{\frac12}}{28}\]
-        Equation for mass remaining after $t$ days: $m(t)=50e^{\frac{\ln(1/2)}{28}t}$}
+        Equation for mass remaining after $t$ days: $m(t)=50e^{\frac{\ln(1/2)}{28}t}$}\\
+        \textcolor{orange}{I chose to keep my values exact here, but it's ok if students use a calculator and convert to a decimal approximation.}
         \item How long does it take the sample to decay to a mass of 2mg?\\
         \textcolor{blue}{
             \[2=50e^{\frac{\ln(1/2)}{28}t}\]
@@ -31,6 +43,7 @@
             \[\ln(\frac{1}{25})=\frac{\ln(1/2)}{28}t\]
             \[t=\ln(\frac{1}{25})(\frac{28}{\ln(1/2)})\approx 130.03 \text{ days}\]
         }
+        \textcolor{orange}{This problem is intended to be a review of a precalculus topic.  We know this is a topic that students struggle with in precalculus, so students may need more support, and should be encouraged to practice more of this type of problem if they find it difficult.}
         \item Take the derivative of your decay function from part b.  What does this derivative represent?  Explain.\\
         \textcolor{blue}{\[m'(t)=50e^{\frac{\ln(1/2)}{28}t}(\frac{\ln(1/2)}{28})\] \\
         The derivative represents the rate of change of the mass of the Strontium in the sample.}
@@ -63,11 +76,13 @@
         Take the derivative of both sides:\\
         \[\frac{1}{y}y'=0-\frac{-Me^{-Mt}}{P_0+(M-P_0)e^{-Mt}}\]
         \[y'=y(-\frac{-Me^{-Mt}}{P_0+(M-P_0)e^{-Mt}})=(\frac{MP_0}{P_0(M-P_0)e^{-Mt}})(\frac{Me^{-Mt}}{P_0+(M-P_0)e^{-Mt}})\]}
+        \textcolor{orange}{See the note above about logarithmic differentaition.  I don't know that it actually makes things much easier here, but it is an option.}
         \item What would $P'(t)$ equal if $P(0)=M$? Does this make sense given what the model represents?\\
         \textcolor{blue}{If we set $P(0)=P_0=M$, then
          \[P'(t)=\frac{-(MM)((M-M)e^{-Mt}(-M))}{(M+(M-M)e^{-Mt})^2}=\frac{0}{M^2}=0\]
          This makes sense because the population is starting at the carrying capacity, it should not be changing, which is indicated by a derivative of 0.  }
-        \item Write a story about a population that might be described by this model.
+        \item Write a story about a population that might be described by this model.\\
+        \textcolor{orange}{No solution is provided in the solution guide so that students can be creative.}
         \item What would happen if $P_o\geq M$?\\
         \textcolor{blue}{The population would decrease over time to $M$.}
     \end{enumerate}
