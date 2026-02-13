@@ -114,14 +114,44 @@
     A soup can in the shape of a right circular cylinder is made from two materials.  The material for the side of the can costs \$0.015 per square inch, and the material for the ends (lids) costs \$0.027 per square inch.  Suppose that we want to construct a can with a volume of 16 cubic inches.  What dimensions minimize the cost of the can? 
     \begin{enumerate}
         \item Draw a picture of the can and label its dimensions with appropriate variables.\\
+          \begin{image}
+            \includegraphics{optimization3A.png}
+          \end{image}
+        \item Use your variables to determine an expression for the volume, surface area, and cost of the can.\\
+        \textcolor{blue}{Volume: $V=\pi r^2h$ \\
+        Surface Area: $SA=2\pi r^2+2\pi rh$
+        Cost: $C=0.027(2\pi r^2)+0.015(2\pi rh)$}
+        \item Determine the total cost function as a function of a single variable.\\
+        \textcolor{blue}{From the Volume equation we get that $h=\frac{V}{\pi r^2}$.  Since we know $V=16in^3$, we have that $h=\frac{16}{pi r^2}$.\\
+        \[C=0.027(2\pi r^2)+0.015(2\pi r(\frac{16}{\pi r^2}))=0.027(2\pi r^2)+0.015(\frac{32}{r})=0.054\pi r^2+\frac{0.48}{r}\]
+        \[C=0.054\pi r^2+\frac{0.48}{r}\]}
         
-        \item Use your variables to determine an expression for the volume, surface area, and cost of the can.
-        \item Determine the total cost function as a function of a single variable.
-        \begin{enumerate}
-            \item What is the domain on which you should consider this function?
-            \item Sketch the graph of the total cost function.  You may use a graphing calculator or Desmos. 
-        \end{enumerate}
-        \item Find the absolute minimum cost and the dimensions that produce this value.
+        \item What is the domain on which you should consider this function?\\
+        \textcolor{blue}{The radius cannot be negative, but can theoretically be any positive number or 0: $[0,\infty)$}
+        \item Sketch the graph of the total cost function.  You may use a graphing calculator or Desmos. 
+          \begin{image}
+            \begin{tikzpicture}[x=0.5cm, y=0.2cm]
+  % Axes
+  \draw[-stealth] (0,0) -- (10,0) node[below right] {$x$};
+  \draw[-stealth] (0,0) -- (0,30) node[above left] {$y$};
+
+  % Grid (optional)
+  \draw[very thin, lightgray] (0,0) grid (10,30);
+
+  % Graph for x>0
+  \draw[very thick, blue, smooth, samples=300, domain=0.05:10]
+    plot (\x, {0.054*(\pi)*(\x)^2 + 0.48/(\x)});
+\end{tikzpicture}
+          \end{image}
+        \item Find the absolute minimum cost and the dimensions that produce this value.\\
+        \textcolor{blue}{\[C(r)=0.054\pi r^2+0.48r^{-1}\]
+        \[C'(r)=0.108\pi r-0.48r^{-2}\]
+        Find a common denominator: $C'(r)=\frac{0.108\pi r^3-0.48}{r^2}$\\
+        If $C'(r)=0$, then the numerator must equal 0: $0.108\pi r^3-0.48=0$\\
+        \[1.08\pi r^3=0.48\]\\
+        \[r^3=1.415\]
+        \[r\approx 1.123in\]\\
+        Then $h=\frac{16}{\pi(1.123)^2}=4.038in$ and $C(1.123)=0.054\pi (1.123)^2+0.48(1.123)^{-1}\approx 0.64$ or 64 cents.} 
     \end{enumerate}
     Adapted from Boelkins, Austin \& Schlicker (2018) \textit{Active Calculus 2.1}.
 \end{exercise}
