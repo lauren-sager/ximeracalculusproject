@@ -1,6 +1,6 @@
 \documentclass{ximera}
 
-\title{Optimization Activity}
+\title{Optimization Activity Facilitator Guide}
 \author{MATH 425: Calculus I}
 
 \begin{document}
@@ -43,6 +43,7 @@ This activity may be a good chance for ``choose your own adventure'' style work.
             (2) & (2)\\
             (3) & (3)\\
         \end{tabular}
+        \textcolor{orange}{Students tend to think this part of the activity is silly.  It really is meant to make sure they are actively working with the graph and making observations.  Even if they haven't written anything down, try to question students about what they are noticing and get them talking about it.}
         \item Explore the Geogebra applet again with paper dimensions 11"x13".  What does the graph represent?\\
         \textcolor{blue}{The graph represents the volume of the box, with respect to the corner square side length ($x$).}
         \item What do the $x$-axis and $y$-axis represent? \\
@@ -132,6 +133,7 @@ This activity may be a good chance for ``choose your own adventure'' style work.
         \textcolor{blue}{Volume: $V=\pi r^2h$ \\
         Surface Area: $SA=2\pi r^2+2\pi rh$
         Cost: $C=0.027(2\pi r^2)+0.015(2\pi rh)$}
+        \textcolor{orange}{The cost function and its relationship with the surface area function may not be obvious to all students.  Use their drawing as a way to help them make sense of it.}
         \item Determine the total cost function as a function of a single variable.\\
         \textcolor{blue}{From the Volume equation we get that $h=\frac{V}{\pi r^2}$.  Since we know $V=16in^3$, we have that $h=\frac{16}{pi r^2}$.\\
         \[C=0.027(2\pi r^2)+0.015(2\pi r(\frac{16}{\pi r^2}))=0.027(2\pi r^2)+0.015(\frac{32}{r})=0.054\pi r^2+\frac{0.48}{r}\]
@@ -141,17 +143,32 @@ This activity may be a good chance for ``choose your own adventure'' style work.
         \textcolor{blue}{The radius cannot be negative, but can theoretically be any positive number or 0: $[0,\infty)$}
         \item Sketch the graph of the total cost function.  You may use a graphing calculator or Desmos. 
           \begin{image}
-            \begin{tikzpicture}[x=0.5cm, y=0.2cm]
-  % Axes
-  \draw[-stealth] (0,0) -- (10,0) node[below right] {$x$};
-  \draw[-stealth] (0,0) -- (0,30) node[above left] {$y$};
+            \begin{tikzpicture}
+  \begin{axis}[
+    axis lines=middle,
+    axis line style={-stealth},
+    xlabel={$x$},
+    ylabel={$y$},
+    xmin=0, xmax=5,
+    ymin=-5, ymax=25,
+    samples=400,
+    grid=both,
+    minor tick num=1,
+    tick align=outside,
+    clip=false,
+    every axis plot/.append style={thick, blue},
+    legend style={draw=none, fill=none, at={(0.02,0.98)}, anchor=north west}
+  ]
 
-  % Grid (optional)
-  \draw[very thin, lightgray] (0,0) grid (10,30);
+    % Plot for x > 0
+    \addplot[
+      domain=0.05:5
+    ]
+    {0.054*pi*x^2 + 0.48/x};
 
-  % Graph for x>0
-  \draw[very thick, blue, smooth, samples=300, domain=0.05:10]
-    plot (\x, {0.054*(\pi)*(\x)^2 + 0.48/(\x)});
+    \addlegendentry{$y = 0.054\pi x^2 + \dfrac{0.48}{x}$}
+
+  \end{axis}
 \end{tikzpicture}
           \end{image}
         \item Find the absolute minimum cost and the dimensions that produce this value.\\

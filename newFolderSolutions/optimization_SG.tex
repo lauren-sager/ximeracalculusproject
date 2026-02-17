@@ -1,6 +1,6 @@
 \documentclass{ximera}
 
-\title{Optimization Activity}
+\title{Optimization Activity Solution Guide}
 \author{MATH 425: Calculus I}
 
 \begin{document}
@@ -129,23 +129,38 @@
         \item What is the domain on which you should consider this function?\\
         \textcolor{blue}{The radius cannot be negative, but can theoretically be any positive number or 0: $[0,\infty)$}
         \item Sketch the graph of the total cost function.  You may use a graphing calculator or Desmos. 
-          \begin{image}
-            \begin{tikzpicture}[x=0.5cm, y=0.2cm]
-  % Axes
-  \draw[-stealth] (0,0) -- (10,0) node[below right] {$x$};
-  \draw[-stealth] (0,0) -- (0,30) node[above left] {$y$};
+           \begin{image}
+             \begin{tikzpicture}
+  \begin{axis}[
+    axis lines=middle,
+    axis line style={-stealth},
+    xlabel={$x$},
+    ylabel={$y$},
+    xmin=0, xmax=5,
+    ymin=-5, ymax=25,
+    samples=400,
+    grid=both,
+    minor tick num=1,
+    tick align=outside,
+    clip=false,
+    every axis plot/.append style={thick, blue},
+    legend style={draw=none, fill=none, at={(0.02,0.98)}, anchor=north west}
+  ]
 
-  % Grid (optional)
-  \draw[very thin, lightgray] (0,0) grid (10,30);
+    % Plot for x > 0
+    \addplot[
+      domain=0.05:5
+    ]
+    {0.054*pi*x^2 + 0.48/x};
 
-  % Graph for x>0
-  \draw[very thick, blue, smooth, samples=300, domain=0.05:10]
-    plot (\x, {0.054*(\pi)*(\x)^2 + 0.48/(\x)});
+    \addlegendentry{$y = 0.054\pi x^2 + \dfrac{0.48}{x}$}
+
+  \end{axis}
 \end{tikzpicture}
-          \end{image}
+           \end{image}
         \item Find the absolute minimum cost and the dimensions that produce this value.\\
-        \textcolor{blue}{\[C(r)=0.054\pi r^2+0.48r^{-1}\]
-        \[C'(r)=0.108\pi r-0.48r^{-2}\]
+         \textcolor{blue}{\[C(r)=0.054\pi r^2+0.48r^{-1}\]
+         \[C'(r)=0.108\pi r-0.48r^{-2}\]
         Find a common denominator: $C'(r)=\frac{0.108\pi r^3-0.48}{r^2}$\\
         If $C'(r)=0$, then the numerator must equal 0: $0.108\pi r^3-0.48=0$\\
         \[1.08\pi r^3=0.48\]\\
