@@ -1,6 +1,6 @@
 \documentclass{ximera}
 
-\title{Intro to Tangent Lines Activity Solution Guide}
+\title{Intro to Tangent Lines Activity Facilitator Guide}
 \author{MATH 425: Calculus I}
 
 \begin{document}
@@ -9,6 +9,16 @@
 \end{abstract}
 \maketitle
 
+\textbf{Student Learning Objectives}
+Students will be able to:
+\begin{itemize}
+  \item Calculate average rate of change given a function or points.
+  \item Interpret average rate of change given a context.
+  \item Find the equation of a secant line to a function.
+\end{itemize}
+\textbf{Prerequise Knowledge:} This activity assumes that students have been introduced to the average rate of change equation $\frac{f(b)-f(a)}{b-a}$ for $f$ from $a$ to $b$.  One question asks students to find average rate of change over successively smaller intervals and use this to extrapolate an instantaneous rate of change.  We try to avoid many of these calculations, in order to prevent students as seeing this as an alternative to using the derivative definition. Exercise 4 tries to anticipate the definition of the derivative. \\
+\\
+This is an activity where it's very hard to judge how quickly students will move through it.  The final exercise is more challenging, so it is meant mostly as a final exercise to provide challenge to those groups who fly through the rest of the activity.  Not every group need get through the final problem.  The part (f) is particularly challenging and can have different paths to a viable answer.  Part (e) may benefit from divide and conquer tactics, as it is a lot of straight calculation.
 
 \begin{exercise}
 If a ball is thrown upwards into the air with a velocity of 40 ft/s, its height in feet $t$ seconds later is given by $y=40t-16t^2$.  
@@ -25,6 +35,7 @@ If a ball is thrown upwards into the air with a velocity of 40 ft/s, its height 
     \end{enumerate}
 Estimate the instantaneous velocity of the same ball when $t=2$ using your work from question 1.  Explain what your answer says about what is happening to the ball at $t=2$. \\
 \textcolor{blue}{ The average velocity at $t=2$ is around -24 ft/s, meaning that the ball is coming back downwards at a rate of 24 feet per second. }
+\textcolor{orange}{Try to avoid reinforcing students' idea that this is a viable way to find the exact instantaneous rate of change. Point out the \textit{estimate} part of the question if students seem to be relying on this as an exact answer.  Some students will also know these formulas (and potentially even the instantaneous rate of change formula) from physics.  Encourage them to use the mathematical means they've learned rather than just pulling out the physics formulas. \textit{Checking} their work with these formulas is encouraged!}
 
 \end{exercise}
 
@@ -49,14 +60,15 @@ A secant line to the function $f$ is a line through the points $(x_1, f(x_1))$ a
     \item Find an expression for the average velocity of the ball on a time interval of the form $[0.5, 0.5+h]$ where $0<h<0.5$, or $[0.5+h,0.5]$ when $-0.5<h<0$ and $h\neq 0$.\\
     \textcolor{blue}{Average velocity=$\frac{f(0.5+h)-f(0.5)}{0.5+h-(0.5)}=\frac{16-16(0.5+h)^2-16+16(0.5)^2}{h}$
     $=\frac{16-4-16h-16h^2-16+4}{h}=\frac{-16h-16h^2}{h}=\frac{h(-16-16h)}{h}$\\
-    $=-16-16h$}
+    $=-16-16h$}\\
+    \textcolor{orange}{Many students inevitably find trying to incorporate variables into these types of calculations challenging.  This looks ahead to the definition of the derivative, so encourage students to work slowly and carefully through the calculation.  They have all the tools!}
     \item Use this expression to compute the average velocity on $[0.5, 0.75]$ and $[0.4, 0.5]$.\\
     \textcolor{blue}{On $[0.5,0.75]=[0.5,0.5+0.25]$, $h=0.25$\\
     Average velocity$=-16-16(0.25)=-16-4=-20$ ft per sec\\
     On $[0.4,0.5]=[0.5-0.1,0.5]$, $h=-0.1$\\
     Average velocity$=-16-16(-0.1)=-16+1.6=-14.4$ ft per sec}
     \item Make a conjecture about the instantaneous velocity at $t=0.5$. \\
-    \textcolor{blue}{We can't determine the instantaneous velocity at $t=0.5$ exactly, but we can conjecture that it is between -20 ft/sec and -14.4 ft/sec.  }
+    \textcolor{blue}{We can't determine the instantaneous velocity at $t=0.5$ exactly, but we can conjecture that it is between -20 ft/sec and -14.4 ft/sec.}
   \end{enumerate}
   Problem from Boelkins, Austin \& Schlicker (2018) \textit{Active Calculus 2.1}.
 \end{exercise}
@@ -87,8 +99,10 @@ A secant line to the function $f$ is a line through the points $(x_1, f(x_1))$ a
         $\frac{P(7)-P(5)}{7-5}=\frac{186904.57-185444.20}{2}=730.18$ people per year\\
         For $[5,6]$:\\
         $\frac{P(6)-P(5)}{6-5}=\frac{186172.94-185444.20}{1}=728.74$ people per year\\}
+        \textcolor{orange}{This is a prime example of a good divide and conquer group problem.  Each student can take one interval and do the calcuation.}
         \item How fast do you think the population of Grand Rapids was changing on January 1, 1985? Said differently, at what rate do you think people were being added to the population of Grand Rapids as of January 1, 1985? How many additional people should the city have expected in the following year? Why?\\
         \textcolor{blue}{It seems like these values are changing by (very approximately) 1.5 people per year.  This is an exponential function, so it does not grow at a constant rate, but we can use this large grained approach to make a broad estimation.  If our assumption holds, it seems as though Grand Rapids should expect to be growing at a rate of about 727.25 people per year, or expect their population to grow about this many people in the following year.}
+        \textcolor{orange}{This is a somewhat vague question. There are many viable ways to reason about what the rate might look like, and the point is that students should be able to defend their reasoning and/or assumptions.  Using a derivative (not expected from students at this point), the actual rate is about 727.33 people per year.}
   \end{enumerate}
   Problem from Wakefield, et al., \textit {Coordinated Calculus}.
 \end{exercise}
