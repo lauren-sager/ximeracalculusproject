@@ -1,0 +1,87 @@
+\documentclass{ximera}
+
+\title{Intro to Tanget Lines Activity}
+\author{MATH 425: Calculus I}
+
+\begin{document}
+\begin{abstract}
+    Working with the peers in your group, solve the following problems. Make sure to show and justify all your work. Make sure everyone in the group understands the solution and participates. Be prepared to report your answers to the whole class. 
+\end{abstract}
+\maketitle
+
+
+\begin{exercise}
+If a ball is thrown upwards into the air with a velocity of 40 ft/s, its height in feet $t$ seconds later is given by $y=40t-16t^2$.  
+ Find the average velocity for the time period beginning at 2 seconds and lasting 
+    \begin{enumerate}
+        \item 0.5 seconds\\
+        \textcolor{blue}{ $\frac{f(2.5)-f(2)}{2.5-2}=\frac{0-16}{.5}=-32$}
+        \item 0.1 seconds\\
+        \textcolor{blue}{ $\frac{f(2.1)-f(2)}{2.1-2}=\frac{13.44-16}{.1}=-25.6$} 
+        \item 0.05 seconds\\
+        \textcolor{blue}{ $\frac{f(2.05)-f(2)}{2.05-2}=\frac{14.76-16}{.05}=-24.8$}
+        \item 0.01 seconds\\
+        \textcolor{blue}{ $\frac{f(2.01)-f(2)}{2.01-2}\approx \frac{15.76-16}{.01}=-24$} 
+    \end{enumerate}
+Estimate the instantaneous velocity of the same ball when $t=2$ using your work from question 1.  Explain what your answer says about what is happening to the ball at $t=2$. \\
+\textcolor{blue}{ The average velocity at $t=2$ is around -24 ft/s, meaning that the ball is coming back downwards at a rate of 24 feet per second. }
+
+\end{exercise}
+
+\begin{exercise} 
+A secant line to the function $f$ is a line through the points $(x_1, f(x_1))$ and $(x_2, f(x_2))$ on the graph of $f$.  It must intersect with the graph at least twice at distinct points.  Find the slope of the secant line to $f(x)=40x-16x^2$ using the points $x=2$ and $x=2.5$. (Hint: look at your calculations in exercise 1).  Does this seem familiar?) \\
+\textcolor{blue}{ $\frac{f(2.5)-f(2)}{2.5-2}=\frac{0-16}{.5}=-32$} 
+\end{exercise}
+
+\begin{exercise}
+  Find the equation of the secant line to the function $f(x)=\frac{x+4}{x-2}$ through the points at $x=-2$ and $x=4$.\\
+  \textcolor{blue}{ $f(-2)=\frac{-2+4}{-2-2}=\frac{2}{-4}=-\frac12$\\
+    $f(4)=\frac{4+4}{4-2}=\frac{8}{2}=4$\\
+    $m=\frac{4+\frac12}{4+2}=(\frac{9}{2})(\frac16)=\frac34$\\
+    Line equation: $y-4=\frac34(x-4)$\\
+    or $y=\frac34x+1$\\
+    or $y+\frac12=\frac34(x+2)$}
+\end{exercise}
+
+\begin{exercise}
+  The position function for a falling ball is given by $s(t)=16-16t^2$, where $s$ is measured in feet and $t$ in seconds.
+  \begin{enumerate}
+    \item Find an expression for the average velocity of the ball on a time interval of the form $[0.5, 0.5+h]$ where $0<h<0.5$, or or $[0.5+h,0.5]$ when $-0.5<h<0$ and $h\neq 0$.\\
+    \textcolor{blue}{Average velocity=$\frac{f(0.5+h)-f(0.5)}{0.5+h-(0.5)}=\frac{16-16(0.5+h)^2-16+16(0.5)^2}{h}$
+    $=\frac{16-4-16h-16h^2-16+4}{h}=\frac{-16h-16h^2}{h}=\frac{h(-16-16h)}{h}$\\
+    $=-16-16h$}
+    \item Use this expression to compute the average velocity on $[0.5, 0.75]$ and $[0.4, 0.5]$.\\
+    \textcolor{blue}{On $[0.5,0.75]=[0.5,0.5+0.25]$, $h=0.25$\\
+    Average velocity$=-16-16(0.25)=-16-4=-20$ ft per sec\\
+    On $[0.4,0.5]=[0.5-0.1,0.5]$, $h=-0.1$\\
+    Average velocity$=-16-16(-0.1)=-16+1.6=-14.4$ ft per sec}
+    \item Make a conjecture about the instantaneous velocity at $t=0.5$. \\
+    \textcolor{We can't determine the instantaneous velocity at $t=0.5$ exactly, but we can conjecture that it is between -20 ft/sec and -14.4 ft/sec.  }
+  \end{enumerate}
+  Problem from Boelkins, Austin \& Schlicker (2018) \textit{Active Calculus 2.1}.
+\end{exercise}
+
+\begin{exercise}
+    According to the U.S. census, the population of the city of Grand Rapids, MI, was 181,843 in 1980; 189,126 in 1990; and 197,800 in 2000.
+    \begin{enumerate}
+        \item Between 1980 and 2000, by how many people did the population of Grand Rapids grow?\\
+        \textcolor{blue}{$197800-181843=15957$ people}
+        \item In an average year between 1980 and 2000, by how many people did the population of Grand Rapids grow?\\
+        \textcolor{blue}{Average change per year: $\frac{15957}{20}=797.85$ people per year}
+        \item Just like we can find the average velocity of a moving body by computing change in position over change in time, we can compute the average rate of change of any function $f$.In particular, the average rate of change of a function $f$ over an interval $[a,b]$ is the quotient
+          \[\frac{f(b)-f(a)}{b-a}.\]
+        What does the quantity  $\frac{f(b)-f(a)}{b-a}$ measure on the graph of $y=f(x)$ over the interval ?\\
+        \textcolor{blue}{This measures the slope of the secant line on the graph through the points $(a,f(a))$ and $(b,f(b))$.}
+        \item Let $P(t)$ represent the population of Grand Rapids at time $t$, where $t$ is measured in years from January 1, 1980. What is the average rate of change of $P$ on the interval from $t=0$ to $t=20$? What are the units on this quantity?\\
+        \textcolor{}
+        \item If we assume the population of Grand Rapids is growing at a rate of approximately 4\% per decade, we can model the population function with the formula
+        \[P(t)=181843(1.04^{\frac{t}{10}}).\]
+        Use this formula to compute the average rate of change of the population on the intervals $[5,10]$, $[5,9]$, $[5,8]$, $[5,7]$ and $[5,6]$.
+        \item How fast do you think the population of Grand Rapids was changing on January 1, 1985? Said differently, at what rate do you think people were being added to the population of Grand Rapids as of January 1, 1985? How many additional people should the city have expected in the following year? Why?
+  \end{enumerate}
+  Problem from Wakefield, et al., \textit {Coordinated Calculus}.
+\end{exercise}
+
+
+
+\end{document}
