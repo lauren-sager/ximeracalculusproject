@@ -1,0 +1,91 @@
+\documentclass{ximera}
+
+\title{Limit Laws Activity Solution Guide}
+\author{MATH 425: Calculus I}
+
+\begin{document}
+\begin{abstract}
+    Working with the peers in your group, solve the following problems. Make sure to show and justify all your work. Make sure everyone in the group understands the solution and participates. Be prepared to report your answers to the whole class. 
+\end{abstract}
+\maketitle
+
+
+\begin{exercise}
+    Evaluate the following limits.  For problems (a) and (b), please show \textit{all} work (including splitting using limit laws) and list the limit laws used.
+  \begin{enumerate}
+ 
+
+   \item $\displaystyle \lim_{x\rightarrow 3} \frac{x^2-9}{x+3}$\\ 
+     \textcolor{blue}{\begin{tabular}{c|c}
+       $\displaystyle=\frac{\lim_{x\rightarrow 3} x^2-\lim_{x\rightarrow 3}9}{\lim_{x\rightarrow3}x+\lim_{x\rightarrow 3}3}$  & Quotient law, sum law, difference law  \\
+        $=\displaystyle \frac{(\lim_{x\rightarrow 3} x)^2-\lim_{x\rightarrow 3}9}{\lim_{x\rightarrow3}x+\lim_{x\rightarrow 3}3}$ & power rule\\
+        $=\frac{3^2-9}{3+3}$
+        $=\frac{0}{6}=0$ & 
+    \end{tabular}}
+    \item $\displaystyle \lim_{x\rightarrow 5} \frac{x^2-9}{x-3}$ \\
+    %\textcolor{blue}{ $\displaystyle \lim_{x\rightarrow 3} \frac{x^2-9}{x+3}$\\ 
+    \textcolor{blue}{\begin{tabular}{c|c}
+       $\displaystyle=\frac{\lim_{x\rightarrow 5} x^2-\lim_{x\rightarrow 5}9}{\lim_{x\rightarrow 5}x-\lim_{x\rightarrow 5}3}$  & Quotient law, sum law, difference law  \\
+        $=\displaystyle \frac{(\lim_{x\rightarrow 5} x)^2-\lim_{x\rightarrow 5}9}{\lim_{x\rightarrow5}x-\lim_{x\rightarrow 5}3}$ & power rule\\
+        $=\frac{5^2-9}{5-3}$
+        $=\frac{16}{2}=8$ & 
+        \end{tabular}}
+    \item $\displaystyle \lim_{x\rightarrow 0}g(x)$ if \[g(x)= 
+    \begin{cases}
+    3x^4+1 &\text{if }x<0\\
+    (x+1)^{\frac14} &\text{if }0\leq x
+    \end{cases}\]
+    \textcolor{blue}{ $\displaystyle \lim_{x\rightarrow 0^-}g(x)=\lim_{x\rightarrow 0^-} 3x^4+1=3(0)^4+1=1$\\
+    $\displaystyle \lim_{x\rightarrow 0^+}g(x)=\lim_{x\rightarrow 0^+}(x+1)^{\frac14}=1^{\frac14}=1$\\
+    Thus $\displaystyle \lim_{x\rightarrow 0} g(x)=1$.}
+  \end{enumerate}
+\end{exercise}
+
+\begin{exercise}
+    Where does the limit of $f(x)$ fail to exist?  
+      \[f(x)=
+    \begin{cases}
+    3x-1 &\text{if }x<-2\\
+    2x^2 &\text{if} -2\leq x\leq 1\\
+    2x+7 & \text{if } 1<x
+    \end{cases}\]
+    \textcolor{blue}{ $\displaystyle \lim_{x\rightarrow -2^-}f(x)=\lim_{x\rightarrow -2^-} 3x-1=3(-2)-1=-7$\\
+    $\displaystyle \lim_{x\rightarrow -2^+} f(x)=\lim_{x\rightarrow -2^+ }2x^2=2(-2)^2=8$\\
+    Thus, $\displaystyle \lim_{x\rightarrow -2}f(x)$ DNE\\
+    $\displaystyle\lim_{x\rightarrow 1^-} f(x)=\lim_{x\rightarrow 1^-} 2x^2=2(1)^2=2$\\
+    $\displaystyle\lim_{x\rightarrow 1^+} f(x)=\lim_{x\rightarrow 1^+} 2x+7=2(1)+7=9$\\
+    Therefore $\displaystyle\lim_{x\rightarrow 1} f(x)$ DNE\\
+    On each interval, the rules are polynomials, so the limit exists.  The only places the limit fails to exist are at $x=-2$ and $x=1$}
+\end{exercise}
+
+\begin{exercise}
+    Use the given table to evaluate the following limits, or explain why you cannot. \\
+  \begin{center}
+        \begin{tabular}{c|c|c}
+            $c$ & $\lim_{x\rightarrow c}f(x)$ & $\lim_{x\rightarrow c}g(x)$  \\ \hline
+            -2 &  5 & 3\\ 
+            0 & -1 & DNE\\ 
+            2 & $\displaystyle\frac{1}{2}$ & -2\\
+            3 & 0 & 4
+        \end{tabular}
+     \end{center}
+     \begin{enumerate}
+     \item $\displaystyle\lim_{x\rightarrow -2} f(x)(g(x))^2$ \textcolor{blue}{ $\displaystyle=\lim_{x\rightarrow -2}f(x)(\lim_{x\rightarrow -2} g(x))^2=5(3)^2=45$}
+     \item $\displaystyle\lim_{x\rightarrow 0} \frac{g(x)}{f(x)}$ \textcolor{blue}{ $\displaystyle=\frac{\lim_{x\rightarrow 0}g(x)}{\lim_{x\rightarrow 0}f(x)}$ cannot be calculated, since $\lim_{x\rightarrow 0}g(x)$ does not exist}
+     \item $\displaystyle \lim_{x\rightarrow 0} \sqrt[3]{f(x)}$ \textcolor{blue}{ $\displaystyle=\sqrt[3]{\lim_{x\rightarrow 0}f(x)}=\sqrt[3]{-1}=-1$}
+     \item $\displaystyle \lim_{x\rightarrow 2} 3f(x)-2g(x)+7x$ \textcolor{blue}{ $\displaystyle=3\lim_{x\rightarrow2}f(x)-2\lim_{x\rightarrow 2}g(x)+7\lim_{x\rightarrow2}x=2(\frac{1}{2})-2(-2)+7(2)=1+4+14=19$}
+     \item $\displaystyle \lim_{x\rightarrow 3} \frac{2f(x)+1}{\sqrt{g(x)}}$ \textcolor{blue}{ $\displaystyle=\frac{2\lim_{x\rightarrow 3}f(x)+\lim_{x\rightarrow3} 1}{\sqrt{\lim_{x\rightarrow3} g(x)}}=\frac{2(0)+1}{\sqrt{4}}=\frac{1}{2}$}
+
+    \end{enumerate}
+\end{exercise}
+
+\begin{exercise}
+     \textbf{Challenge problem: }Find an example where $\displaystyle \lim_{x\rightarrow 0} \frac{f(x)}{g(x)}$ exists, but neither $\displaystyle\lim_{x\rightarrow 0}f(x)$ or $\displaystyle \lim_{x\rightarrow 0}g(x)$ exist.\\
+     \textcolor{blue}{ Suppose $f(x)=\frac{1}{x^3}$ and $g(x)=\frac{1}{x^5}$.  Then $\lim_{x\rightarrow 0}f(x)$ and $\lim_{x\rightarrow 0}g(x)$ DNE.\\
+ $\displaystyle\lim_{x\rightarrow 0}\frac{f(x)}{g(x)}=\lim_{x\rightarrow 0}\frac{\frac{1}{x^3}}{\frac{1}{x^5}}=\lim_{x\rightarrow 0}\frac{x^5}{x^3}=\lim_{x\rightarrow 0}x^2=0$ }
+\end{exercise}
+
+
+
+
+\end{document}
