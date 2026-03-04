@@ -1,0 +1,122 @@
+\documentclass{ximera}
+
+\title{Infinite Limits and Indeterminate Forms Activity Solutions Guide}
+\author{MATH 425: Calculus I}
+
+\begin{document}
+\begin{abstract}
+    Working with the peers in your group, solve the following problems. Make sure to show and justify all your work. Make sure everyone in the group understands the solution and participates. Be prepared to report your answers to the whole class. 
+\end{abstract}
+\maketitle
+
+\begin{exercise}
+    Determine whether the following statements are true or false.  Explain your reasoning.
+    \begin{enumerate}
+        \item If we state that $\lim_{x\rightarrow 5}f(x)=\infty$, then we are implicitly saying that the limit exists.\\
+        \textcolor{blue}{False: A limit existing implies that the limit has a finite value.  Saying a limit equals $\infty$ is a specific way that a limit can fail to exist.}
+        \item If we state that $\lim_{x\rightarrow 5}f(x)=5$, then we are implicitly saying that the limit exists.\\
+        \textcolor{blue}{True: This limit is a finite, numerical value.}
+        \item If $\lim_{x\rightarrow 1^-}f(x)=\infty$, then $\lim_{x\rightarrow 1^+}f(x)=-\infty$.\\
+        \textcolor{blue}{False: This does not need to be true.  For example $f(x)=\frac{1}{(x-1)^2}$ has $\lim_{x\rightarrow 1^-}f(x)=\infty$ and $\lim_{x\rightarrow 1^+}f(x)=\infty$.}
+        %\item If $\lim_{x\rightarrow 5}f(x)=\infty$, then $f(x)$ has a vertical asymptote at $x=5$.
+        \item If $\lim_{x\rightarrow 5}f(x)=\infty$, then $f(x)$ is continuous at $x=5$.\\
+        \textcolor{blue}{False: Continuity requires the limit to exist at $x=5$, and this limit does not exist.}\\
+         Problems adapted from Hartman, et al., \textit{APEX Calculus}.
+    \end{enumerate} 
+\end{exercise}
+
+\begin{exercise}
+    Evaluate the limits, including classifying infinite limits (one-sided and two-sided, where appropriate).
+\begin{enumerate}
+    \item $\displaystyle \lim_{x\rightarrow -2}\frac{\sqrt{x^2+21}-5}{x+2}$ \\
+    \textcolor{blue}{ Gives a $\frac{0}{0}$ form.\\
+    $\displaystyle=\lim_{x\rightarrow -2} \frac{\sqrt{x^2+21}-5}{x+2}\bigg(\frac{\sqrt{x^2+21}+5}{\sqrt{x^2+21}+5}\bigg)$\\
+    $\displaystyle=\lim_{x\rightarrow-2} \frac{x^2+21-25}{(x+2)(\sqrt{x^2+21}+5)}$\\
+    $\displaystyle=\lim_{x\rightarrow -2}\frac{(x-2)(x+2)}{(x+2)(\sqrt{x^2+21}+5)}$\\
+    $\displaystyle=\lim_{x\rightarrow -2}\frac{x-2}{\sqrt{x^2+21}+5}=\frac{-4}{10}=-\frac25$}
+    
+    \item $\displaystyle \lim_{x\rightarrow -1}\frac{x-2}{x^2+2x+1}$ \\
+    \textcolor{blue}{ Gives a $\frac{c}{0}$ form\\
+    numerator: $-1-2=-3$\\
+    denominator: if $x>-1$, $x^2+2x+1\rightarrow 0$ and $(x+1)^2>0$\\
+    if $x<-1$. $x^2+2x+1\rightarrow 0$ and $(x+1)^2>0$\\
+    Either way, the fraction is negative\\
+    $\displaystyle\lim_{x\rightarrow -1}\frac{x-2}{x^2+2x+1}=-\infty$}
+    
+    
+    \item $\displaystyle\lim_{x\rightarrow 0}\frac{\sqrt{x^2+4}-2}{x^2}$ \\
+    \textcolor{blue}{ Gives $\frac00$ form\\
+    $\displaystyle\lim_{x\rightarrow 0}\frac{\sqrt{x^2+4}-2}{x^2}\bigg(\frac{\sqrt{x^2+4}+2}{\sqrt{x^2+4}+2}\bigg)$\\
+    $\displaystyle =\lim_{x\rightarrow 0}\frac{x^2+4-4}{x^2(\sqrt{x^2+4}+2)}$\\
+    $=\displaystyle =\lim_{x\rightarrow 0}\frac{1}{\sqrt{x^2+4}+2}=\frac{1}{4}$}
+    
+
+    \item $\displaystyle \lim_{x\rightarrow 0}\frac{3x-2}{x^2-x}$\\
+     \textcolor{blue}{ Gives a $\frac{c}{0}$ form\\
+   numerator: $3(0)-2=-2$\\
+    denominator: As $x\rightarrow 0$, $x^2\leq x$.  If $x<0$ and $x\rightarrow 0$, $x^2-x>0$ (fraction is negative).\\
+    If $x>0$ and $x\rightarrow 0$, $x^2-x<0$ (fraction is positive).\\
+    Thus $\displaystyle \lim_{x\rightarrow 0^-} \frac{3x-2}{x^2-x}=-\infty$ and $\displaystyle \lim_{x\rightarrow 0^+} \frac{3x-2}{x^2-x}=\infty$.\\
+    The one-sided limits do not match, so the limit DNE.}
+
+    \item $\displaystyle \lim_{x\rightarrow 3} \frac{1-x}{|x-3|}$\\
+    \textcolor{blue}{ numerator: $1-3=-2$\\
+    denominator: Regardless of whether $x$ is coming from the left or right, $|x-3|>0$ as $x\rightarrow 3$.  Thus the fraction is negative in both cases, or $\displaystyle \lim_{x\rightarrow 3^-}\frac{1-x}{|x-3|}=\lim_{x\rightarrow 3^+}\frac{1-x}{|x-3|}=-\infty=\lim_{x\rightarrow 3}\frac{1-x}{|x-3|}$.}
+
+    \item $\displaystyle \lim_{x\rightarrow 0} \bigg( \frac{1}{x}-\frac{1}{x(x-1)}\bigg)$\\
+    \textcolor{blue}{ $=\displaystyle\lim_{x\rightarrow 0} \frac{(x-1)}{x(x-1)}-\frac{1}{x(x-1)}=\lim_{x\rightarrow 0} \frac{x-2}{x(x-1)}$ gives a $\frac{c}{0}$ form.\\
+    Numerator: $0-2=-2$\\
+    Denominator: if $x<0$, then $x(x-1)\rightarrow 0$ and is positive (fraction is negative).\\
+    If $x>0$, then $x(x-1)\rightarrow 0$ and is negative (fraction is positive)\\
+    Limit DNE}
+
+     \item $\displaystyle \lim_{x\rightarrow 0} \bigg( \frac{1}{x}+\frac{1}{x(x-1)}\bigg)$\\
+     \textcolor{blue}{ $=\displaystyle\lim_{x\rightarrow 0} \frac{(x-1)}{x(x-1)}+\frac{1}{x(x-1)}=\lim_{x\rightarrow 0} \frac{x}{x(x-1)}=\lim_{x\rightarrow0} \frac{1}{x-1}=\frac{1}{-1}=-1$}
+
+    %.
+  \end{enumerate}
+\end{exercise} 
+
+\begin{exercise}
+    Consider the function \[ f(x)=
+    \begin{cases}
+    3x^2-1 & \text{if }x<-1\\
+    -2x & \text{if } -1<x<2\\
+    \frac{2}{x-3} &\text{if } 2<x
+    \end{cases}\]
+    Identify all $a$ where $\displaystyle \lim_{x\rightarrow a} f(x)$ does not exist.  Show reasoning to support your answer.\\
+    \textcolor{blue}{ This piecewise function changes at $x=-1$ and $x=2$, so the limit may fail to exist at these points. Also, $x=3$ causes division by 0.  Each of the rules is defined everywhere else.\\
+$x=-1$:\\
+$\displaystyle \lim_{x\rightarrow -1^-} f(x)=3(-1)^2-1=2$\\
+$\displaystyle \lim_{x\rightarrow -1^+} f(x)=-2(-1)=2$\\
+So $\displaystyle \lim_{x\rightarrow-1}f(x)=2$\\
+$x=2$:\\
+$\displaystyle \lim_{x\rightarrow 2^-} f(x)=-2(2)=-4$\\
+$\displaystyle \lim_{x\rightarrow -2^+} f(x)=\frac{2}{2-3}=-2$\\
+So $\displaystyle \lim_{x\rightarrow 2}f(x)$ DNE\\
+$x=3$:\\
+numerator: 2\\
+denominator: If $x<3$, $x-3<0$ so $\displaystyle \lim_{x\rightarrow 3^-} f(x)=-\infty$\\
+If $x>3$, $x-3>0$ so $\displaystyle \lim_{x\rightarrow 3^+}f(x)=\infty$\\
+$\displaystyle \lim_{x\rightarrow 3} f(x)$ DNE\\
+\\
+So $\displaystyle \lim_{x\rightarrow a} f(x)$ DNE when $a=2,3$
+}
+\end{exercise}
+
+
+\begin{exercise}
+
+  Challenge problem: Evaluate $\displaystyle \lim_{x\rightarrow 2} \frac{\sqrt{6-x}-2}{\sqrt{3-x}-1} $\\
+  \textcolor{blue}{ $=\displaystyle \lim_{x\rightarrow 2} \frac{\sqrt{6-x}-2}{\sqrt{3-x}-1}\bigg(\frac{\sqrt{6-x}+2}{\sqrt{6-x}+2}\bigg)\bigg(\frac{\sqrt{3-x}+1}{\sqrt{3-x}+1}\bigg)$\\
+$=\displaystyle \lim_{x\rightarrow 2}\frac{(6-x-4)(\sqrt{3-x}+1)}{(3-x-1)(\sqrt{6-x}+2)}$\\
+$=\displaystyle \lim_{x\rightarrow 2}\frac{(2-x)(\sqrt{3-x}+1)}{(2-x)(\sqrt{6-x}+2)}$\\
+$=\displaystyle \lim_{x\rightarrow 2}\frac{\sqrt{3-x}+1}{\sqrt{6-x}+2}$\\
+$\displaystyle =\frac{\sqrt{3-2}+1}{\sqrt{6-2}+2}=\frac{2}{4}=\frac12$}
+     
+
+\end{exercise}
+
+
+
+\end{document}
