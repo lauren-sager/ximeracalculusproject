@@ -1,0 +1,52 @@
+\documentclass{ximera}
+
+\title{Trig Limits and Squeeze Theorem Activity}
+\author{MATH 425: Calculus I}
+
+\begin{document}
+\begin{abstract}
+    Working with the peers in your group, solve the following problems. Make sure to show and justify all your work. Make sure everyone in the group understands the solution and participates. Be prepared to report your answers to the whole class. 
+\end{abstract}
+\maketitle
+
+
+\begin{exercise}
+    Evaluate the limits.
+    \begin{enumerate}
+        \item $\displaystyle \lim_{x\rightarrow 0}\frac{\sin(7x)}{3x}$
+        \item $\displaystyle\lim_{\theta \rightarrow 0}\frac{\sin(3\theta)\sin(5\theta)}{3\theta^2}$
+        \item $\displaystyle\lim_{x\rightarrow 0} \frac{\cos(x)-1}{\tan(x)}$
+        \item $\displaystyle\lim_{x\rightarrow \pi^-} \ln(\sin(x))$ (Hint: a graph of $y=\ln(x)$ may be enlightening.)
+    \end{enumerate}  
+    
+\end{exercise}
+
+\begin{exercise}
+  The indirect nature of the squeeze theorem can make it difficult to master.  Your group will review the squeeze theorem and use it to work out another indeterminate form which cannot be resolved in a direct fashion.\\
+
+  The Squeeze Theorem (here I have chosen to use $L(x)$, $U(x)$ to notate the \textbf{lower} and \textbf{upper} bounding functions which are squeezing $f$): If $L(x)\leq f(x)\leq U(x)$ for all $x$ close to $c$, and \textbf{both} $\displaystyle \lim_{x\rightarrow c}L(x)=V$, and $\displaystyle\lim_{x\rightarrow c}U(x)=V$, then $\displaystyle\lim_{x\rightarrow c}f(x)=V$, as well.\\
+
+  To use this theorem, we need an $f(x)$ which cannot be handled with direct evaluation or simplification, and then we need to find bounding functions $L$ and $U$ which satisfy the remaining requirements in the theorem.
+  In the first exercise, we consider $$\lim_{x\rightarrow 0}\frac{x}{2^x-2}$$
+  \begin{enumerate}
+    \item First check that this is sufficiently nasty. (\textit{Direct evaluation should fail, and the limit should appear to be indeterminate.)}
+    \item For the next part, consider the following functions: 
+    $$g(x)=x^{\frac23},\;\;\;\;\;h(x)=-x^{\frac23}$$
+    \item Graph all three of  these functions for $x$ values near zero. (Use technology, and verify that you have the correct setup for the squeeze theorem).
+    \item Apply $\lim_{x\rightarrow 0}$ to the chain of inequalities, and appeal to the squeeze theorem to determine the value of this limit. \\
+  \end{enumerate}
+\end{exercise}
+
+\begin{exercise}
+    The squeeze theorem can be hard to use on complicated problems in the wild.  Consider the following argument: \\
+    A student is trying to determine the value of the limit: $$\lim_{x\rightarrow 0}\frac{x^2}{\sin(x)}.$$
+    The student has discovered that when $x$ is close to zero, the following chain of inequalities is true: 
+    $$\frac{x^3}{\sin(x)}\leq\frac{x^2}{\sin(x)}\leq\frac{x}{\sin(x)}.$$
+    Discuss with your group how much knowledge you can gain from this chain of inequalities. (i.e. Is this chain enough to use the squeeze theorem?  Do these choices of $L(x)$ and $U(x)$ satisfy all of the requirements of the squeeze theorem?  Is there any information that can be extracted by applying a limit to this chain of inequalities? (Hint: Maybe we can establish what the limit \textbf{cannot} be, even if we don't know what it is yet.))
+     
+\end{exercise}
+
+
+
+
+\end{document}
