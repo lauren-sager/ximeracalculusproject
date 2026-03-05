@@ -9,13 +9,23 @@
 \end{abstract}
 \maketitle
 
+\textbf{Student Learning Objectives:}
+Students will be able to:
+\begin{itemize}
+    \item Evaluate limits at infinity using methods discussed in class.
+    \item Create examples of functions with specific limit and discontinuity properties.
+\end{itemize}
+
+\textbf{Prerequisite Knowledge:} Students should be familiar with limits, end behavior and limits at infinity.  Students will also be required to understand types of discontinuities to explore how they may interact with limits.\\
+
+This activity is more practice-based than other activities, as these limits are something students generally need additional support in order to fully understand.  Check with the instructor if they did not specify how much work students will be required to show for these limits.  The algebraic renormalization procedure may not be required for all cases, but it is necessary for the limits involving a square root in the division.  The final problem is more creative to get students to explore the interaction between limits and discontinuities.  If multiple groups get this far, have them trade examples and check each others' work.  
 
 \begin{exercise}
     Evaluate the limits.\\
   \begin{enumerate}
     \item $\displaystyle\lim_{x\rightarrow -\infty}\frac{x^2-3x+2}{x-3}$\\
     \textcolor{blue}{$=\displaystyle \lim_{x\rightarrow -\infty} \frac{\frac{x^2}{x}-\frac{3x}{x}+\frac{2}{x}}{\frac{x}{x}-\frac{3}{x}}=\lim_{x\rightarrow -\infty} \frac{x-3+\frac{2}{x}}{1-\frac{3}{x}}=-\infty$}\\
-    
+    \textcolor{orange}{Check with the instructor to see if they will accept reasoning about degree of numerator and denominator for these problems.}
     
     \item $\displaystyle\lim_{x\rightarrow -\infty} (x^2-7x^5)$\\
     \textcolor{blue}{$=\displaystyle \lim_{x\rightarrow -\infty} x^2(1-7x^3)$\\
@@ -23,12 +33,13 @@
     
     \item $\displaystyle\lim_{s\rightarrow \infty}\frac{\sqrt{1+4s^6}}{2-s^3}$\\
     \textcolor{blue}{$\displaystyle\lim_{s\rightarrow \infty}\frac{\sqrt{s^6(\frac{1}{s^6}+4)}}{2-s^3}$\\
-    $=\displaystyle \lim_{x\rightarrow \infty}\frac{\frac{s^3}{s^3}\sqrt{\frac{1}{s^6}+4}}{\frac{2}{s^3}-\frac{s^3}{s^3}}=\lim_{x\rightarrow \infty}\frac{\sqrt{\frac{1}{s^6}+4}}{\frac{2}{s^3}-1}=\frac{\sqrt{4}}{-1}=-2$}
+    $=\displaystyle \lim_{x\rightarrow \infty}\frac{\frac{s^3}{s^3}\sqrt{\frac{1}{s^6}+4}}{\frac{2}{s^3}-\frac{s^3}{s^3}}=\lim_{x\rightarrow \infty}\frac{\sqrt{\frac{1}{s^6}+4}}{\frac{2}{s^3}-1}=\frac{\sqrt{4}}{-1}=-2$}\\
+    \textcolor{orange}{Students may use powers here to argue about the limit, but they should also be showing the algebraic renomalization procedure for problems with roots.}
     
     \item $\displaystyle\lim_{x\rightarrow \infty}(\sqrt{9x^2+x}-3x)$ (Hint: this may benefit from multiplication by the conjugate over itself.)\\
     \textcolor{blue}{$\displaystyle \lim_{x\rightarrow \infty}\sqrt{9x^2+x}-3x\bigg(\frac{\sqrt{9x^2+x}+3x}{\sqrt{9x^2+x}+3x}\bigg)$\\
     $=\displaystyle \lim_{x\rightarrow \infty} \frac{9x^2+x-9x^2}{\sqrt{9x^2+x}+3x}=\lim_{x\rightarrow \infty}\frac{x}{|3x| \sqrt{1+\frac{1}{9x}}+3x}=\lim_{x\rightarrow \infty}\frac{x}{x(3\sqrt{1+\frac{1}{9x}}+3)}=\lim_{x\rightarrow \infty}\frac{1}{3\sqrt{1+\frac{1}{9x}}+3}=\frac{1}{6}$}
-    
+
     \item $\displaystyle \lim_{x\rightarrow \infty} \sqrt{3+x^2}-x$ (Hint: this may benefit from multiplication by the conjugate over itself.)\\
     \textcolor{blue}{Multiply by the conjugate over itself: $\displaystyle \lim_{x\rightarrow \infty}\sqrt{3+x^2}-x\bigg(\frac{\sqrt{3+x^2}+x}{\sqrt{3+x^2}+x}\bigg)$\\
     $=\displaystyle \lim_{x\rightarrow \infty} \frac{3+x^2-x^2}{\sqrt{3+x^2}+x}=\lim_{x\rightarrow \infty}\frac{3}{x\sqrt{\frac{3}{x^2}+1}+x}=\lim_{x\rightarrow \infty}\frac{\frac3x}{\frac{x}{x}\sqrt{\frac{3}{x^2}+1}+\frac{x}{x}}$\\
@@ -37,14 +48,13 @@
 
     \item $\displaystyle\lim_{x\rightarrow \infty}\frac{1+x^4}{x^6+1}$\\
     \textcolor{blue}{$\displaystyle =\lim_{x\rightarrow \infty}\frac{\frac{1}{x^6}+\frac{x^4}{x^6}}{\frac{x^6}{x^6}+\frac{1}{x^6}}=\frac{0}{1}=0$}
-
+    
     \item $\displaystyle \lim_{x\rightarrow \infty} 1.5^{-x}-7$\\
     \textcolor{blue}{$\displaystyle =\lim_{x\rightarrow \infty} \frac{1}{1.5^x}-7=0-7=-7$}
 
     \item $\displaystyle \lim_{x\rightarrow -\infty} 1.5^{-x}-7$\\
     \textcolor{blue}{$\displaystyle =\lim_{x\rightarrow -\infty} \frac{1}{1.5^x}-7=\infty$}
-    
-    
+
   \end{enumerate}
 \end{exercise} 
     
@@ -52,7 +62,8 @@
 \begin{exercise}
     
 
- Create an example of a function which satisfies the following.  Trade your examples with a classmate or another group and challenge them to figure out which function fits each problem! 
+ Create an example of a function which satisfies the following.  Trade your examples with a classmate or another group and challenge them to figure out which function fits each problem!\\
+ \textcolor{orange}{There are infinitely many possibilities for all of these problems. When interacting with students on these create an example problems, ask students to defend their choices.  This gives you the opportunity to check their answer, and also makes sure they understand the example they chose.}
  \begin{enumerate}
     \item A function $f$ with no infinite discontinuities where $\displaystyle\lim_{x\rightarrow \infty}f(x)=3$. \\
     \textcolor{blue}{ An example would be $f(x)=\frac{3x^2-3}{x^2+1}$}
