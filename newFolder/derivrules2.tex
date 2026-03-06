@@ -1,0 +1,95 @@
+\documentclass{ximera}
+
+\title{Derivative Rules Part 2 Activity}
+\author{MATH 425: Calculus I}
+
+\begin{document}
+\begin{abstract}
+    Working with the peers in your group, solve the following problems. Make sure to show and justify all your work. Make sure everyone in the group understands the solution and participates. Be prepared to report your answers to the whole class. 
+\end{abstract}
+\maketitle
+
+\begin{exercise}
+    Use the table to answer the following questions.\\  
+    \begin{tabular}{c|c|c|c|c}
+        x  & $f(x)$ & $g(x)$ & $f'(x)$ & $g'(x)$   \\ \hline
+        -1  & $\pi$ & 0 & -1 & 3\\ \hline
+        0 & $-\frac12$ & -1 & 0 & 4\\ \hline
+        2 & -2 & 7 & 3 & $-\frac{\pi}{4}$ \\ \hline
+        3 & 1 & e & $\frac23$ & 0\\%\hline   
+    \end{tabular}
+    \begin{enumerate}
+        \item $\frac{f}{g}(-1)$
+        \item $\frac{g}{f}(0)$
+        \item $(fg)(2)$
+        \item $(3f-2g)(0)$
+        \item $f(g(-1))$
+        \item $\frac{d}{dx} (f+g)(x)$ at $x=3$
+        \item $\frac{d}{dx} (3f+4g)(x)$ at $x=2$
+        \item $\frac{d}{dx} x^2+f(x)$ at $x=0$
+        \item $\frac{d}{dx} \big(\frac{f}{g}(x)\big)$ at $x=3$
+        \item $\frac{d}{dx} (3f(g(x)))$ at $x=-1$
+        \item $\frac{d}{dx} x^2f(x)$ at $x=3$
+    \end{enumerate}
+\end{exercise}
+
+\begin{exercise}
+    Use the graph to find the following derivatives.
+    \begin{image}
+    \begin{tikzpicture}[scale=1]
+        \begin{axis}[
+            xlabel=$x$,
+            ylabel=$y$,
+            grid=major,
+            axis lines=middle,
+            xmin=-0.5, xmax=6.5,
+            ymin=-3, ymax=5,
+            xtick={0,1,2,3,4,5,6},
+            ytick={-3,-2,-1,0,1,2,3,4,5}
+        ]
+        
+        % Function f(x): piecewise linear
+        \addplot[blue, thick] coordinates {(0,1) (2,3) (4,0) (6,2)};
+        \addlegendentry{$f(x)$}
+        
+        % Function g(x): piecewise linear
+        \addplot[red, thick] coordinates {(0,4) (1,2) (3,2) (5,-1) (6,-1)};
+        \addlegendentry{$g(x)$}
+        
+        \end{axis}
+    \end{tikzpicture}
+\end{image}
+    \begin{enumerate}
+        \item $f'(2)$
+        \item $g'(4)$
+        \item $fg'(3)$
+        \item $\frac{f}{g}'(1)$
+        \item $(f+g)'(5)$
+    \end{enumerate}
+\end{exercise}
+
+\begin{exercise}
+    Calculate the derivative for the following functions using rules from class.  Before attempting the derivative, choose a rule (or rules) and justify to yourself why you are using this rule. 
+    \begin{enumerate}
+        \item $f(x)=x^{\frac23}\sqrt{(3x^7-x)}$
+        \item $g(x)=(2x^4-3x^{-3})x^{-\frac{1}{3}}$
+        \item $f(z)=(z^2-3z^{\frac{1}{4}})(z-1)^{-1}$
+        \item $h(t)=e^2(3t-2)t^{\frac{3}{4}}$
+        \item $g(w)=\frac{w^7-3w^2}{15}$ \\
+        \item $p(x)=\frac{\sqrt{x}(x-2)}{x-3}$    
+        \item $f(x)=\frac{1}{(x^2-1)(x^2+x+1)}$
+        \item $g(x)=(2x-7)^{-1}(x+5)$
+        \item $v(t)=\frac{\sqrt{t}-1}{\sqrt{t}+1}$
+        
+    \end{enumerate}
+
+
+\end{exercise}
+
+\begin{exercise}
+    Find the equation of the tangent line to the graph of $f(x)=\frac{3x-1}{2x^2-7}$ at $x=2$.
+\end{exercise}
+
+
+
+\end{document}
