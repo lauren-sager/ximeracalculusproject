@@ -17,23 +17,23 @@
 
     \begin{enumerate}
         \item By experimenting with the value of $k$, find a value of $k$ so that the graph of $p(t)=f(kt)=e^{kt}$ appears to align with the graph of $g(t)=3^t$.  What is the value of $k$?\\
-        {\color{blue} $k$ looks to be approximately 1.1.}
+        \textcolor{blue}{ $k$ looks to be approximately 1.1.}
 
         \item Similarly, experiment to find a value of $k$ so that the graph of $p(t)=f(kt)=e^{kt}$ appears to align with the graph of $h(t)=(\frac13)^t$.  What is the value of $k$?\\
-        {\color{blue} This $k$ looks to be about -1.1}
+        \textcolor{blue}{ This $k$ looks to be about -1.1}
 
         \item For the value of $k$ you determined in (a), compute $e^k$.  What do you observe? \\
-        {\color{blue} $e^{1.1}\approx 3.004$, which is close to 3.  }%Students should include something here about that $e^k$ is about 3. }
+        \textcolor{blue}{ $e^{1.1}\approx 3.004$, which is close to 3.  }%Students should include something here about that $e^k$ is about 3. }
    
         \item For the value of $k$ you determined in (a), compute $e^k$.  What do you observe?  \\
-        {\color{blue} $e^{-1.1}\approx 0.339\approx \frac13$.  Note here that $e^k\approx \frac{1}{3}$}
+        \textcolor{blue}{ $e^{-1.1}\approx 0.339\approx \frac13$.  Note here that $e^k\approx \frac{1}{3}$}
    
         \item Given any exponential function of the form $b^t$, do you think it's possible to find a value of $k$ so that $p(t)=f(kt)=e^{kt}$ is the same function as $b^t$?  Why or why not?\\
-        {\color{blue} We can find this number $k$ such that $e^{kt}=b^t$ when $b>0$, since we just need that $e^k=b$, and the range of an exponential function is all positive real numbers.}
+        \textcolor{blue}{ We can find this number $k$ such that $e^{kt}=b^t$ when $b>0$, since we just need that $e^k=b$, and the range of an exponential function is all positive real numbers.}
    
         \item  We'll be talking about logarithms and their connection to exponential functions soon. 
         It happens to be true that $ln(3)\approx 1.1$ and $\ln(\frac{1}{3})\approx -1.1$. With this information, can you set up an equation to find such a $k$ so that $p(t)=f(kt)=e^{kt}$ is the same function as $b^t$? \\
-        {\color{blue} If $e^k=b$, then $\ln(b)=k$.}
+        \textcolor{blue}{ If $e^k=b$, then $\ln(b)=k$.}
    
    
     \end{enumerate}  
@@ -91,22 +91,21 @@
     $e^x=e$ means $x=1$.}
 \end{exercise}
 
-begin{exercise}
+\begin{exercise}
     Calculate the derivative for the following functions using rules from our class: 
         \begin{enumerate}
             \item $f(x)=(3x^7-\sqrt{x})e^x$\\
-            {\color{blue} $f'(x)=(3x^7-\sqrt{x})e^x+e^x(21x^6-\frac{1}{2}x^{-\frac{1}{2}})$}
+            \textcolor{blue}{ $f'(x)=(3x^7-\sqrt{x})e^x+e^x(21x^6-\frac{1}{2}x^{-\frac{1}{2}})$}
        
             \item $h(t)=e^t(3t-2)t^{\frac{3}{4}}$\\
-            {\color{blue} $h'(t)=\frac{t^{\frac{3}{4}}(3e^t+e^t(3t-2))-e^t(3t-2)(\frac{3}{4}t^{-\frac{1}{4}})}{t^{\frac{3}{2}}}$}
+            \textcolor{blue}{ $h'(t)=\frac{t^{\frac{3}{4}}(3e^t+e^t(3t-2))-e^t(3t-2)(\frac{3}{4}t^{-\frac{1}{4}})}{t^{\frac{3}{2}}}$}
        
             \item $f(t)=\frac{te^{2t}}{e^{3t}}$\\
-            {\color{blue} $=\frac{t}{e^t};\;\; f'(t)=\frac{e^t-te^t}{e^{2t}}$}
+            \textcolor{blue}{ $=\frac{t}{e^t};\;\; f'(t)=\frac{e^t-te^t}{e^{2t}}$}
         
             \item $p(x)=\frac{\sqrt{x}e^x}{x-3}$\\
-            {\color{blue} $p'(x)=\frac{(x-3)(\sqrt{x}e^x+e^x(\frac{1}{2}x^{-\frac{1}{2}}))-\sqrt{x}e^x}{(x-3)^2}$}
-        
-    \end{enumerate}
+            \textcolor{blue}{ $p'(x)=\frac{(x-3)(\sqrt{x}e^x+e^x(\frac{1}{2}x^{-\frac{1}{2}}))-\sqrt{x}e^x}{(x-3)^2}$}
+        \end{enumerate}
 \end{exercise}
 
 \begin{exercise}
@@ -114,20 +113,22 @@ begin{exercise}
         $$I(t)=\frac{100t}{e^t}.$$
       
     Go graph this on Desmos and explore the graph a bit.
-    \begin{center}
+    %\begin{center}
+        \[
         \graph{100x(e^{-x})}
-    \end{center}
+        \]
+    %\end{center}
     %\xmalt A graph of the function $I(t)=\frac{100t}{e^t}$.
     Calculate 
     \begin{enumerate}
         \item[a.] $I'(0.5)$ 
-        {\color{blue}$=30.327$}
+        \textcolor{blue}{$=30.327$}
         \item[b.] $I'(2)$
-        {\color{blue} $=-13. 534$}
+        \textcolor{blue}{ $=-13. 534$}
         \item[c.] $I'(5)$
-        {\color{blue} $=-2.695$}
+        \textcolor{blue}{ $=-2.695$}
         \item[d.] Explain what these values represent. 
-        {\color{blue} These values are the the instantaneous rate of change in light intensity at the given millisecond.  Thinking about the physical situation, do these values make sense?}
+        \textcolor{blue}{ These values are the the instantaneous rate of change in light intensity at the given millisecond.  Thinking about the physical situation, do these values make sense?}
 \end{enumerate}
 
 \end{exercise}
