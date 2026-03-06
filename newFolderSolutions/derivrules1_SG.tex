@@ -1,0 +1,84 @@
+\documentclass{ximera}
+
+\title{Derivative Rules (So Far) Activity Solution Guide}
+\author{MATH 425: Calculus I}
+
+\begin{document}
+\begin{abstract}
+    Working with the peers in your group, solve the following problems. Make sure to show and justify all your work. Make sure everyone in the group understands the solution and participates. Be prepared to report your answers to the whole class. 
+    %A default abstract of an almost empty course.
+\end{abstract}
+\maketitle
+
+
+\begin{exercise}
+Calculate the derivative for the following functions using the derivative rules we've discussed in class so far: 
+\begin{enumerate}
+    \item $s(t)=\frac{1}{t}-\frac{3}{t^6}$\\
+    \textcolor{blue}{$s'(t)=-t^{-2}+18t^{-7}$}
+
+    \item $f(x)=\sqrt{3}x^2-\sqrt{3}$
+    \textcolor{blue}{ $f'(x)=2\sqrt{3}x$}
+    
+    \item $g(w)=w^5-\frac{1}{w^\frac{3}{2}}$
+    \textcolor{blue}{ $g'(w)=5w^4+\frac{3}{2}w^{-\frac{5}{2}}$}
+    
+    \item $f(z)=\frac{2\sqrt{z}}{3}$ 
+    \textcolor{blue}{ $f'(x)= \frac{2}{3}\cdot \frac12 z^{-1/2}=\frac13 z^{-1/2}$}
+    
+    \item $g(x)=-7x^{0.25}$
+    \textcolor{blue}{ $g'(x)=-\frac{7}{4}x^{-0.75}$}
+    
+    \item $v(t)=\pi^2$
+    \textcolor{blue}{ $v'(t)=0$}
+    
+    \item $p(t)=\frac{2t^2-3t+1}{\sqrt{t}}$ \textcolor{blue}{ $=2t^{\frac32}-3t^{\frac12}+t^{-\frac12}$}\\
+    \textcolor{blue}{ $p'(t)=3t^{\frac12}-\frac32 t^{-\frac12}-\frac12t^{-\frac32}$}
+
+    \item $s(t)=\frac{1}{t}-\frac{3}{t^6}+e^5$\\
+    \textcolor{blue}{ $s'(t)=-t^{-2}+18t^-7+0$}
+\end{enumerate}
+\end{exercise}
+
+\begin{exercise}
+    Find the equation of the line tangent to the graphs of the following functions at the given point.  Use Desmos to graph the function and your tangent line and check your work.
+        \begin{enumerate}
+    %\item $f(x)=e^x$ at $(0,1)$\\
+            \item $g(x)=x^6-24x$ at $(2, 16)$\\
+            \textcolor{blue}{ $g'(x)=6x^5-24$ so $g'(2)=6(2)^5-24=192-24=168$\\
+            So the tangent line is $y-16=168(x-2)$ or $y=168x-320$}
+            \item $h(x)=\sqrt[3]{x}-\frac{3}{x}$ at $(1, -2)$\\
+            \textcolor{blue}{ $h'(x)=\frac{1}{3}x^{-2/3}+3x^{-2}=\frac{1}{3\sqrt[3]{x^2}}+\frac{3}{x^2}$ so $h'(1)=\frac{1}{3\sqrt[3]{1^2}}+\frac{3}{1^2}=\frac{1}{3}+3=\frac{10}{3}$\\
+            So the tangent line is $y+2=\frac{10}{3}(x-1)$ or $y=\frac{10}{3}x-\frac{16}{3}$}
+        \end{enumerate}
+\end{exercise}
+
+
+\begin{exercise}
+  The following problem will step you through proving the sum rule for derivatives. Our goal will be to show that $$\frac{d}{dx}[(f+g)(x)]=\frac{d}{dx}[f(x)]+\frac{d}{dx}[g(x)]$$
+    \begin{enumerate}
+        \item Write $(f+g)(x+h)$ in terms of $f(x)$ and $g(x)$. \\
+        \textcolor{blue}{ $(f+g)(x+h)=f(x+h)+g(x+h)$}
+        \item Use your answer from (a) to write the derivative definition for $(f+g)(x)$.\\
+        \textcolor{blue}{ $\displaystyle \lim_{h\rightarrow 0}\frac{(f+g)(x+h)-(f+g)(x)}{h}=\lim_{h\rightarrow 0}\frac{f(x+h)+g(x+h)-f(x)-g(x)}{h}$}
+        \item Group your numerator of the derivative definition into $f$ terms and $g$ terms.\\
+        \textcolor{blue}{$\displaystyle =\lim_{h\rightarrow 0}\frac{(f(x+h)-f(x))+(g(x+h)-g(x))}{h}$}
+        \item Use the opposite of finding a common denominator to split your fraction into two fractions (hint: both should look like the difference quotient $\frac{F(x+h)-F(x)}{h}$).\\
+        \textcolor{blue}{ $\displaystyle =\lim_{h\rightarrow 0} \frac{f(x+h)-f(x)}{h}+\frac{g(x+h)-g(x)}{h}$}
+        \item Use the sum property for limits to separate your limit into the sum of two limits.\\
+        \textcolor{blue}{ $\displaystyle =\lim_{h\rightarrow 0} \frac{f(x+h)-f(x)}{h}+\lim_{h\rightarrow 0}\frac{g(x+h)-g(x)}{h}$}
+        \item Substitute a derivative notation for any derivative definitions  that show up. $\square$ ($\leftarrow$ this is a symbol traditionally used to show a proof is complete.) \\
+        \textcolor{blue}{ $=\displaystyle f'(x)+g'(x)$}
+    \end{enumerate}
+\end{exercise}
+
+\begin{exercise}
+    Using a similar method to (4), show that $$ \frac{d}{dx}(cf(x))=c\frac{d}{dx}f(x)$$ by manipulating the definition of the derivative.\\
+    \textcolor{blue}{ $\displaystyle \frac{d}{dx}(cf(x))=\lim_{h\rightarrow 0} \frac{cf(x+h)-cf(x)}{h}=\lim_{h\rightarrow 0}\frac{c(f(x+h)-f(x))}{h}$\\
+    $\displaystyle =\lim_{h\rightarrow 0}c\frac{f(x+h)-f(x)}{h}=c\lim_{h\rightarrow 0}\frac{f(x+h)-f(x)}{h}=cf'(x)$}
+\end{exercise}
+
+
+
+
+\end{document}
