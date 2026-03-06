@@ -9,6 +9,19 @@
 \end{abstract}
 \maketitle
 
+\textbf{Student Learning Outcomes}
+Students will be able to:
+\begin{itemize}
+    \item Find the derivative of linear, quadratic and simple cubic polynomials using the derivative definition.
+    \item Find the derivative of a function from a graph when the function is linear or at a max or min value.
+    \item Show that a derivative does not exist using the limit definition of the derivative.
+    \item Identify the sign of a derivative from a graph.
+\end{itemize}
+
+\textbf{Prerequisite Knowledge}: It is assumed that students have seen the limit definition of the derivative, although it is also included here for reference.  Students are also expected to be familiar with limits.  \\
+
+This activity is likely too long for most students.  Divide and conquer could be a viable strategy on problem 2, as long as students are getting experience with at least one formula across types of polynomials.  
+
 \begin{definition}
         \textbf{The limit definition of the derivative}\\
         Suppose $f$ is a continuous function and $a$ is a value in the domain of $f$. The \textbf{derivative} of $f$ at $a$, denoted by $f'(a)$, is defined by the following limit (if it exists):
@@ -50,6 +63,7 @@
         \item $f'(4)$ \textcolor{blue}{$=-2$}
         \item $f'(7)$ \textcolor{blue}{$=0$}
     \end{enumerate}
+    \textcolor{orange}{These locations were all chosen so the slope of the function can be exactly calculated.  If groups are engaged with this problem, you can raise the question of what happens at the points where the pieces of the function connect, and also to estimate slopes along the parabola part of the function.}
 \end{exercise}
 
 \begin{exercise}
@@ -74,7 +88,8 @@ Calculate the following derivatives at the given value using both the $h\rightar
         Using $h\rightarrow 0$:\\
         $\displaystyle f'(0)=\lim_{h\rightarrow 0}\frac{(h)^3-4+4}{h}=\lim_{h\rightarrow 0}\frac{h^3}{h}=\lim_{h\rightarrow 0}h^2=0$}
         
-        \item Did either version of the derivative definition seem easier to use or more helpful?  For which functions? 
+        \item Did either version of the derivative definition seem easier to use or more helpful?  For which functions? \\
+        \textcolor{orange}{An interesting question to ask yourself if you are used to only one of the definitions!}
     \end{enumerate}
 
     \end{exercise}
@@ -84,7 +99,8 @@ Calculate the following derivatives at the given value using both the $h\rightar
             \item Find the equation to the tangent line to $f(x)=x^2-3x$ at $a=-1$.\\
             \textcolor{blue}{$f'(-1)=-5$ (calculated in 2b)\\
                 $f(-1)=(-1)^2-3(-1)=4$\\
-                Equation of the tangent line: $y-4=-5(x+1)$}
+                Equation of the tangent line: $y-4=-5(x+1)$}\\
+            \textcolor{orange}{Note that this value was calculated in 2b and doesn't need to be done again! }
             \item Find the equation to the tangent line to $f(x)=x^2-3x$ at $a=2$.\\
             \textcolor{blue}{$f'(2)=\displaystyle\lim_{h\rightarrow 0}\frac{(2+h)^2-3(2+h)+2}{h}=\lim_{h\rightarrow 0}\frac{4+2h+h^2-6-3h+2}{h}=\lim_{h\rightarrow 0}\frac{-h+h^2}{h}=\lim_{h\rightarrow 0}\frac{h(-1+h)}{h}$\\
             $=\displaystyle \lim_{h\rightarrow 0} -1+h=-1$\\
@@ -96,7 +112,8 @@ Calculate the following derivatives at the given value using both the $h\rightar
     \begin{exercise}
         Show that the derivative of the function $f(x)=x^{1/3}$ does not exist at $a=0$.\\
         \textcolor{blue}{$f'(0)=\displaystyle\lim_{h\rightarrow 0} \frac{h^{1/3}-0}{h}=\lim_{h\rightarrow 0}\frac{1}{h^{2/3}}=\infty$ (The 2/3 power means to take a cube root and square the value, so the numerator will always be positive.) \\
-        Since the limit does not exist (is not finite), the derivative doesn't exist.}
+        Since the limit does not exist (is not finite), the derivative doesn't exist.}\\
+        \textcolor{orange}{This is likely a new idea for most students - thinking about how the limit and derivative work together like this.  Have students set up the definition if they are stuck, and then work from there.  This is another place where it is helpful to remember that a limit of infinity is not a limit that exists.}
     \end{exercise}
    
 
