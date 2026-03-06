@@ -1,0 +1,106 @@
+\documentclass{ximera}
+
+\title{Exponential Function Derivatives Activity}
+\author{MATH 425: Calculus I}
+
+\begin{document}
+\begin{abstract}
+    Working with the peers in your group, solve the following problems. Make sure to show and justify all your work. Make sure everyone in the group understands the solution and participates. Be prepared to report your answers to the whole class. 
+\end{abstract}
+\maketitle
+
+
+\begin{exercise}
+    Open this Desmos worksheet: \\
+    \begin{center}
+        \desmos{hpym0hoois}{800}{600}
+    \end{center}
+
+    \begin{enumerate}
+        \item By experimenting with the value of $k$, find a value of $k$ so that the graph of $p(t)=f(kt)=e^{kt}$ appears to align with the graph of $g(t)=3^t$.  What is the value of $k$?
+   
+        \item Similarly, experiment to find a value of $k$ so that the graph of $p(t)=f(kt)=e^{kt}$ appears to align with the graph of $h(t)=(\frac13)^t$.  What is the value of $k$?
+   
+        \item For the value of $k$ you determined in (a), compute $e^k$.  What do you observe? 
+   
+        \item For the value of $k$ you determined in (a), compute $e^k$.  What do you observe?  
+   
+        \item Given any exponential function of the form $b^t$, do you think it's possible to find a value of $k$ so that $p(t)=f(kt)=e^{kt}$ is the same function as $b^t$?  Why or why not?
+   
+        \item  We'll be talking about logarithms and their connection to exponential functions soon. 
+        It happens to be true that $ln(3)\approx 1.1$ and $\ln(\frac{1}{3})\approx -1.1$. With this information, can you set up an equation to find such a $k$ so that $p(t)=f(kt)=e^{kt}$ is the same function as $b^t$? \\
+   
+   
+    \end{enumerate}  
+   
+    Problem adapted from Boelkins, et al., \textit{Active Prelude to Calculus}.
+\end{exercise}
+
+
+\begin{exercise}
+    Calculate the derivative for the following functions using the derivative rules we've discussed in class so far: 
+        \begin{enumerate}
+            \item $g(x)=3e^x-\frac{4}{\sqrt{x}}$
+            \item $f(x)=\sqrt[6]{x^7} -\frac{e^x}{3}$
+            \item $h(t)=4et^2$
+    
+        \end{enumerate}
+    \end{exercise}
+
+\begin{exercise}
+    Find the equation of the line tangent to the graphs of $f(x)=e^x$ at $x=0$.  Use Desmos to graph the function and your tangent line and check your work.
+\end{exercise}
+
+\begin{exercise}
+    Suppose $\displaystyle \lim_{x\rightarrow 2} f(x)=-1$. 
+    What is $\displaystyle \lim_{x\rightarrow 2}e^{f(x)}$? (Hint: how do continuous functions and limits interact?)
+\end{exercise}
+
+
+\begin{exercise}
+    At what point on the curve $y=1-e^x$ is the tangent line parallel to $-x-y=5$?   Find the equation of the tangent line at this point.  Check your graph by graphing the curve and both lines on Desmos.
+\end{exercise} 
+
+\begin{exercise}
+    At what value of $x$ does $f(x)=e^x-ex$ have a horizontal tangent line? 
+\end{exercise}
+
+\begin{exercise}
+    Calculate the derivative for the following functions using rules from our class: 
+        \begin{enumerate}
+            \item $f(x)=(3x^7-\sqrt{x})e^x$
+       
+            \item $h(t)=e^t(3t-2)t^{\frac{3}{4}}$
+       
+            \item $f(t)=\frac{te^{2t}}{e^{3t}}$
+        
+            \item $p(x)=\frac{\sqrt{x}e^x}{x-3}$
+        
+    \end{enumerate}
+\end{exercise}
+
+\begin{exercise}
+    The intensity (in candles) of light seen by the eye when a camera flashes at time t (in milliseconds) is modelled by the equation
+        $$I(t)=\frac{100t}{e^t}.$$
+      
+    Go graph this on Desmos and explore the graph a bit.
+    \begin{center}
+        \graph{100x(e^{-x})}
+    \end{center}
+    %\xmalt A graph of the function $I(t)=\frac{100t}{e^t}$.
+    Calculate 
+    \begin{enumerate}
+        \item[a.] $I'(0.5)$ 
+
+        \item[b.] $I'(2)$
+
+        \item[c.] $I'(5)$
+
+        \item[d.] Explain what these values represent. 
+
+\end{enumerate}
+
+\end{exercise}
+
+
+\end{document}

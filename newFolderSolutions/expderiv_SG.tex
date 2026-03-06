@@ -1,0 +1,139 @@
+\documentclass{ximera}
+
+\title{Exponential Function Derivatives Activity Solutions Guide}
+\author{MATH 425: Calculus I}
+
+\begin{document}
+\begin{abstract}
+    Working with the peers in your group, solve the following problems. Make sure to show and justify all your work. Make sure everyone in the group understands the solution and participates. Be prepared to report your answers to the whole class. 
+\end{abstract}
+\maketitle
+
+\begin{exercise}
+    Open this Desmos worksheet: \\
+    \begin{center}
+        \desmos{hpym0hoois}{800}{600}
+    \end{center}
+
+    \begin{enumerate}
+        \item By experimenting with the value of $k$, find a value of $k$ so that the graph of $p(t)=f(kt)=e^{kt}$ appears to align with the graph of $g(t)=3^t$.  What is the value of $k$?\\
+        {\color{blue} $k$ looks to be approximately 1.1.}
+
+        \item Similarly, experiment to find a value of $k$ so that the graph of $p(t)=f(kt)=e^{kt}$ appears to align with the graph of $h(t)=(\frac13)^t$.  What is the value of $k$?\\
+        {\color{blue} This $k$ looks to be about -1.1}
+
+        \item For the value of $k$ you determined in (a), compute $e^k$.  What do you observe? \\
+        {\color{blue} $e^{1.1}\approx 3.004$, which is close to 3.  }%Students should include something here about that $e^k$ is about 3. }
+   
+        \item For the value of $k$ you determined in (a), compute $e^k$.  What do you observe?  \\
+        {\color{blue} $e^{-1.1}\approx 0.339\approx \frac13$.  Note here that $e^k\approx \frac{1}{3}$}
+   
+        \item Given any exponential function of the form $b^t$, do you think it's possible to find a value of $k$ so that $p(t)=f(kt)=e^{kt}$ is the same function as $b^t$?  Why or why not?\\
+        {\color{blue} We can find this number $k$ such that $e^{kt}=b^t$ when $b>0$, since we just need that $e^k=b$, and the range of an exponential function is all positive real numbers.}
+   
+        \item  We'll be talking about logarithms and their connection to exponential functions soon. 
+        It happens to be true that $ln(3)\approx 1.1$ and $\ln(\frac{1}{3})\approx -1.1$. With this information, can you set up an equation to find such a $k$ so that $p(t)=f(kt)=e^{kt}$ is the same function as $b^t$? \\
+        {\color{blue} If $e^k=b$, then $\ln(b)=k$.}
+   
+   
+    \end{enumerate}  
+   
+    Problem adapted from Boelkins, et al., \textit{Active Prelude to Calculus}.
+\end{exercise}
+
+\begin{exercise}
+    Calculate the derivative for the following functions using the derivative rules we've discussed in class so far: 
+        \begin{enumerate}
+                \item $g(x)=3e^x-\frac{4}{\sqrt{x}}$\\
+                \textcolor{blue}{ $g'(x)=3e^x+2 x^{-\frac32}$}
+    
+                \item $f(x)=\sqrt[6]{x^7} -\frac{e^x}{3}$\\
+                \textcolor{blue}{ $f'(x)=\frac{7}{6}x^{\frac16}-\frac13e^x$}
+    
+                \item $h(t)=4et^2$\\
+                \textcolor{blue}{ $h'(t)=8et$}
+    
+        \end{enumerate}
+\end{exercise}
+
+\begin{exercise}
+    Find the equation of the line tangent to the graphs of $f(x)=e^x$ at $x=0$.  Use Desmos to graph the function and your tangent line and check your work.\\
+    \textcolor{blue}{ $f'(x)=e^x$ so $f'(0)=e^0=1$\\
+    So the tangent line is $y-1=1(x-0)$ or $y=x+1$}
+    \begin{center}
+        \desmos{dwxditai89}{800}{600}
+    \end{center}
+    
+\end{exercise}
+
+\begin{exercise}
+    Suppose $\displaystyle \lim_{x\rightarrow 2} f(x)=-1$. 
+    What is $\displaystyle \lim_{x\rightarrow 2}e^{f(x)}$? (Hint: how do continuous functions and limits interact?)\\
+    \textcolor{blue}{ $\lim_{x\rightarrow 2} e^{f(x)}=e^{\lim_{x\rightarrow 2} f(x)}=e^{-1}=\frac1e$.}
+\end{exercise}
+
+
+\begin{exercise}
+    At what point on the curve $y=1-e^x$ is the tangent line parallel to $-x-y=5$?   Find the equation of the tangent line at this point.  Check your graph by graphing the curve and both lines on Desmos.\\
+     \textcolor{blue}{$y'=-e^x$ and the line can be written as $y=-x-5$, which has slope -1.  \\
+    Then we know that we want to know when $y'=-1$, or $-e^x=-1$.  Then $e^x=1$, so $x=0$.  \\
+    The point is $(0, 1-e^0)=(0,0)$ so the tangent line is $y=-1(x)$}
+    \begin{center}
+        \desmos{dwxditai89}{800}{600}
+    \end{center}
+    \textcolor{blue}{Use the colored dots next to the formulas to toggle the graphs on/off.}
+\end{exercise} 
+
+\begin{exercise}
+    At what value of $x$ does $f(x)=e^x-ex$ have a horizontal tangent line? \\
+    \textcolor{blue}{ $f'(x)=e^x-e$\\
+    A horizontal tangent has slope 0, so we need $e^x-e=0$.\\
+    $e^x=e$ means $x=1$.}
+\end{exercise}
+
+begin{exercise}
+    Calculate the derivative for the following functions using rules from our class: 
+        \begin{enumerate}
+            \item $f(x)=(3x^7-\sqrt{x})e^x$\\
+            {\color{blue} $f'(x)=(3x^7-\sqrt{x})e^x+e^x(21x^6-\frac{1}{2}x^{-\frac{1}{2}})$}
+       
+            \item $h(t)=e^t(3t-2)t^{\frac{3}{4}}$\\
+            {\color{blue} $h'(t)=\frac{t^{\frac{3}{4}}(3e^t+e^t(3t-2))-e^t(3t-2)(\frac{3}{4}t^{-\frac{1}{4}})}{t^{\frac{3}{2}}}$}
+       
+            \item $f(t)=\frac{te^{2t}}{e^{3t}}$\\
+            {\color{blue} $=\frac{t}{e^t};\;\; f'(t)=\frac{e^t-te^t}{e^{2t}}$}
+        
+            \item $p(x)=\frac{\sqrt{x}e^x}{x-3}$\\
+            {\color{blue} $p'(x)=\frac{(x-3)(\sqrt{x}e^x+e^x(\frac{1}{2}x^{-\frac{1}{2}}))-\sqrt{x}e^x}{(x-3)^2}$}
+        
+    \end{enumerate}
+\end{exercise}
+
+\begin{exercise}
+    The intensity (in candles) of light seen by the eye when a camera flashes at time t (in milliseconds) is modelled by the equation
+        $$I(t)=\frac{100t}{e^t}.$$
+      
+    Go graph this on Desmos and explore the graph a bit.
+    \begin{center}
+        \graph{100x(e^{-x})}
+    \end{center}
+    %\xmalt A graph of the function $I(t)=\frac{100t}{e^t}$.
+    Calculate 
+    \begin{enumerate}
+        \item[a.] $I'(0.5)$ 
+        {\color{blue}$=30.327$}
+        \item[b.] $I'(2)$
+        {\color{blue} $=-13. 534$}
+        \item[c.] $I'(5)$
+        {\color{blue} $=-2.695$}
+        \item[d.] Explain what these values represent. 
+        {\color{blue} These values are the the instantaneous rate of change in light intensity at the given millisecond.  Thinking about the physical situation, do these values make sense?}
+\end{enumerate}
+
+\end{exercise}
+
+
+\end{document}
+
+
+
