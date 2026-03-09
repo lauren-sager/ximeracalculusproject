@@ -1,0 +1,79 @@
+\documentclass{ximera}
+
+\title{Rates of Change in Applications Solution Guide}
+\author{MATH 425: Calculus I}
+
+\begin{document}
+\begin{abstract}
+    Working with the peers in your group, solve the following problems. Make sure to show and justify all your work. Make sure everyone in the group understands the solution and participates. Be prepared to report your answers to the whole class. 
+\end{abstract}
+\maketitle
+
+
+\begin{exercise}
+    The following graph shows the height $y$ of a mass oscillating at the end of a spring, through one cycle of oscillation.  Sketch the graph of the velocity as a function of time from the graph.
+    \begin{image}
+        \begin{tikzpicture}
+            \begin{axis}[
+                width=10cm,
+                height=6cm,
+                grid=major,
+                grid style={gray!30},
+                xtick={0, 1.5708, 3.1416, 4.7124, 6.2832},
+                xtick style={draw=none},
+                ytick style={draw=none},
+                xticklabels={},
+                yticklabels={},
+                axis lines=middle,
+            ]
+                \addplot[blue, thick, domain=0:2*pi, samples=200] {sin(deg(x))};
+                \addplot[red, thick, domain=0:2*pi, samples=200] {cos(deg(x))};
+            \end{axis}
+        \end{tikzpicture}
+    \end{image}
+    %\xmalt Graph of one period of a $\sin(x)$-looking curve in blue, and its derivative, a $\cos(x)$-looking curve in red.
+    \textcolor{blue}{The graph of derivative of the original curve (in blue) is the red graph.}
+\end{exercise}
+
+\begin{exercise}
+    Suppose that for $x\geq 1000$, the dollar cost of producing $x$ video cameras is $$C(x)=500x-0.003x^2+10^{-8}x^3.$$  Find the rate of change of the average cost per camera, defined as $\dfrac{C(x)}{x}$ at $x=5000$ cameras produced.\\
+    \textcolor{blue}{$\dfrac{C(x)}{x}=\dfrac{5000x-0.003x^2+10^{-8}x^3}{x}$\\
+    $\displaystyle \frac{d}{dx}(\frac{C(x)}{x})=\frac{x(5000-0.006x+30^{-8}x^2)-(5000x-0.003x^2+10^{-8}x^3)}{x^2}$\\
+    or $\displaystyle \frac{d}{dx}(\frac{C(x)}{x})=-0.003+20^{-8}x$\\
+    Evaluated at $x=5000$: The rate of change of average cost per camera at 5000 cameras sold is $-0.003$}
+\end{exercise}
+
+\begin{exercise}
+   A rock thrown vertically upward from the surface of the moon at a velocity of 24 m/sec reaches a height of $s(t)=24t-0.8t^2$ meters in $t$ seconds.
+   \begin{enumerate}
+       \item Find the rock's acceleration and velocity at time $t$.\\
+       \textcolor{blue}{ $v(t)=s'(t)=24-1.6t$ and $a(t)=v'(t)=s''(t)=-1.6$}
+       \item How long does it take the rock to reach its maximum height? \\
+       \textcolor{blue}{ There are multiple ways to approach this problem:
+       \begin{enumerate}
+           \item This position function is a parabola, so we can find the vertex: 
+           $x=-\frac{b}{2a}=-\frac{24}{2(-0.8)}=15$
+           \item OR we can find when the velocity is 0 (comes to an instantaneous standstill before changing direction: \\
+           $v(t)=0=24-1.6t$\\
+           $24=1.6t$\\
+           $t=\frac{24}{1.6}=15$
+       \end{enumerate}
+        The rock reaches its maximum height after 15 seconds.}
+       \item What is the maximum height? \\
+       \textcolor{blue}{ $s(15)=24(15)-0.8(15)^2=225$ meters}
+       \end{enumerate}
+    \end{exercise}
+ 
+\begin{exercise}
+    The power delivered by a battery to an apparatus of resistance $R$ (in ohms) is $P=\dfrac{2.25R}{(R+0.5)^2}$ watts (W).  Find the rate of change of power with respect to resistance for $R=3$ ohms and $R=5$ ohms.\\
+    \textcolor{blue}{$P=\dfrac{2.25R}{R^2+R+0.25}$\\
+    $P'=\dfrac{(R^2+R+0.25)(2.25)-2.25R(2R+1)}{(R^2+R+0.25)^2}$\\
+    $P'(3)=-0.13$ watts per ohm\\
+    $P'(5)=-0.06$ watts per ohm}
+\end{exercise}
+
+Problems adapted from Rogawski et al. \textit{Calculus: Early Transcendentals}, 4th Ed.  Problem 2 from Hass, Weir, Thomas, \textit{University Calculus}, 2nd Ed.
+
+
+
+\end{document}
