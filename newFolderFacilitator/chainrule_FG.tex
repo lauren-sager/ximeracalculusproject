@@ -1,0 +1,99 @@
+\documentclass{ximera}
+
+\title{Chain Rule Activity (with Trig) Facilitator Guide}  %with trig
+\author{MATH 425: Calculus I}
+
+\begin{document}
+\begin{abstract}
+    Working with the peers in your group, solve the following problems. Make sure to show and justify all your work. Make sure everyone in the group understands the solution and participates. Be prepared to report your answers to the whole class. 
+\end{abstract}
+\maketitle
+
+\textbf{Student Learning Objectives}\\
+Students will be able to:
+    \begin{itemize}
+        \item Find derivatives at a point given a table of values for functions and their derivatives.
+        \item Find derivatives of functions in cases where the chain rule is required (composed functions).
+        \item Combine the chain and other derivative rules to find the derivative of functions.
+        \item Find the equation of a tangent line to a function which is a composition of functions.
+    \end{itemize}
+
+\textbf{Prerequisite Knowledge:} This version of the chain rule activity expects that students know the derivative of exponential functions of the form $e^x$ and the six trigonometric functions.  Students are also expected to be familiar with the chain rule.  \\
+
+Some books cover the chain rule with the other rules, while others wait until after trig functions to provide more examples of where the chain rule is useful.  This activity assumes the latter.  
+
+
+\begin{exercise}
+    Given the following table of values, evaluate the given derivatives at the specified $x$.\\
+    \begin{tabular}{c|c|c|c|c}
+        x & $f(x)$ & $g(x)$ & $f'(x)$ & $g'(x)$  \\ \hline
+        1 & -1 & 2 & 0 & $\frac{1}{2}$\\
+        2 & 1 & -3 & -1 & -2 \\
+        3 & 4 & 1 & 3 & -4 
+    \end{tabular}
+    \begin{enumerate}
+        \item[a.] $\frac{d}{dx}[f(g(x))]$ at $x=1$\\
+        \textcolor{blue}{ $=f'(g(x))g'(x)$ at $x=1$: $f'(g(1))g'(1)=f'(2)\frac12=(-1)\frac12=-\frac12$}
+
+        \item[b.] $\frac{d}{dx}[g(f(x))]$ at $x=2$\\
+        \textcolor{blue}{ $=g'(f(x))f'(x)$ at $x=2$: $g'(f(2))f'(2)=g'(1)(-1)=\frac12(-1)=-\frac12$}
+
+        \item[c.] $\frac{d}{dx}[2f(x)+3g(x)]$ at $x=2$\\
+        \textcolor{blue}{ $=2f'(x)+3g'(x)$ at $x=2$: $2f'(2)+3g'(2)=2(-1)+3(-2)=-8$}
+
+        \item[d.] $\frac{d}{dx}[\sqrt{f(x)}]$ at $x=3$\\
+        \textcolor{blue}{ $=\frac12(f(x))^{-\frac12}f'(x)$ at $x=3$: $\frac12(f(3))^{-\frac12}f'(3)=\frac12(4)^{-\frac12}(3)=\frac34$}
+
+        \item[e.] $\frac{d}{dx}[\frac{f(x)}{g(x)}]$ at $x=1$\\
+        \textcolor{blue}{ $=\frac{g(x)f'(x)-f(x)g'(x)}{(g(x))^2}$ at $x=1$: $\frac{g(1)f'(1)-f(1)g'(1)}{(g(1))^2}=\frac{2(0)-(-1)(\frac12)}{2^2}=\frac{\frac{1}{2}}{4}=\frac18$}
+
+        \item[f.] $\frac{d}{dx}[(f(x))^2g(x)]$ at $x=3$\\
+        \textcolor{blue}{ $=(f(x))^2g'(x)+2f(x)f'(x)g(x)$ at $x=3$: \\$(f(3))^2g'(3)+2f(3)f'(3)g(3)=(4)^2(-4)+2(4)(3)(1)=-64+24=-40$}
+
+        \item $\frac{d}{dx}[\sin(f(x))]$ at $x=2$\\
+        \textcolor{blue}{$=\cos(f(x))f'(x)$ at $x=2$: $\cos(f(2))f'(2)=\cos(1)(-1)=-\cos(1)$}
+    \end{enumerate}
+    \textcolor{orange}{Another table problem to help students make sense of the rules without the added complexity of function expressions.  One of students' major issues with these types of problems is trying to evaluate first, then take the derivative.  Point out to students that doing these problems in that order will always lead to a derivative of 0, so we need to derive first and then substitute.}
+\end{exercise}
+
+\begin{exercise}
+Find the derivative of the following functions.  In any cases where the chain rule is required, state the inside and outside functions.\\
+\textcolor{orange}{We will not always require students to write out the inside and outside functions for the chain rule, but as an introduction, this will help students make sense of the rule and take it slow.}
+    \begin{enumerate}
+        \item $\displaystyle f(x)=\sin^2(x)$ \\
+        \textcolor{blue}{ $f'(x)=2\sin(x)\cos(x)$}
+
+        \item $g(x)=\sqrt{x^2-3x+2}$ \\
+        \textcolor{blue}{ $g'(x)=\frac12(x^2-3x+2)^{-\frac12}(2x-3)$}
+
+        \item $\displaystyle h(x)=\frac{\cot(x)}{\sqrt[3]{x}}$\\
+        \textcolor{blue}{ $h'(x)=\frac{x^{\frac13}(-\csc^2(x))-\frac13x^{-\frac23}\cot(x)}{(\sqrt[3]{x})^2}$}
+
+        \item $g(t)=(\frac{t}{3t-1})^{100}$\\
+        \textcolor{blue}{$100(\frac{t}{3t-1})^{99}(\frac{(3t-1)-(3t)}{(3t-1)^2})$}
+        
+        \item $p(x)=\sqrt{1+xe^{-x}}$\\
+        \textcolor{blue}{$\frac{1}{2}(1+xe^{-x})^{-\frac12}(-xe^{-x}+e^{-x})$}
+        
+        \item $\displaystyle h(\theta)=\theta^2\csc(\pi\theta)$\\
+        \textcolor{blue}{ $h'(\theta)=\theta^2(-\pi\csc(\pi\theta)\cot(\pi\theta))+2\theta\csc(\pi\theta)$}
+
+        \item $f(z)=e^{e^z}$\\
+        \textcolor{blue}{ $f'(z)=e^{e^z}e^z$}
+        
+    \end{enumerate}
+
+\end{exercise}
+
+\begin{exercise}
+    Find the equation of the tangent line to the function $f(x)=\sqrt{1+x^2}$ at $x=2$.\\
+    \textcolor{blue}{$f'(x)=\frac12(1+x^2)^{-\frac12}(2x)$\\
+    $f'(2)=\frac{1}{2\sqrt{1+2^2}}(2(2))=\frac{4}{2\sqrt{5}}=\frac{2}{\sqrt{5}}$\\
+    $f(2)=\sqrt{1+2^2}=\sqrt{5}$\\
+    Tangent line: $y-\sqrt{5}=\frac{2}{\sqrt{5}}(x-2)$}
+\end{exercise}
+
+
+
+
+\end{document}
