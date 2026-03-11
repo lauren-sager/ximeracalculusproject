@@ -1,0 +1,112 @@
+\documentclass{ximera}
+
+\title{Inverse Functions Activity Facilitator Guide}
+\author{MATH 425: Calculus I}
+
+\begin{document}
+\begin{abstract}
+    Working with the peers in your group, solve the following problems. Make sure to show and justify all your work. Make sure everyone in the group understands the solution and participates. Be prepared to report your answers to the whole class. 
+\end{abstract}
+\maketitle
+
+\textbf{Student Learning Outcomes}
+Students will be able to:
+\begin{itemize}
+    \item Find the inverse of a function.
+    \item Find the domain and range of a function and its inverse.
+    \item Identify when a function will not have an inverse.
+\end{itemize}
+
+\textbf{Prerequisite Knowledge:} This activity is meant to be a review of inverse functions.  The activity assumes students know how to find an inverse and how the domain and range of a function and its inverse are connected.  The very last problem requires the use of inverse trig functions, but this may be omitted if desired.
+
+\begin{exercise}
+     Do the functions $r(t)$ and $s(t)$ defined by
+        \[r(t)=3-\frac15(t-1)^3\]
+    and 
+        \[s(t)=3-\frac15(t-1)^2\]
+    have corresponding inverse functions? If not, use algebraic reasoning to explain why; if so, demonstrate by using algebra to find a formula for the inverse function.
+    Problem from Boelkins et al., \textit{Active Prelude to Calculus}.\\
+    \textcolor{blue}{For $r(t)$:\\
+    Solving for $t$: $y=3-\frac15(t-1)^3$\\
+    $y-3=-\frac15(t-1)^3$\\
+    $-5(y-3)=(t-1)^3$\\
+    $\sqrt[3]{-5(y-3)}=t-1$\\
+    $\sqrt[3]{-5(y-3)}+1=t$\\
+    Since the cube root of a value is always defined and never ambiguous (no $\pm$ for odd roots), it appears that $r(t)$ has inverse $r^{-1}(t)=\sqrt[3]{-5(t-3)}+1$.\\
+    For $s(t)$:\\
+    Solving for $t$:  $y=3-\frac15(t-1)^2$\\
+    $y-3=-\frac15(t-1)^2$\\
+    $-5(y-3)=(t-1)^2$\\
+    $\pm\sqrt{-5(y-3)}=t-1$\\
+    $\pm\sqrt{-5(y-3)}+1=t$\\
+    Because the square root can be positive or negative, we cannot write the inverse as a single function of $t$. Therefore, it appears that $s(t)$ does not have an inverse function without more restrictions being added. }\\
+    \textcolor{orange}{The relationship here is a tricky one to put into words.  If students are stuck (or have forgotten the +/- part of the square root function), have them explore graphs to see what is different between the two functions.  It may help them to remind them that taking an inverse reflects the graph over the line $y=x$.}
+\end{exercise}
+
+\begin{exercise}
+    The conversion from degrees Celsius to degrees Fahrenheit is given by $F=g(C)=\frac95 C+32$.
+    \begin{enumerate}
+        \item Solve the equation $F=\frac95C+32$ for $C$.  We will call this function $h(C)$.\\
+        \textcolor{blue}{$F-32=\frac95 C$\\
+        $C=\frac59(F-32)$ or $h(C)=\frac59(F-32)$}
+        \item Find the simplest expression that you can for the composite function $j(C)=h(g(C))$.\\
+        \textcolor{blue}{$j(C)=h(\frac95 C+32)=\frac59(\frac95 C+32-32)=C$}
+        \item Find the simplest expression that you can for the composite function $k(F)=g(h(F))$.\\
+        \textcolor{blue}{$k(F)=g(\frac59(F-32))=\frac95(\frac59(F-32))+32=F-32+32=F$}
+        \item Why are the functions $j$ and $k$ so simple?  Explain by discussing how $g$ and $h$ process inputs to generate outputs and what happens when we first execute one followed by the other.\\
+        \textcolor{blue}{$g$ and $h$ take an input ($F$ or $C$ respecitvely), and output the opposite temperature scale ($C$ and $F$ respectively).  When we compose these functions, we should expect that they undo each other, since we are taking $F\rightarrow C \rightarrow F$ or $C\rightarrow F \rightarrow C$.  This is why we get the simple outputs of $j(C)=C$ and $k(F)=F$.}
+    \end{enumerate}
+    \textcolor{orange}{This function is relatively straightforward, and some students may even have the two versions memorized.  The main goal here is to have students think through what is happening when we compose a function with its inverse and why the output is just the original value.}
+    Problem from Boelkins et al., \textit{Active Prelude to Calculus}.
+\end{exercise}
+
+
+\begin{exercise}
+    Find the inverse of the following functions.  Give the domain and range of the inverse. 
+    \begin{enumerate}
+    \item $f(x)=\frac{4x-1}{2x+3}$\\
+    \textcolor{blue}{ Swap x and y: $x=\frac{4y-1}{2y+3}$\\
+    Solve for $y$: $x(2y+3)=4y-1$\\
+     $2xy+3x=4y-1$\\ 
+     $2xy-4y=-1-3x$\\
+     $y(2x-4)=-1-3x$\\
+    $f^{-1}(x)=\frac{-1-3x}{2x-4}$\\
+    Domain of $f(x)$=Range of $f^{-1}(x)$: $2x+3\neq 0$ when $x\neq -\frac32$ (all real numbers except $x=-\frac32$)\\
+    Domain of $f^{-1}(x)$: $2x-4\neq0$ when $x\neq 2$ (all real numbers except $x=2$)}
+
+    \item $g(x)=\sqrt{x^2-1}$\\
+    \textcolor{blue}{ Swap xand y: $x=\sqrt{y^2-1}$\\
+    Solve for y: $x^2=y^2-1$\\ 
+    $x^2+1=y^2$\\
+    $f^{-1}(x)=\pm \sqrt{x^2+1}$\\
+    Domain of $f(x)$=Range of $f^{-1}(x)$: $x^2\geq 1$ so $\sqrt{x^2}=|x|\geq 1$ or $-1\leq x$ and $x\geq 1 $\\
+    All real numbers less than or equal to -1 or greater than or equal to 1\\
+    Domain of $f^{-1}(x)$: $x^2+1\geq 0$ so $\sqrt{x^2}=|x|\geq 1$ or $-1<\leq x$ and $x\geq 1$\\
+     All real numbers less than or equal to -1 or greater than or equal to 1}
+    
+    \item $h(x)=\frac{2}{x^2+9}$\\
+    \textcolor{blue}{ Swap x and y: $x=\frac{2}{y^2+9}$\\
+    $x(y^2+9)=2$\\
+    $xy^2=2-9x$\\
+    $y^2=\frac{2-9x}{x}$\\
+    $y=\pm\sqrt{ \frac{2-9x}{x}}$\\
+        Domain of $f(x)$=Range of $f^{-1}(x)$: All real numbers\\
+    Domain of $f^{-1}(x)$: $x\neq 0$ and $2-9x$ and $x$ must share the same sign\\
+    $2-9x>0$ when $x<\frac29$.  The signs only match when $0<x\leq \frac29$}
+    
+    \item $g(x)=\sin(3x-1)$\\
+    \textcolor{blue}{ Swap x and y: $x=\sin(3y-1)$\\
+    $\arcsin(y)=3y-1$\\
+    $\arcsin(x)+1=3y$\\
+    $\frac{\arcsin(x)+1}{3}=y$\\
+    Domain of $g(x)$=range of $g^{-1}(x)$: All real numbers\\
+    Domain of $g^{-1}(x)$=range of $g(x)$: $-\frac{\pi}{2}\leq 3x-1\leq \frac{\pi}{2}$\\
+    $1-\frac{\pi}{2}\leq 3x\leq 1+\frac{\pi}{2}$ \\
+    $\frac{1-\frac{\pi}{2}}{3}\leq x\leq  \frac{1+\frac{\pi}{2}}{3}$ }
+    \end{enumerate}
+\end{exercise}
+
+
+
+
+\end{document}
