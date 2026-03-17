@@ -1,0 +1,54 @@
+\documentclass{ximera}
+
+\title{Inverse Trigonometric Functions Activity Solution Guide}
+\author{MATH 425: Calculus I}
+
+\begin{document}
+\begin{abstract}
+    Working with the peers in your group, solve the following problems. Make sure to show and justify all your work. Make sure everyone in the group understands the solution and participates. Be prepared to report your answers to the whole class. 
+    %A default abstract of an almost empty course.
+\end{abstract}
+\maketitle
+
+\textbf{Student Learning Objectives}\\
+Students will be able to:
+    \begin{itemize}
+        \item Find derivatives of inverse trig functions in combination with other functions (composition, product, etc.)
+        \item Use inverse trig functions to find tangent lines with a particular slope on trig functions.
+    \end{itemize}
+
+\textbf{Prerequisite Knowledge:} This activity expects that students know the formulas for the derivatives of the six inverse trig functions, plus all derivative rules. \\
+
+This is a very short activity that can be appended to another activity for additional practice on the inverse trig functions.
+
+\begin{exercise}
+    Find the derivative of each of the following functions:
+    \begin{enumerate}
+        \item $f(x)=\arcsin(x^2-3)$\\
+        \textcolor{blue}{$f'(x)=\frac{2x}{\sqrt{1-(x^2-3)^2}}$}
+         \item $g(x)=\arctan(x)\cos(x)$\\
+         \textcolor{blue}{$g'(x)=\frac{\cos(x)}{1+x^2}-\arctan(x)\sin(x)$}
+         \item $h(x)=\operatorname{arcsec}(e^x)$\\
+         \textcolor{blue}{$h'(x)=\frac{e^x}{|e^x|\sqrt{(e^x)^2-1}}$}
+         \item $f(x)=5x^2\arcsin(x^3)+\arccos(x^4)$\\
+         \textcolor{blue}{$f'(x)=10x\arcsin(x^3)+\frac{5x^5}{\sqrt{1-x^6}}-\frac{4x^3}{\sqrt{1-x^8}}$}
+         \item $g(x)=\sin(\arcsin(x))$ (Hint: there are multiple ways to think about this problem: use the chain rule first, then check your answer by thinking about the composition of the functions.)\\
+         \textcolor{blue}{$g'(x)=\cos(\arcsin(x))(\frac{1}{\sqrt{1-x^2}})=\sqrt{1-x^2}(\frac{1}{\sqrt{1-x^2}})=1$.  Note that we could have also just said that $\sin(\arcsin(x))=x$, so $g'(x)=1$.}\\
+        \textcolor{orange}{The $\cos(\arcsin(x))=\sqrt{1-x^2}$ in the simplification step comes from making a triangle with opposite side from angle $\theta$ labelled $x$ and hypotenuse 1 and taking $\cos(\theta)=\frac{\sqrt{1-x^2}}{1}$.  Alternately, if students did notice $\sin(\arcsin(x))=1$, then $\cos^2(x)=1-\sin^2(\theta)=1-x^2$, leading to $\cos(x)=\sqrt{1-x^2}$ ($\cos(x)$ is positive on the range of $\arcsin(x)$.)}
+    \end{enumerate}
+\end{exercise}
+
+\begin{exercise}
+    Suppose that $f(x)=\sin(x)$.  Find any $x$ with $0\leq x\leq \pi$ such that the tangent line to $f(x)$ at $x$ has slope $-\frac{1}{\sqrt{2}}$.  Write the equation of this tangent at this $x$.\\
+    \textcolor{blue}{$f'(x)=\cos(x)$\\
+      We want $f'(x)=\cos(x)=-\frac{1}{\sqrt{2}}$ or $\arccos(-\frac{1}{\sqrt{2}})=x$.  This happens at $x=\frac{3\pi}{4}$. \\
+      $\sin(\frac{3\pi}{4})=\frac{1}{\sqrt{2}}$\\
+      The equation of the tangent line is $y-\frac{1}{\sqrt{2}}=-\frac{1}{\sqrt{2}}(x-\frac{3\pi}{4})$.}\\
+      \textcolor{orange}{Technicially, the $\arccos$ function is not required for this problem, but it makes a good connection to what these functions actually do.  Many students begin to mix up the inverse trig functions and their derivatives because they lack the foundational understanding of what inverse trig functions do.  Explicitly using them here is a good way to connect this and see how it differs from a derivative.}
+\end{exercise}
+
+
+
+
+
+\end{document}

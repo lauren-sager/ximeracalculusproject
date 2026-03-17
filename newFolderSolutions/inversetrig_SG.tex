@@ -1,0 +1,42 @@
+\documentclass{ximera}
+
+\title{Inverse Trigonometric Functions Activity Solution Guide}
+\author{MATH 425: Calculus I}
+
+\begin{document}
+\begin{abstract}
+    Working with the peers in your group, solve the following problems. Make sure to show and justify all your work. Make sure everyone in the group understands the solution and participates. Be prepared to report your answers to the whole class. 
+    %A default abstract of an almost empty course.
+\end{abstract}
+\maketitle
+
+
+\begin{exercise}
+    Find the derivative of each of the following functions:
+    \begin{enumerate}
+        \item $f(x)=\arcsin(x^2-3)$\\
+        \textcolor{blue}{$f'(x)=\frac{2x}{\sqrt{1-(x^2-3)^2}}$}
+         \item $g(x)=\arctan(x)\cos(x)$\\
+         \textcolor{blue}{$g'(x)=\frac{\cos(x)}{1+x^2}-\arctan(x)\sin(x)$}
+         \item $h(x)=\operatorname{arcsec}(e^x)$\\
+         \textcolor{blue}{$h'(x)=\frac{e^x}{|e^x|\sqrt{(e^x)^2-1}}$}
+         \item $f(x)=5x^2\arcsin(x^3)+\arccos(x^4)$\\
+         \textcolor{blue}{$f'(x)=10x\arcsin(x^3)+\frac{5x^5}{\sqrt{1-x^6}}-\frac{4x^3}{\sqrt{1-x^8}}$}
+         \item $g(x)=\sin(\arcsin(x))$ (Hint: there are multiple ways to think about this problem: use the chain rule first, then check your answer by thinking about the composition of the functions.)\\
+         \textcolor{blue}{$g'(x)=\cos(\arcsin(x))(\frac{1}{\sqrt{1-x^2}})=\sqrt{1-x^2}(\frac{1}{\sqrt{1-x^2}})=1$.  Note that we could have also just said that $\sin(\arcsin(x))=x$, so $g'(x)=1$.}
+    \end{enumerate}
+\end{exercise}
+
+\begin{exercise}
+    Suppose that $f(x)=\sin(x)$.  Find any $x$ with $0\leq x\leq \pi$ such that the tangent line to $f(x)$ at $x$ has slope $-\frac{1}{\sqrt{2}}$.  Write the equation of this tangent at this $x$.\\
+    \textcolor{blue}{$f'(x)=\cos(x)$\\
+      We want $f'(x)=\cos(x)=-\frac{1}{\sqrt{2}}$ or $\arccos(-\frac{1}{\sqrt{2}})=x$.  This happens at $x=\frac{3\pi}{4}$. \\
+      $\sin(\frac{3\pi}{4})=\frac{1}{\sqrt{2}}$\\
+      The equation of the tangent line is $y-\frac{1}{\sqrt{2}}=-\frac{1}{\sqrt{2}}(x-\frac{3\pi}{4})$.}
+\end{exercise}
+
+
+
+
+
+\end{document}
