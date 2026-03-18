@@ -1,0 +1,117 @@
+\documentclass{ximera}
+
+\title{Logarithm Review Activity Solution Guide}
+\author{MATH 425: Calculus I}
+
+\begin{document}
+\begin{abstract}
+   Working with the peers in your group, solve the following problems. Make sure to show and justify all your work. Make sure everyone in the group understands the solution and participates. Be prepared to report your answers to the whole class. 
+\end{abstract}
+\maketitle
+
+\textbf{Student Learning Outcomes}
+Students will be able to: 
+    \begin{itemize}
+        \item Convert between logarithmic and exponential forms.
+        \item Solve exponential and logarithmic equations.
+        \item Solve for constants in exponential models using given data.
+    \end{itemize}
+
+\textbf{Prerequisite Knowledge:} This activity is meant to be a review of logarithms and logarithmic equations.  The activity expects that students know logarithmic and exponent properties, and strategies for solving both types of equations.  Problem 2 (especially part (b)) may be more unfamiliar to students.\\
+
+I expect that problem 2 will be the problem that takes the longest.  Problems 1 and 3 should be relatively rote, and problem 4 is more explaining than calculating.
+
+\begin{exercise}
+    Rewrite the following logarithmic expressions as exponential functions, and exponential functions as logarithmic functions.  In each case, your answer should be an equation with a single logarithm or a single exponential function on one side of the equation.
+    \begin{enumerate}
+        \item $\log_5 25=2$ \textcolor{blue}{$5^2=25$}
+        \item $\log_2 8=3$ \textcolor{blue}{$2^3=8$}
+        \item $\log_{10} 1000=3$ \textcolor{blue}{$10^3=1000$}
+        \item $e^3\approx 20.0855$ \textcolor{blue}{$\ln(20.0855)\approx 3$}
+        \item $10^4=10000$ \textcolor{blue}{$\log 10000=4$}
+    \end{enumerate}
+    \textcolor{orange}{The hope is that these problems are easy for students. The goal of including them here is to reinforce the connection between a log and exponential expression.}
+\end{exercise}
+
+
+\begin{exercise}
+    For a population that is growing exponentially according to a model of the form $P(t)=Ae^{kt}$, the doubling time is the amount of time that it takes the population to double.  For each population described below, assume the function is growing exponentially according to the model $P(t)=Ae^{kt}$, where $t$ is measured in years.  
+    \begin{enumerate}
+        \item Suppose a certain population initially has 100 members and doubles after 3 years.  What are the values of $A$ and $k$ in the model?\\
+        \textcolor{blue}{$P(0)=100$, so $Ae^0=100$ or $A=100$.\\
+        $P(3)=200$ or $100e^{3k}=200$ so $e^{3k}=2$.  \\
+        We use natural logs to solve: $ln(e^{3k})=\ln(2)$, or $3k=ln(2)$.  Thus $k=\frac{\ln(2)}{3}$.}
+        \item A different population is observed to satisfy $P(4)=250$ and $P(11)=500$.  What is the population's doubling time?  When will 2000 members of the population be present?\\
+        \textcolor{blue}{Note that 500 is double 250, so the doubling time is $11-4=7$ years.\\   
+        We know $P(4)=250=Ae^{4k}$ and $P(11)=500=Ae^{11k}$.  We have two equations with two unknowns, so we can solve for $A$ and $k$.\\
+        Solve an equation for A: $A=\frac{250}{e^{4k}}$\\
+        Sub into the other equation: $500=(\frac{250}{e^{4k}})e^{11k}$\\
+        $500=250e^{7k}$\\
+        $2=e^{7k}$\\
+        $ln(2)=7k$\\
+        $k=\frac{\ln(2)}{7}$\\
+        $A=\frac{250}{e^{4k}}=\frac{250}{e^{4\left(\frac{\ln(2)}{7}\right)}}$\\
+        To solve for the time when the population is 2000, $2000=\frac{250}{e^{4\left(\frac{\ln(2)}{7}\right)}}e^{\frac{\ln(2)}{7}t}$\\
+        $2000=250e^{\frac{\ln(2)}{7}(t-4)}$\\
+        $8=e^{\frac{\ln(2)}{7}(t-4)}$\\
+        $ln(8)=\frac{\ln(2)}{7}(t-4)$\\
+        $t-4=\frac{7\ln(8)}{\ln(2)}$\\
+        $t=\frac{7\ln(8)}{\ln(2)}+4=25$ years\\
+        Note: there are other correct ways to solve this problem!  Don't assume your route is incorrect if it does not match this one.  Ask your TA, LA or instructor if you have questions about your solution.} \\
+        \textcolor{orange}{There are multiple routes to solving this problem.  This is the most literal way, but note that the population doubles in 7 years, which leads us to our $k$ (although we don't see that until part (d)). Once students have $k$, they can realistically get how long it would take 250 to double 3 times (21 years), and then add the 4 years it took to get 250.  If groups have different methods, encourage students to explain their reasoning to each other.}
+        \item Another population is observed to have doubling time $t=21$.  What is the value of $k$ in the model?\\
+        \textcolor{blue}{$2A=Ae^{21k}$\\
+        $2=e^{21k}$\\
+        $\ln(2)=21k$\\
+        $k=\frac{\ln(2)}{21}$}
+        \item How is $k$ related to the doubling time, regardless of how long the doubling time is?\\
+        \textcolor{blue}{If $D$ is doubling time, then $k=\frac{\ln(2)}{D}$.}
+    \end{enumerate}
+\end{exercise}
+
+\begin{exercise}
+    \begin{enumerate}
+        \item Find the solution of the exponential equation $1000(1.04)^{2t}=50000$ in terms of logarithms. (Keep your answer exact.)\\
+        \textcolor{blue}{$1.04^{2t}=\frac{50000}{1000}=50$\\
+        $\ln(1.04^{2t})=\ln(50)$\\
+        $2t\ln(1.04)=\ln(50)$\\
+        $t=\frac{\ln(50)}{2\ln(1.04)}$}
+        \item Find the solution to the logarithmic equation $2-\ln(3-x)=0$ rounded to three decimal places.\\
+        \textcolor{blue}{$2=\ln(3-x)$\\
+        $e^{2}=e^{\ln(3-x)}$\\
+        $3-x=e^{2}$\\
+        $-x=e^{2}-3$\\
+        $x=3-e^{2}$
+        $x\approx -4.389$}
+    \end{enumerate}
+    
+\end{exercise}
+
+\begin{exercise}
+    Our goal in this exercise is to investigate the product property for logarithms.
+    \begin{enumerate}
+        \item Write $10^x\cdot 10^y$ as $10$ raised to a single power.  That is, complete the equation \[10^x\cdot 10^y = 10^{\square}\]
+        by filling in the box with an appropriate expression involving $x$ and $y$.\\
+        \textcolor{blue}{$\square=x+y$\\
+        $10^x\cdot 10^y = 10^{x+y}$}
+        \item What is the simplest way to write $\log_{10}10^x$?  What about the simplest equivalent expression for $\log_{10}10^y$?\\
+        \textcolor{blue}{$\log_{10}10^x=x$\\
+        $\log_{10}10^y=y$}
+        \item Explain why each of the follwoing three equal signs is valid in the sequence of inequalities:
+        \begin{align}
+            \log_{10}(10^x\cdot 10^y) & =\log_{10}(10^{x+y})\\
+            &=x+y\\
+            &= \log_{10}(10^x) + \log_{10}(10^y)\\
+        \end{align}
+        \textcolor{blue}{Equality 1: this is the sum/product property for exponents (as we saw in (a)).\\
+        Equality 2: simplification of the log: ``what power of 10 gives $10^{x+y}$?'' has answer $x+y$\\
+        Equality 3: going backwards from equality 2, or how we simplified in (b).}
+        \item Suppose that $a$ and $b$ are positive real numbers so we can think of $a$ as $10^x$ for some real number $x$ and $b$ as $10^y$ for some real number $y$. That is, $a=10^x$ and $b=10^y$. What does our work in (c) tell us about $\log_{10}(ab)$?\\
+        \textcolor{blue}{This shows that the log product property is true: $\log_{10}(ab)=\log_{10}(a)+\log_{10}(b)$ }
+    \end{enumerate}
+    \textcolor{orange}{This problem is essentially walking students through a ``proof'' of the product property for logarithms.}
+\end{exercise}
+
+Problems 2-4 from Boelkins, et al., \textit{Active Prelude to Calculus}.
+
+\end{document}
