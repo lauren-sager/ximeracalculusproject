@@ -1,0 +1,71 @@
+\documentclass{ximera}
+
+\title{Related Rates Activity Solution Guide}
+\author{MATH 425: Calculus I}
+
+\begin{document}
+\begin{abstract}
+   Working with the peers in your group, solve the following problems. Make sure to show and justify all your work. Make sure everyone in the group understands the solution and participates. Be prepared to report your answers to the whole class. 
+\end{abstract}
+\maketitle
+
+
+Consider the following related rates problem:\\
+\begin{example}
+    The \textbf{surface} of a spherical snowball is melting at a constant rate of $1cm^2/min$.  How quickly is the volume changing when the radius is 2 cm?\\
+\end{example}
+
+This problem is somewhat awkward, because it involves two rates of change which are not directly related by a familiar formula.  This group exercise will explore the problem using two different procedures which should lead to the same result.  This is a good example which demonstrates that as mathematics becomes more complex, you may have access to multiple tools which can help find solutions, but different tools may feel more or less effective or natural to you.\\
+Your group will be assigned to do \textit{either} Procedure A \textit{or} Procedure B.  Please follow the instructions and do the procedure assigned to you.
+
+\begin{exercise} \textbf{Procedure A:}
+\begin{enumerate}
+    \item Since the problem involves a sphere, recall or look up the geometric formulas for the surface area and the volume of the sphere.  Using notation with your chosen formula, translate each given value in the problem into the correct corresponding value or derivative.\\
+     \textcolor{blue}{ $V=\frac{4}{3}\pi r^3$ and $S=4\pi r^2$.\\
+     $r=2 cm$, $\frac{dS}{dt}=-1 cm^2/min$}
+     
+    \item Using the original problem statement, determine the rate of change which is required to answer the question.  Select the geometric formula involving this quantity, and use implicit differentiation to deduce a formula for the desired rate.\\
+    \textcolor{blue}{ $\frac{dV}{dt}=\frac{4}{3}\pi(3r^2)\frac{dr}{dt}=4\pi r^2\frac{dr}{dt}$}
+    \item Write a list of all the quantities needed to specify the answer we need.\\
+    \textcolor{blue}{ $\frac{dr}{dt}=?$, $r=2$, $\frac{dv}{dt}=?$}
+    \item Identify the rate of change which is given in the problem statement, and use implicit differentiation to connect that rate of change to another. \\
+    \textcolor{blue}{ $\frac{dS}{dt}=8\pi r\frac{dr}{dt}$ or $\frac{dr}{dt}=\frac{\frac{dS}{dt}}{8\pi r}$ so $\frac{dr}{dt}=\frac{-1}{8\pi(2)}=-\frac{1}{16\pi}$}
+    \item Use algebra and substitution to find all of the necessary values to deduce the answer to the problem. \\
+    \textcolor{blue}{ $\frac{dV}{dt}=4\pi(2)^2(-\frac{1}{16\pi})=-1cm^3/min$}
+    \item Find a group which used Procedure B and share your steps with them.
+\end{enumerate}
+
+\end{exercise}
+
+
+\begin{exercise} \textbf{Procedure B:}
+\begin{enumerate}
+    \item Since the problem involves a sphere, recall or look up the geometric formulas for the surface area and the volume of the sphere.  Using notation with your chosen formula, translate each given value in the problem into the correct corresponding value or derivative.\\
+    \textcolor{blue}{ $V=\frac{4}{3}\pi r^3$ and $S=4\pi r^2$\\
+    $r=2 cm$, $\frac{dS}{dt}=-1 cm^2/min$}
+    
+    \item Using the original problem statement, determine the rate of change which is required to answer the question and the rate of change which is given.\\
+    \textcolor{blue}{ $\frac{dS}{dt}=-1$ and $\frac{dV}{dt}$ is the unknown.}
+    
+    \item Solve one of the geometric formulae for $r$ so that you can combine the formulae to obtain either $V=f(S)$ or $S=g(V)$. Use implicit differentiation on this new formula to relate the known and unknown rates of change.\\
+    \textcolor{blue}{$S=4\pi r^2$, so $r^2=\frac{S}{4\pi}$ or $r=\sqrt{\frac{S}{4\pi}}=\frac{S^\frac12}{2\sqrt{\pi}}$\\
+    $V=\frac{4}{3}\pi(\frac{S^{\frac12}}{2\sqrt{\pi}})^3=\frac{1}{6}\pi^{-\frac12}S^{\frac32}$\\
+    $\frac{dV}{dt}=\frac{1}{6\sqrt{\pi}}(\frac32S^{\frac12})\frac{dS}{dt}=\frac{S^{\frac12}}{4\sqrt{\pi}}\frac{dS}{dt}$}
+    
+    \item Make a list of all the quantities you need to find to solve for the desired rate of change.\\
+    \textcolor{blue}{ $\frac{dS}{dt}=-1$, $S=4\pi(2)^2=16\pi$, $\frac{dv}{dt}=?$}
+    
+    
+    
+    \item Use algebra and substitution to find all of the necessary values to deduce the answer to the problem.  \\
+    \textcolor{blue}{$\frac{dV}{dt}=\frac{(16\pi)^{\frac12}}{4\sqrt{\pi}}(-1)=-1 cm^3/min$}
+    
+    \item Find a group which used Procedure A and share your steps with them.
+\end{enumerate}
+\end{exercise}
+
+\end{document}
+
+
+
+\end{document}
