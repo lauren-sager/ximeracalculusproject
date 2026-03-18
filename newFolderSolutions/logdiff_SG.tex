@@ -1,0 +1,74 @@
+\documentclass{ximera}
+
+\title{Logarithmic Differentiation Activity Solution Guide}
+\author{MATH 425: Calculus I}
+
+\begin{document}
+\begin{abstract}
+   Working with the peers in your group, solve the following problems. Make sure to show and justify all your work. Make sure everyone in the group understands the solution and participates. Be prepared to report your answers to the whole class. 
+\end{abstract}
+\maketitle
+
+
+\begin{exercise}
+    Use logarithmic differentiation to find the derivative of the following functions: 
+    \begin{enumerate}
+        \item $\displaystyle f(x)=\sqrt{x(x+1)}$\\
+    \textcolor{blue}{ $\ln(y)=\ln(\sqrt{x(x+1)})=\frac12\left(\ln(x)+\ln(x+1)\right)$\\
+    Take the derivative of both sides:\\
+    $\frac{1}{y}y'=\frac12\left(\frac{1}{x}+\frac{1}{x+1}\right)$\\
+    $y'=\frac12 y\left(\frac{1}{x}+\frac{1}{x+1}\right)$\\
+    $y'=\frac12 \left(\sqrt{x(x+1)}\right)\left(\frac{1}{x}+\frac{1}{x+1}\right)$}
+    
+    \item $\displaystyle g(x)=\frac{e^{6x}\sqrt{x^6-14x}}{(\sqrt{3x-4})^5}$\\
+    \textcolor{blue}{ \begin{align}
+        \ln(y)&=\ln\left(\frac{e^{6x}\sqrt{x^6-14x}}{(\sqrt{3x-4})^5}\right)=\ln(e^{6x})+\frac12\ln(x^6-14x)-\frac52\ln(3x-4)\nonumber\\
+        &=6x+\frac12\ln(x^6-14x)-\frac52\ln(3x-4)\nonumber
+    \end{align}
+    Take the derivative of both sides: \\
+    $\frac{1}{y}y'=6+\frac{1}{2(x^6-14x)}(6x^5-14)-\frac{5}{2(3x-4)}(3)$\\
+    $y'=y\left(6+\frac{1}{2(x^6-14x)}(6x^5-14)-\frac{5}{2(3x-4)}(3)\right)$\\
+    $y'=\left(\frac{e^{6x}\sqrt{x^6-14x}}{(\sqrt{3x-4})^5}\right)\left(6+\frac{1}{2(x^6-14x)}(6x^5-14)-\frac{5}{2(3x-4)}(3)\right)$}
+    
+    \item $\displaystyle h(x)=x^{(3^x)}$\\
+    \textcolor{blue}{ $\ln(y)=\ln(x^{(3^x)})=3^x\ln(x)$\\
+    Take the derivative of both sides: \\
+    $\frac1{y}y'=3^x\left(\frac1x\right)+3^x\ln(3)\ln(x)$\\
+    $y'=y\left(3^x\left(\frac1x\right)+3^x\ln(3)\ln(x)\right)$\\
+    $y'=\left(x^{(3^x)}\right)\left(3^x\left(\frac1x\right)+3^x\ln(3)\ln(x)\right)$\\}
+    
+    \item $\displaystyle f(x)=\frac{x(x^2-4x+3)^7}{(3x-1)^2}$\\
+    \textcolor{blue}{ 
+    \begin{align}
+    \ln(y)&=\ln\left(\frac{x(x^2-4x+3)^7}{(3x-1)^2}\right)\nonumber\\
+    &=\ln(x)+7\ln(x^2-4x+3)-2\ln(3x-1) \nonumber
+    \end{align}
+    Take the derivative of both sides:\\
+    $\frac{1}{y}y'=\frac{1}{x}+7\left(\frac{1}{x^2-4x+3}\right)(2x-4)-2\left(\frac{1}{3x-1}\right)(3)$\\
+    $y'=y\left(\frac{1}{x}+7\left(\frac{1}{x^2-4x+3}\right)(2x-4)-2\left(\frac{1}{3x-1}\right)(3)\right)$\\
+    $y'=\left(\frac{x(x^2-4x+3)^7}{(3x-1)^2}\right)\left(\frac{1}{x}+7\left(\frac{1}{x^2-4x+3}\right)(2x-4)-2\left(\frac{1}{3x-1}\right)(3)\right)$}
+
+    
+    \item $\displaystyle g(\theta)=\frac{\theta\sin(\theta)}{\sqrt{\sec(\theta)}}$\\
+    \textcolor{blue}{ $\ln((y)=\ln\left(\frac{\theta\sin(\theta)}{\sqrt{\sec(\theta)}}\right)=\ln(\theta)+\ln(\sin(\theta))-\frac12\ln(\sec(\theta))$\\
+    Take the derivative of both sides:\\
+    $\frac{1}{y}y'=\frac{1}{\theta}+\frac{1}{\sin(\theta)}(\cos(\theta))-\frac{1}{2}\frac{1}{\sec(\theta)}(\sec(\theta)\tan(\theta))$\\
+    $y'=y\left(\frac{1}{\theta}+\frac{1}{\sin(\theta)}(\cos(\theta))-\frac{1}{2}\frac{1}{\sec(\theta)}(\sec(\theta)\tan(\theta))\right)$\\
+    $y'=\left(\frac{\theta\sin(\theta)}{\sqrt{\sec(\theta)}}
+\right)\left(\frac{1}{\theta}+\frac{1}{\sin(\theta)}(\cos(\theta))-\frac{1}{2}\frac{1}{\sec(\theta)}(\sec(\theta)\tan(\theta))\right)$}
+
+
+    \item $\displaystyle h(x)=x^{\sqrt{x}}$   \\
+    \textcolor{blue}{ $\ln(y)=\ln(x^{\sqrt{x}})=\sqrt{x}\ln(x)$\\
+    $\frac{1}{y}y'=\sqrt{x}\left(\frac{1}{x}\right)+\frac{1}{2}x^{-\frac12}\ln(x)$\\
+    $y'=y\left(\sqrt{x}\left(\frac{1}{x}\right)+\frac{1}{2}x^{-\frac12}\ln(x)\right)$\\
+    $y'=x^{\sqrt{x}}\left(\sqrt{x}\left(\frac{1}{x}\right)+\frac{1}{2}x^{-\frac12}\ln(x)\right)$} 
+    \end{enumerate}
+
+\end{exercise}
+
+
+
+
+
+\end{document}
