@@ -1,0 +1,87 @@
+\documentclass{ximera}
+
+\title{Related Rates 2 Activity Facilitator Guide}
+\author{MATH 425: Calculus I}
+
+\begin{document}
+\begin{abstract}
+   Working with the peers in your group, solve the following problems. Make sure to show and justify all your work. Make sure everyone in the group understands the solution and participates. Be prepared to report your answers to the whole class. 
+\end{abstract}
+\maketitle
+
+\textbf{Student Learning Outcomes:}
+Students will be able to:
+    \begin{itemize}
+        \item Set up and solve related rates problems.
+        \item Interpret the meaning of derivatives in context.
+    \end{itemize}
+
+\textbf{Prerequisite Knowledge:} The related rates problems included use the Pythagorean Theorem, trig function definitions and the surface area of a sphere formulas, so students will need to know or look up these formulas.  Additionally, students will need to set up formulas for the given situation and take derivatives implicitly. 
+
+\textbf{Note:} This is a more ``straight forward'' related rates activity than the versioned activity.  Students may have enough time after completing the versioned activity to finish several of these problems, or this activity can be used on its own.
+
+\begin{exercise}
+    A large snowball is melting so that its radius is decreasing at the rate of 4 cm per hour.  How fast is the surface area decreasing at the moment when the radius is 7 cm? \\
+    \textcolor{blue}{Surface area of a sphere: $S=4\pi r^2$\\
+    $\frac{dS}{dt}=?$\\
+    $\frac{dr}{dt}=$-4 cm/hour\\
+    $r=7$ cm\\
+    Derivative: $\frac{dS}{dt}=8\pi r\frac{dr}{dt}$\\
+    Subbing in: $\frac{dS}{dt}=8\pi(7)(-4)=-224\pi$ cm$^2$/hour}
+\end{exercise}
+    
+\begin{exercise}
+    A traffic patrol helicopter is stationary a quarter of a mile directly above a highway.  Its radar detects a car whose line-of-sight distance from the helicopter is half a mile and is increasing at a rate of 57 mph.  Is the car exceeding the highway's speed limit of 60 mph?\\
+    \textcolor{blue}{Pythagorean theorem: $x^2+y^2=z^2$\\
+    $\frac{dy}{dt}=0$ mph (the height of the helicopter is stationary)\\
+    $\frac{dx}{dt}=?$ \\
+    $\frac{dz}{dt}=57$ mph\\
+    Derivative: $2x\frac{dx}{dt}+2y\frac{dy}{dt}=2z\frac{dz}{dt}$\\
+    Subbing in: $y=\frac{1}{4}$, $x=\frac{\sqrt{3}}{4}$ (found using Pythagorean theorem), $z=\frac{1}{2}$\\
+    $2(\frac{\sqrt{3}}{4})\frac{dx}{dt}+2(\frac{1}{4})(0)=2(\frac{1}{2})(57)$\\
+    $\frac{\sqrt{3}}{2}\frac{dx}{dt}=57$\\
+    $\frac{dx}{dt}=\frac{57}{\frac{\sqrt{3}}{2}}\approx 65.81$ mph}
+\end{exercise}
+   
+\begin{exercise}  
+    A dinghy is pulled toward a dock by a rope from the bow through a ring on the dock 6ft above the bow.  The rope is hauled in at rate of 2 ft/sec.  
+    \begin{enumerate}
+        \item How fast is the boat approaching the dock when 10 ft of rope are out?\\
+        \textcolor{blue}{\color{blue}Pythagorean Theorem: $x^2+y^2=z^2$\\
+        $\frac{dx}{dt}=?$\\
+        $\frac{dy}{dt}=0$ (the distance between the ring and the height of the bow isn't changing)\\
+        $\frac{dz}{dt}=-2$ ft/s\\
+        Derivative: $2x\frac{dx}{dt}+2y\frac{dy}{dt}=2z\frac{dz}{dt}$\\
+        Subbing in: $x=8$ ft (found using Pythagorean Theorem); $y=6$ ft; $z=10$ ft\\
+        $2(8)\frac{dx}{dt}+2(6)(0)=2(10)(-2)$\\
+        $16\frac{dx}{dt}=-40$\\
+        $\frac{dx}{dt}=-\frac{40}{16}=-\frac{5}{2}$ ft/sec}
+
+        \item At what rate is the angle $\theta$ between the rope and the vertical changing at this instant?\\
+        \textcolor{blue}{\color{blue} Use a trig definition $\cos(\theta)=\frac{y}{z}$\\
+        $\frac{dy}{dt}=0$ (still not changing)\\
+        $\frac{dz}{dt}=-2$ ft/s\\
+        $\frac{d\theta}{dt}=?$\\
+        Derivative: $-\sin(\theta)\frac{d\theta}{dt}=\frac{z\frac{dy}{dt}-y\frac{dz}{dt}}{z^2}$\\
+        Subbing in: $z=10$; $\theta=\arccos(\frac{3}{5})$ or more simply, $-\sin(\theta)=-\frac{4}{5}$ (we can figure this out from knowing all 3 sides); $y=6$\\
+        $-\frac{4}{5}\frac{d\theta}{dt}=\frac{10(0)-6(-2)}{10^2}$\\
+        $\frac{d\theta}{dt}=\frac{12}{100}(-\frac{5}{4})=-\frac{3}{20}$ radians/s} 
+     \end{enumerate}
+\end{exercise}   
+
+\begin{exercise}
+    A rocket fired straight up is being tracked by a radar station 3 miles from the launching pad.  If the rocket is travelling at 2 miles per second, how fast is the distance between the rocket and the tracking station changing at the moment when the rocket is 4 miles up?\\
+    \textcolor{blue}{Pythagorean theorem: $x^2+y^2=z^2$\\
+    $\frac{dy}{dt}=2$ mi/s\\
+    $\frac{dx}{dt}=0$ (the radar station is not changing distance from the launch pad)\\
+    $\frac{dz}{dt}=?$\\
+    Derivative: $2x\frac{dx}{dt}+2y\frac{dy}{dt}=2z\frac{dz}{dt}$\\
+    Subbing in: $x=3$, $y=4$, $z=5$(found using the Pythagorean theorem)\\
+    $2(3)(0)+2(4)(2)=2(5)\frac{dz}{dt}$\\
+    $16=10\frac{dz}{dt}\\
+    \frac{dz}{dt}=\frac{16}{10}=\frac{8}{5}$ mi/s}
+\end{exercise}
+    
+ 
+
+\end{document}
