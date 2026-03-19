@@ -1,0 +1,65 @@
+\documentclass{ximera}
+
+\title{Linearization Activity Facilitator Guide}
+\author{MATH 425: Calculus I}
+
+\begin{document}
+\begin{abstract}
+   Working with the peers in your group, solve the following problems. Make sure to show and justify all your work. Make sure everyone in the group understands the solution and participates. Be prepared to report your answers to the whole class. 
+\end{abstract}
+\maketitle
+
+\textbf{Student Learning Objectives}
+Students will be able to:
+    \begin{itemize}
+        \item Create the linearization to a function at a given point.
+        \item Use the linearization of a function to estimate the value of a function near the given value.  
+    \end{itemize}
+
+\textbf{Prerequisite Knowledge:} Students will be expected to know the formula of the linearization for this activity, and how to sub a value into a linear function. Problem 1 expects students to know the derivative of $\sin(x)$ and the chain rule.\\
+
+This is a short activity that can be appended to another exercise. Linearizations are not really different from using a tangent line to approximate a function near the point of tangency, so this activity could also be used earlier after covering tangent lines.  
+
+\begin{exercise}
+   Let $c$ be a nonzero number. Consider the function $f(x)=\sin(cx)$ and the point $(0,0)$. \begin{enumerate}
+      \item Find the linearization of $f$ at $0$.\\
+        \textcolor{blue}{ $f(x)\approx c(x-0)+0=cx$}
+        
+        \item Find an estimate for $f(-0.1)$. Find an estimate for $f(0.123)$.\\
+        \textcolor{blue}{ $f(-0.1)\approx c(-0.1)=-0.1c$\\
+        $f(0.123)\approx 0.123c$}
+        
+        \item How might this linearization help you find the limit $\lim_{x\to 0}\frac{\sin(cx)}{cx}$?\\
+        \textcolor{blue}{From (b), it seems as though $\sin(cx)\approx cx$ when $x$ is close to $0$. So, $\lim_{x\to 0}\frac{\sin(cx)}{cx}\approx \lim_{x\to 0}\frac{cx}{cx}=1$.}\\
+        \textcolor{orange}{One thing to be aware of here: it is students' natural inclination to want to pull the $c$ out of the $\sin(x)$, or just to cancel the $c(x)$ entirely.  Make sure students understand that is not what is happening here.  Instead, we are using an approximation to go from $\sin(cx)$ to just $cx$.  }
+   \end{enumerate}
+\end{exercise}
+ 
+\begin{exercise}
+   Consider the functions $g(x)=2x^{2}-7x$ and $h(x)=x^{3}-4x^{2}+2x$. 
+   \begin{enumerate}
+       \item Show that these functions have the same linearization $L(x)$ at $a=3$.
+        \textcolor{blue}{ $g(3)=2(3^2)-7(3)=18-21=-3$\\
+        $g'(3)=4(3)-7=5$\\
+        $g(x)\approx 5(x-3)-3$\\
+        $h(3)=3^3-4(3^2)+2(3)=27-36+6=-3$\\
+        $h'(3)=3(3^2)-8(3)+2=27-24+2=5$\\
+        $h(x)\approx 5(x-3)-3$\\
+        So $L(x)=5(x-3)-3$}
+    
+        
+        \item Compute $L(2.8)$, $g(2.8)$, and $h(2.8)$. Which does $L(2.8)$ better approximate: $g(2.8)$ or $h(2.8)$? \\
+        \textcolor{blue}{ $L(2.8)=5(2.8-3)-3=5(-.2)-3=-4$\\
+        $g(2.8)=-3.92$\\
+        $h(2.8)=-3.808$\\
+        $g(x)$ is better approximated by $L(x)$.}
+        
+        \item Think about your responses for (b). Why do think this occurs? Graph the functions $L(x)$, $g(x)$, and $h(x)$. What do you notice?
+        \textcolor{blue}{ $h(x)$ stays closer to the tangent line $L(x)$, as it is less ``turn-y''.  It seems like the fewer turns (at least nearby $a$), the better the approximation is.}\\
+    
+   \end{enumerate}
+\end{exercise}
+
+
+
+\end{document}
