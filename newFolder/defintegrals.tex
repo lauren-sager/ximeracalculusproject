@@ -13,6 +13,34 @@
 \begin{exercise}
     The given graph is a graph of the function $f(x)$. Use the graph to evaluate the definite integrals.
     %\includegraphics[scale=0.4]{Image files/5_1_5_2.png}
+    \begin{image}
+        \begin{tikzpicture}
+            \begin{axis}[
+                axis lines = middle,
+                xlabel = $x$,
+                ylabel = $y$,
+                xmin = -3, xmax = 7,
+                ymin = -5, ymax = 3,
+                grid = major,
+                width = 10cm,
+                height = 8cm
+            ]
+            
+            % y = -2x - 3 for x <= 0
+            \addplot[blue, thick, domain=-2.5:0] {-2*x - 3};
+            
+            % y = x - 3 for 0 <= x <= 4
+            \addplot[blue, thick, domain=0:4] {x - 3};
+            
+            % y = 1 for 4 <= x <= 6
+            \addplot[blue, thick, domain=4:6] {1};
+            
+            % y = -3x + 19 for x >= 6
+            \addplot[blue, thick, domain=6:7] {-3*x + 19};
+            
+            \end{axis}
+        \end{tikzpicture}
+    \end{image}
        \begin{enumerate}
         \item $\displaystyle \int_{-2}^{0} f(x)dx$%{\color{blue}$=\frac{1}{4}-\frac{9}{4}=-2$}
         \item $ \displaystyle\int_{0}^3 f(x) dx$ %{\color{blue} $=-\frac{9}{2}$}
