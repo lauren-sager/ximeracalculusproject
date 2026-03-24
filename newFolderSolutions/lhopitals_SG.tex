@@ -1,0 +1,102 @@
+\documentclass{ximera}
+
+\title{l'Hopital's Rule and Indeterminate Limits Activity}
+\author{MATH 425: Calculus I}
+
+\begin{document}
+\begin{abstract}
+   Working with the peers in your group, solve the following problems. Make sure to show and justify all your work. Make sure everyone in the group understands the solution and participates. Be prepared to report your answers to the whole class. 
+\end{abstract}
+\maketitle
+
+
+\begin{exercise}
+    Evaluate the limits.  Some of these limits may be determined via function dominance.  If not, l'H\^opital's rule \text{may} be helpful.  If you do not show your work mathematically, share your reasoning.
+\begin{enumerate}
+    \item $\lim_{x\rightarrow 0} \frac{x}{e^x}$ \textcolor{blue}{ $=\frac{0}{e^0}=\frac01=0$ \\
+Function dominance does not apply here, as the limit is not a limit at infinity.}
+    \item $\lim_{x\rightarrow \infty} \frac{x}{e^x}$ \textcolor{blue}{ $\frac{\infty}{\infty}$ form.\\
+    Function dominance or l'Hopital's rule is appropriate here, so the limit is $0$.}
+    \item $\lim_{x\rightarrow -\infty} \frac{x}{e^x}$ \textcolor{blue}{ $\frac{-\infty}{0}$ form.\\
+    Neither function dominance nor l'H\^opital's rule applies.\\
+    $\lim_{x\rightarrow -\infty}\frac{1}{e^{x}}=\infty$, so $\lim_{x\rightarrow -\infty}\frac{1}{e^x}(x)=-\infty$  }
+     \item $\lim_{x\rightarrow \infty} \frac{x}{e^{-x}}$ \textcolor{blue}{ $\frac{\infty}{0}$ form\\
+     Neither function dominance nor l'H\^opital's rule applies.\\
+     $\lim_{x\rightarrow \infty}\frac{1}{e^{-x}}=\infty$, so $\lim_{x\rightarrow \infty}\frac{1}{e^x}(x)=\infty$ }
+    \item $\lim_{x\rightarrow -\infty} \frac{x}{e^{-x}}$ \textcolor{blue}{ $\frac{\infty}{\infty}$ form.\\
+    Function dominance or l'Hopital's rule is appropriate here, so the limit is $0$.}
+    \item $\lim_{x\rightarrow -\infty} \frac{x^2-1}{x+4}$ \textcolor{blue}{ $\frac{\infty}{\infty}$ form\\
+    Because both functions are polynomials, function dominance is not applicable (both functions are in the same fishy).  l'Hopital's rule applies, or an argument based on \textbf{degree} of the polynomials will work here. The limit is $\infty$}
+    \item $\lim_{x\rightarrow \infty} \frac{x^2-1}{x+4}$ \textcolor{blue}{ $\frac{\infty}{-\infty}$ form Because both functions are polynomials, function dominance is not applicable (both functions are in the same fishy).  l'Hopital's rule applies, or an argument based on \textbf{degree} of the polynomials will work here. The limit is $-\infty$}
+\end{enumerate}   
+\end{exercise}
+  
+\begin{exercise}
+Evaluate the following limits.  Be sure to indicate the form before using l'H\^opital's Rule.
+
+\begin{enumerate}
+    \item $\displaystyle \lim_{x\rightarrow 0} \frac{3x-\sin x}{x}$\\
+    \textcolor{blue}{ form: $\frac{0}{0}$\\
+    $\lim_{x\rightarrow 0}\frac{3-\cos x}{1}=\frac{3-\cos(0)}{1}=2$}
+   
+    \item $\displaystyle \lim_{x\rightarrow 0}\frac{\sqrt{1+x}-1-\frac{1}{2}x}{x^2}$\\
+    \textcolor{blue}{ form: $\frac{0}{0}$\\
+    $\lim_{x\rightarrow 0} \frac{\frac{1}{2}(1+x)^{-\frac{1}{2}}-\frac{1}{2}}{2x}$\\
+    form: still $\frac{0}{0}$\\
+    $\lim_{x\rightarrow 0} \frac{-\frac{1}{4}(1+x)^{-\frac{3}{2}}}{2}=-\frac{1}{8}$}
+
+    \item $\displaystyle \lim_{x\rightarrow 0}\frac{1-\cos x}{x+x^2}$\\
+     \textcolor{blue}{ form: $\frac{0}{0}$\\
+    $\lim_{x\rightarrow 0}\frac{\sin(x)}{1+2x}=\frac{0}{1}=0$}
+
+    \item  $\displaystyle \lim_{x\rightarrow \frac{\pi}{2}^-}\frac{\sec x}{1+\tan x}$\\
+      \textcolor{blue}{ form: $\frac{\infty}{\infty}$\\
+    $\lim_{x\rightarrow \frac{\pi}{2}^-} \frac{\sec x \tan x}{\sec^2 x}=\lim_{x\rightarrow \frac{\pi}{2}^-} \sin(x)=1$}
+
+    \item $\displaystyle \lim_{x\rightarrow \infty} \frac{e^x}{x^2}$\\
+    \textcolor{blue}{ form: $\frac{\infty}{\infty}$\\
+    $\lim_{x\rightarrow \infty} \frac{e^x}{2x}$  form: $\frac{\infty}{\infty}$\\
+    $\lim_{x\rightarrow \infty} \frac{e^x}{2}=\infty$}
+
+    \item  $\displaystyle \lim_{x\rightarrow 0^+} \sqrt{x}\ln(x)$\\
+     \textcolor{blue}{ form: $0\cdot -\infty$\\
+    $=\lim_{x\rightarrow 0^+}\frac{\ln(x)}{x^{-\frac{1}{2}}}$ form: $\frac{-\infty}{\infty}$\\
+    $=\lim_{x\rightarrow 0^+} \frac{\frac{1}{x}}{-\frac{1}{2x^{\frac{3}{2}}}}=\lim_{x\rightarrow 0^+} -2\sqrt{x}=0$}
+
+    \item $\displaystyle \lim_{x\rightarrow 0^-} \frac{1}{\sin x}-\frac{1}{x}$\\
+    \textcolor{blue}{ form: $-\infty+\infty$\\
+    $\lim_{x\rightarrow 0^-} \frac{x-\sin x}{x\sin x}$ form: $\frac{0}{0}$\\
+    $=\lim_{x\rightarrow 0^-} \frac{1-\cos x}{\sin x+x\cos x}$ form: $\frac{0}{0}$\\
+    $=\lim_{x\rightarrow 0^-} \frac{\sin x}{2\cos x-x\sin x}=\frac{0}{2}=0$}
+
+    \item $\displaystyle \lim_{x\rightarrow 0^+} (1+\ln(a)x)^{\frac{1}{x}}$, where $a$ is a positive constant.\\
+    \textcolor{blue}{ form: $1^{\infty}$\\
+    $=\lim_{x\rightarrow 0^+}e^{(\frac{1}{x}\ln(1+\ln(a)x)}$\\
+    $=e^{\lim_{x\rightarrow 0^+}\frac{\ln(1+\ln(a)x)}{x}}$\\
+    form: $\frac00$ \\
+    $=e^{\lim_{x\rightarrow 0^+}\frac{\frac{\ln(a)}{1+\ln(a)x}}{1}}$\\
+    $=e^{\lim_{x\rightarrow 0^+}\frac{\ln(a)}{(1+\ln(a)x)}}=e^{\ln(a)}=a$}
+
+    \item $\displaystyle \lim_{x\rightarrow \infty} x^{\frac{1}{x}}$\\
+    \textcolor{blue}{ form: $\infty^0$\\
+    $\lim_{x\rightarrow \infty} e^{\ln(x^{\frac{1}{x}})}=\lim_{x\rightarrow \infty} e^{\frac{1}{x}\ln{x}}=e^{\lim_{x\rightarrow \infty} \frac{\ln(x)}{x}}$ limit form: $\frac{\infty}{\infty}$\\
+    $=e^{\lim_{x\rightarrow \infty} \frac{\frac{1}{x}}{1}}=e^{\frac{0}{1}}=e^0=1$
+    }
+\end{enumerate}
+\end{exercise}
+
+    
+\begin{exercise}    
+    Find any horizontal asymptotes of the function $f(x)=\frac{e^x}{x^2}$. \\
+    \textcolor{blue}{$\lim_{x\rightarrow \infty} \frac{e^x}{x^2}$\\
+    form: $\frac{\infty}{\infty}$\\
+    $\lim_{x\rightarrow \infty} \frac{e^x}{2x}$  form: $\frac{\infty}{\infty}$\\
+    $\lim_{x\rightarrow \infty} \frac{e^x}{2}=\infty$\\
+    $\lim_{x\rightarrow -\infty} \frac{e^x}{x^2}=\lim_{x\rightarrow -\infty} e^x\frac{1}{x^2}=0\cdot 0=0$}
+\end{exercise}
+
+
+
+
+
+\end{document}
