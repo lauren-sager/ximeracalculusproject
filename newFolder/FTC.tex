@@ -1,0 +1,44 @@
+\documentclass{ximera}
+
+\title{Accumulation Functions and the FTC Activity}
+\author{MATH 425: Calculus I}
+
+\begin{document}
+\begin{abstract}
+   Working with the peers in your group, solve the following problems. Make sure to show and justify all your work. Make sure everyone in the group understands the solution and participates. Be prepared to report your answers to the whole class. 
+\end{abstract}
+\maketitle
+
+
+\begin{exercise}
+    Consider the function $f(t)=2t$ and its ``area so far'' (or accumulated area) function $F(x)=\int_1^x 2tdt$. 
+    \begin{center}
+        \desmos{bqkmwso4ed}{800}{600}
+    \end{center}
+    (The $h$ slider in Desmos acts as $x$ in the integral equation.  Slide this to visualize how $x$ changes the situation.)\\
+    \begin{enumerate}
+        \item Using the graph and geometry, find an explicit function for $F(x)$.  
+        \item How much area has been accumulated so far when $x=4$?
+        \item Find $F'(x)$.
+        \item What is the rate of change at $x=4$?
+    \end{enumerate}
+    Problem adapted from Boelkins, et al., \textit{Active Calculus}, 2nd ed.\\
+\end{exercise}
+
+\begin{exercise}
+    Find the derivatives.
+    \begin{enumerate}
+        \item $\frac{d}{dx}\int_{-1}^x 3t^3-4t+17dt$
+        \item $\frac{d}{dx}\int_x^3 \sqrt{16t^2-9}dt$
+        \item $\frac{d}{dx}\int_e^{e^x} \ln(t-1)dt$
+        \item $\frac{d}{dx}\int_{x^2}^{x^3} \sin(t)dt$ (Hint: you may need multiple integrals here to make the FTC apply.)
+    \end{enumerate}
+\end{exercise}
+
+\begin{exercise}
+    The amount of water in a tank at time $x$ is given by the function $F(x)=\int_0^x 2+\sin(t)dt$.  What is the flow rate of water into the tank? 
+\end{exercise}
+
+
+
+\end{document}

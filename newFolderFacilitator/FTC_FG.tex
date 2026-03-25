@@ -1,0 +1,66 @@
+\documentclass{ximera}
+
+\title{Accumulation Functions and the FTC Activity Facilitator Guide}
+\author{MATH 425: Calculus I}
+
+\begin{document}
+\begin{abstract}
+   Working with the peers in your group, solve the following problems. Make sure to show and justify all your work. Make sure everyone in the group understands the solution and participates. Be prepared to report your answers to the whole class. 
+\end{abstract}
+\maketitle
+
+\textbf{Student Learning Outcomes}\\
+Students should be able to:
+    \begin{itemize}
+        \item Identify and differentiate accumulation functions of the form $\int_c^x f(t)dt$.
+        \item Find areas indicated by accumulation functions.
+    \end{itemize}
+
+\textbf{Prerequisite Knowledge:} Students should be familiar with the part of the Fundamental Theorem of Calculus which involves the derivative of the accumulation function.  Exercise (1) attempts to help students understand what the accumulation function actually is and make connections via Geometry to the FTC. \\
+
+This activity is quite short, and may be combined with the Definite Integral activity to cover both parts of the FTC.
+
+\begin{exercise}
+    Consider the function $f(t)=2t$ and its ``area so far'' (or accumulated area) function $F(x)=\int_1^x 2tdt$.  Using the graph and geometry, find an explicit function for $F(x)$.  Then find $F'(x)$.
+    \begin{center}
+        \desmos{bqkmwso4ed}{800}{600}
+    \end{center}
+    (The $h$ slider in Desmos acts as $x$ in the integral equation.  Slide this to visualize how $x$ changes the situation.)\\
+        \begin{enumerate}
+        \item Using the graph and geometry, find an explicit function for $F(x)$.  \\
+        \textcolor{blue}{This area is a trapezoid, so we can either use the trapezoid area formula or take the big triangle and subtract the missing triangle. \\
+    Big triangle height: 2x, base: x\\
+    Small triangle height: 2, base: 1\\
+     $F(x)=\frac12(x)(2x)-\frac12(1)(2)=x^2-1$\\
+     If you use the trapezoid area formula: base 1=2, base 2=2x, height=x-1\\
+     $F(x)=\frac12(2+2x)(x-1)=(1+x)(x-1)=x^2-1$}
+        \item How much area has been accumulated so far when $x=4$?\\
+        \textcolor{blue}{$F(4)=4^2-1=15$ square units}
+        \item Find $F'(x)$.\\
+        \textcolor{blue}{$F'(x)=2x$.}
+        \item What is the rate of change at $x=4$?\\
+        \textcolor{blue}{$F'(4)=2(4)=8$ square units per unit time}
+    \end{enumerate}
+    Problem adapted from Boelkins, et al., \textit{Active Calculus}, 2nd ed.
+
+\end{exercise}
+
+\begin{exercise}
+    Find the derivatives.
+    \begin{enumerate}
+        \item $\frac{d}{dx}\int_{-1}^x 3t^3-4t+17dt$ \textcolor{blue}{$=3x^3-4x+17$}
+        \item $\frac{d}{dx}\int_x^3 \sqrt{16t^2-9}dt$ \textcolor{blue}{$=-\int_3^x\sqrt{16t^2-9}dt=-16x^2-9$}
+        \item $\frac{d}{dx}\int_e^{e^x} \ln(t-1)dt$ \textcolor{blue}{$=\ln(e^x-1)e^x$}
+        \item $\frac{d}{dx}\int_{x^2}^{x^3} \sin(t)dt$ (Hint: you may need multiple integrals here to make the FTC apply.)\\
+        \textcolor{blue}{$=\int_{x^2}^0 \sin(t)dt+\int_0^{x^3}\sin(t)dt=-\int_0^{x^2}\sin(t)dt+\int_0^{x^3}\sin(t)dt=-\sin(x^2)(2x)+\sin(x^3)(3x^2)$}
+    \end{enumerate}
+\end{exercise}
+
+\begin{exercise}
+    The amount of water in a tank at time $x$ minutes is given by the function $F(x)=\int_0^x 2+\sin(t)dt$ liters.  What is the flow rate of water into the tank? \\
+    \textcolor{blue}{Rate of change is the derivative of the amount function: $F'(x)=\frac{d}{dx}\int_0^x 2+\sin(t)dt=2+\sin(x)$ liters per minute.}
+\end{exercise}
+
+
+
+\end{document}
