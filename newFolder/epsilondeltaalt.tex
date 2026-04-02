@@ -1,0 +1,86 @@
+\documentclass{ximera}
+
+\title{Epsilon-Delta Alternate Activity}
+\author{MATH 425: Calculus I}
+
+\begin{document}
+\begin{abstract}
+   Working with the peers in your group, solve the following problems. Make sure to show and justify all your work. Make sure everyone in the group understands the solution and participates. Be prepared to report your answers to the whole class. 
+\end{abstract}
+\maketitle
+
+If your group is comfortable with continuity and logic, then the following alternate activity may be more challenging, or more interesting.  You may choose to submit your work on this activity instead of the original continuity activity.  If you find this activity too abstract, you can return to the original activity. \\
+
+\begin{definition}
+    In class we discussed a short introduction to the definition of a limit.  In pseudo-formal terms, this definition was given by:
+    We say $\lim_{x\rightarrow c}f(x)=L$ if and only if \textbf{for every} $\epsilon$ greater than zero, \textbf{there exists} (and we can find) a $\delta$ greater than zero for which the statement
+        \[|x-c|<\delta \text{  (i.e. the distance between $x$ and $c$ is less than $\delta$)}\] 
+    implies
+        \[|f(x)-L|<\epsilon \text{  (i.e. the distance between $f(x)$ and $L$ is less than $\epsilon$)}.\] 
+
+    In pure logical/mathematical notation we have 
+    \[\lim_{x\rightarrow c}f(x)=L \iff \forall \epsilon>0, \exists \delta>0, (\text{such that } |x-c|<\delta \implies |f(x)-L|<\epsilon).\]
+\end{definition}
+
+This activity will explore how to construct a short formal argument (a proof) of continuity for affine functions.
+
+\begin{remark}
+    The symbol $\forall$ is called a `universal quantifier,' and the symbol $\exists$ is called the `exsistential quantifier.'  These two symbols can be translated as ``for all'' and ``there exists'' respectively.  They are used to make precise logical statements about sets of objects.
+\end{remark}
+
+\begin{exercise}
+    Recall from class the fact that straight line functions are continuous.  Use the definition of continuity to assert a value for the following limit:
+    \[\lim_{x\rightarrow 1}2x+1=\square\]
+\end{exercise}
+
+\begin{exercise}
+    Use the ingredients from the previous exercise to substitute expressions for $c$, $f(x)$ and $L$ into the three boxed expressions in the logical implication written below:
+    \[|x-\square|<\delta \implies |\square-\square|<\epsilon \]
+    (This is the logical statement we need to prove to show the limit value matches the function value.)
+\end{exercise}
+
+
+As you work through the remaining questions you will see text in \textbf{bold} and \textit{italic} typeface.  We use \textbf{bold} to fill in parts of the argument which handle the logical quatifies and \textit{italic} to share comments and hints about how to proceed.  If your group gtes the questions correct, then the bold type and your answers will form a mathematical proof that $f(x)=2x+1$ is continuous at $x=1$.
+
+\begin{exercise}
+    Follow the italic prompts to construct a proof of the logical implication needed to prove $\lim_{x\rightarrow 1}2x+1=3$.\\
+
+    \textit{We begin the proof by choosing an epsilon ($\epsilon$).  This line explicitly recognizes that the value of $\epsilon$ is constant for the remainder of the proof, however since we aren't saying anything specific about $\epsilon$, we proceed in the hope that we can create a generic argument which helps us select a $\delta$ which makes the logical implication in the definition of the limit true.}\\
+    \textbf{Let $\epsilon>0$ be fixed, but arbitrary.}\\
+    \textit{When creating $\epsilon$-$\delta$ proofs, one often begins with the desired conclusion and manipulates it algebraically.  This may seem awkward, but we are employing a strategy similar to solving a maze or labyrinth by working from the end of the maze to the beginning.  If we keep track of our trail, it is then very easy to retrace our steps and solve the make (or create the proof) in the forward direction.  Try to manipulate the left hand side of $|f(x)-L|<\epsilon$ using algebra until you can make the quantity $|x-1|$ appear.}\\
+    \\
+    \textit{Once you have found the quantity $|x-1|$, use the inequality to propose a connection (equation) between $\delta$ and $\epsilon$.  Select $\delta$ so that you can retrace your algebraic steps backwards to the desired conclusion.}\\
+    \\
+    \textit{Since you have shown the definition of the limit is satisfied, the proof is now complete. $\square$}
+\end{exercise}
+
+\begin{exercise}
+    Prove $\lim_{x\rightarrow-1}3x+4=1$.\\
+    \textit{This time the proof, we will tell you have to choose $\delta$ from the outset, and you will construct the proof in such as way that is more readable, and fits the structure of the definition of the limit in a more natural way.}\\
+    \textbf{Let $\epsilon>0$ be given.}\\
+    \textbf{Select any $\delta$ in the interval $(0,\frac{\epsilon}{3})$.}\\
+    \textit{Now with $\epsilon$ fixed and $\delta$ selected, you may assert the hypothesis of the definition of the limit (i.e. the distance between $x$ and $-1$ is strictly less than the $\delta$ we select, so it must be less than $\frac{\epsilon}{3}$).}\\
+    \\
+    \textit{Manipulate this inequality to show that the desired inequality $|f(x)-L|<\epsilon$ must also be satisfied.}
+\end{exercise}
+
+\begin{exercise}
+    Finally, you are ready to consider a arbitrary linear limit.\\
+    Prove: $\lim_{x\rightarrow c}mx+b=mc+b$\\
+    \textbf{Proof:}\\
+    \textit{Use either the approach from question 3 or question 4, and don't forget to let $\epsilon$ be given at the beginning of the proof.}
+\end{exercise}
+
+\begin{exercise}
+    (Optional Discussion Question that delves into some of the formal details needed to handle infinite limits.)\\
+    As an additional curiosity, we consider the following statement and its formal definition:\\
+    We say that $\lim_{x\rightarrow c}f(x)=\infty$ if and only if
+    \[\forall L\in \mathbb{R}^+, \exists \delta>0, \text{ such that }\forall x_0\in(c-\delta,c)\cup(c,c+\delta), f(x_0)>L.\]
+    Discuss this definition with your peers and write out its meaning in English.\\
+    \\
+    Try to use this definition to show that 
+    \[\lim_{x\rightarrow 0}\frac{1}{x^2}=\infty\]
+\end{exercise}
+
+
+\end{document}
