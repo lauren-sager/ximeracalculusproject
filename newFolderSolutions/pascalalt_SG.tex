@@ -1,0 +1,104 @@
+\documentclass{ximera}
+
+\title{Pascal's Triangle and Binomials Activity Solution Guide}
+\author{MATH 425: Calculus I}
+
+\begin{document}
+\begin{abstract}
+   Working with the peers in your group, solve the following problems. Make sure to show and justify all your work. Make sure everyone in the group understands the solution and participates. Be prepared to report your answers to the whole class. 
+\end{abstract}
+\maketitle
+
+This activity is a good choice for two types of student: 
+\begin{enumerate}
+    \item If your group is feeling uncertain about some of the mechanics of algebra, Pascal's triangle shows you a patter which helps speed up binomial algebra.  Binomials appear frequently in our derivative definition, so speeding up your algebra can be very helpful.
+    \item If you group has experience with calculus in high school, and you are comfortable with computing derivatives using the limit definition, then you can use this activity to explore combinatorics and factorials, and get a deeper sense of the arguments which justify the rules for differentiation.
+\end{enumerate}
+
+
+ The binomial theorem is a piece of mathematics which explains the coefficient pattern when we expand binomials of the form $(x+y)^n$.  This activity shows a few ways to generate the numbers in this pattern: both by using Pascal's Triangle (whic the activity will teach you how to create), and by using the combinatoric formula for binomial coefficients.\\
+ \\
+ \textbf{Motivation:} When applying the definition of the derivative to power functions (and polynomials, more generally), we often need to expand terms like $(x+h)$, $(x+h)^2$, etc.  We can do this quickly using the Binomial Theorem.  If we write out the Binomial Theorem in compact mathematical notation, it can look quite intimidating and complicated.  However, we can build up the idea contained in the Theorem using much simpler patterns.  For low degree polynomials, you may even just memorize the coefficients rather than use the approach we develop here.
+
+
+\begin{exercise}
+    First, we begin by building the top of Pascal's Triangle.  Start with 1, and imagine 1 at the top of the pyramid (you can use the figure below).\\
+    Each level of the pyramid will contain one more more number than the level above.  If we keep the numbers cenetered, each row of numbers will be diagonally ofset from the numbers above.
+    \begin{enumerate}
+        \item Fill in the numbers of row 2 by adding the nubmers just to the left and right of the number you are filling in. (This means all the numbers in the interior of the pyramid will be sums of exactly two numbers on the previous level, and the numbers along the edge of the pyramid will always be the same.)
+        \item Fill in the first four levels of the pyramid.
+        \textcolor{blue}{
+        \begin{align}
+               & & & 1 & & & \\
+               & & 1 & & 1 & &\\
+               & 1 & & 2 & & 1 & \\
+               1 & & 3 & & 3 & & 1
+        \end{align}}
+        \item Next, we show how these numbers are connected to binomials.\\
+        Start with 1.\\
+        \begin{itemize}
+            \item Write 1 on the first line.
+            \item Now multiply 1 by $(x+y)$, and multiply everything out so no parentheses remain.  (To help with the next step, if you have any $x$ or $y$ by itself, write those terms as $1x$ and $1y$ so you can explicitly track coefficients.)  Write your result on the second line.
+            \item Repeat this process two times (i.e. take your result on line 2, multiply by $(x+y)$ and expand, then write that on line 3.  Take that and multiply by $(x+y)$ again, and write that on line 4.)\\
+            \textcolor{blue}{
+            \begin{center}
+                $1=1$\\
+                $(x+y)=1x+1y$\\
+                $(x+y)^2=1x^2+2xy+1y^2$\\
+                $(x+y)^3=1x^3+3x^2y+3xy^2+1y^3$
+            \end{center}}
+            \item Now circle all your coefficients and compare to Pascal's Triangle above.  See anything? 
+            \textcolor{blue}{They match!}
+        \end{itemize}
+    \end{enumerate}
+\end{exercise}
+
+\begin{exercise}
+    Finally, we connect Pascal's Triangle to binomial coefficient notation, and give a brief explanation of the combinatorial formula for the binomial coefficients.  \\
+    In the previous two exercises, you build a set of numbers called Pascal's Triangle.  Then, you computed some binomials and hopefully noticed that the numbers in Pascal's Triangle match the coefficients in the binomial \textbf{exactly}.  By itself, these patterns can be useful, because it gives us a shortcut for deducing:
+    \[(x+h)^3=x^3+3x^2h+3xh^2+h^3\]
+    without multiplying all the bits! \\
+    \\
+    Many times, we might be interested in a single number far along in the pyramid. For example, what is the middle position 50 levels down??? When this happens, it helps to have a formula we can use to compute one of these numbers directly.  Combinatorics is the branch of mathematics concerned with advanced counting techniques, and the numbers in Pascal's Triangle match perfectly with one of the formulas which is used in combinatorics.  The numbers in this pattern are called the binomial coefficients, but in combinatoric notation, we write these in terms of the counting problem they solve. \\
+    \\
+    The notation ${n \choose k}$ refers to the combinatoric problem of `choosing' a subset of $k$ objects from a parent set of $n$ objects.\\
+    When building up an understanding of this notation, it helps to use it in a few different test cases. \\
+    Discuss the answers to these questions with your group, and check with your TA or LA if you encounter a disagreement.
+    \begin{enumerate}
+        \item How many ways are there to leave a set of objects alone?
+        \[{n\choose 0}=\]
+        \textcolor{blue}{1}
+        \item How many ways are there to choose everything in a set of $n$ objects?
+        \[{n \choose n}=\]
+        \textcolor{blue}{1}
+        \item (Harder example) How many ways are there to select a single object from a set of $n$ objects? (i.e. `Pikachu, I choose you!' out of my $n$ Pokemon.)
+        \[{n\choose 1}=\]
+        \textcolor{blue}{n}
+    \end{enumerate}
+    With these three examples, we now present the combinatorial formula for the binomial coefficient:
+    \[{n\choose k}=\frac{n!}{(n-k)!k!}\]
+    (As a group, verify that your answers from above agree with this formula.)\\
+    \\
+    This compilcated formula allows us to calculate specific coefficients, or specific positions in Pascal's Triangle without building the whole pattern.\\
+    \\
+    The formula involves factorial notation, notated with an $!$.  The factorial function is well defined for positive integers by using the product of integers up to $n$.  It is also well defined for zero if we use the combinatoric approach to assign itse value.  A single factorial function tells us the number of possible orderings of a set of $n$ objects, and since nothing can be ordered only by doing nothing, we have one way to order it.  (It is possible to justify $0!=1$ in other ways as well.)\\
+    The formula for binomial coefficients can be `explained' by combinatorics by building the formula using a counting process: The first part of the formula counts the number of possibilities of $k$ winners drawn from the $n$ set: 
+    \[\frac{n!}{(n-k)!}\]
+    Once those are counted, the formula is completed by dividing by $k!$ which eliminates the order created by selecting the $k$ chosen elements sequentially.\\
+    \begin{enumerate}
+        \item (d.) Use the formula to calculate: 
+        \[{1\choose 1}, \,\,\, {2\choose 1}, \,\,\, {3\choose 2}, \,\,\, {5 \choose 4}\]
+        \textcolor{blue}{ ${1\choose 1}=\frac{1!}{(1-1)!1!}=\frac{1}{1(1)}=1$\\
+        ${2 \choose 1}=\frac{2!}{(2-1)!1!}=\frac{2}{1(1)}=2$\\
+        ${3\choose 2}=\frac{3!}{(3-2)!2!}=\frac{6}{1(2)}=3$\\
+        ${5\choose 4}=\frac{5!}{(5-4)!4!}=\frac{120}{1(24)}=5$}
+        (Hint: Lay out the numbers from $\frac{n!}{(n-k)!}$ as a product, then divide by as many factors of $k!$ as possible.  If you do it this way, computing even things like $11\choose 3$ by hand won't be too bad.) \\
+        \textcolor{blue}{${11\choose 3}=\frac{11\cdot 10\cdot 9\cdot \dots 3 \cdot 2 \cdot 1}{(8\cdot 7 \cdot 6\ cdot \dots 3\cdot 2\cdot 1)(3\cdot 2 \cdot 1)}=\frac{11\cdot 10 \cdot 9}{3\cdot 2 \cdot 1}=11(5)(3)=165$}
+    \end{enumerate}
+\end{exercise}
+
+
+
+
+
+\end{document}
