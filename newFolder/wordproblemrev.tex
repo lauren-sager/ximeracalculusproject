@@ -19,65 +19,10 @@ Where $zig(x)$ and $zag(x)$ are the distances travelled by the first and second 
 Use the geometry of the race course and the Pythagorean Theorem, assuming that the distance from the opposite side corner to the place where the handoff takes place is $x$, find an objective function in terms of $x$.  If the runners happen to run exactly at the same speed (they trained together for this race, after all), where should the hand off occur? (Namely, what value of $x$ results in the minimum travel time?)
 
 Where should the contestants plan to hand over the baton?\\
-\textcolor{blue}{
-   \begin{image}
-      \includegraphics{}
-   \end{image}
-\includegraphics[scale=.7]{Image files/opitimization race.png}
-We assume $x$ is the distance to the left of the hand off point, making the distance to the right of the hand of point $80-x$.\\
-If $zig(x)$ is the distance run by the first runner, $zig(x)=\sqrt{400+x^2}$ by the Pythagorean Theorem.\\
-If $zag(x)$ is the distance run by the second runner, $zag(x)=\sqrt{400+(80-x)^2}$ by the Pythagorean Theorem.\\
-$$T(x)=\frac{\sqrt{400+x^2}}{s}+\frac{\sqrt{400+(80-x)^2}}{s}$$
-$$T'(x)=\frac{1}{s}\bigg(\frac12(400+x^2)^{-1/2}(2x)+\frac12(400-(80-x)^2)^{-1/2}(2)(80-x)(-1)\bigg)=\frac{1}{s}\bigg(\frac{x}{\sqrt{400+x^2}}-\frac{80-x}{\sqrt{400+(80-x)^2}}\bigg)$$\\
-To find the minimum value of $T(x)$, we need to check where $T'(x)=0$ and where $T'(x)$ DNE. \\
-$\dfrac{1}{s}\bigg(\dfrac{x}{\sqrt{400+x^2}}-\dfrac{80-x}{\sqrt{400+(80-x)^2}}\bigg)=0$ when $\bigg(\dfrac{x}{\sqrt{400+x^2}}-\dfrac{80-x}{\sqrt{400+(80-x)^2}}\bigg)=0$\\
-Or, when $\dfrac{x}{\sqrt{400+x^2}}=\dfrac{80-x}{\sqrt{400+(80-x)^2}}$.  \\
-Multiplying by both denominators gives: \\
-$x\sqrt{400+(80-x)^2}=(80-x)\sqrt{400+x^2}$\\
-Square both sides: \\
-$x^2(400+(80-x)^2)=(80-x)^2(400+x^2)$\\
-Distribute: \\
-$400x^2+x^2(80-x)^2=400(80-x)^2+x^2(80-x)^2$\\
-Subtract the common term from both sides:\\
-$400x^2=400(80-x)^2$\\
-Divide by 400 and expand $(80-x)^2$:\\
-$x^2=6400-160x+x^2$\\
-$6400-160x=0$, or $x=40$m.  \\
-
-Check when $T'$ DNE: both denominators are distances, so they will always be positive values, and thus the expressions will always exist.\\
-
-Classify the absolute minimum:
-Domain of $T(x)$: $[0,80]$\\
-$T(0)=\frac{1}{s}\bigg(\sqrt{400+0^2}+\sqrt{400+80^2}\bigg)=\frac{102.46}{s}$\\
-$T(40)=\frac{1}{s}\bigg(\sqrt{400+40^2}+\sqrt{400+40^2}\bigg)=\frac{89.44}{s}$\\
-$T(80)=\frac{1}{s}\bigg(\sqrt{400+80^2}+\sqrt{400+0^2}\bigg)=\frac{102.46}{s}$\\
-
-$T(40)$ is the smallest, making $x=40$ the distance giving the shortest time.}
 \end{exercise}
 
 \begin{exercise}
-Suppose you are video recording the ascent of a hot air balloon.  The balloon is rising from a spot on the ground 300 ft away from your location, at a constant rate of 1 ft/sec.  When the camera is at an angle of $\frac{\pi}{6}$ from horizontal, what is the rate of change of the angle of the camera tracking the balloon?  Assume the camera is at ground level.\\
-\textcolor{blue}{Before we solve the problem, let's think about all possibilities for equations for this triangle: \\
-$b^2=a^2+c^2$\\
-$\tan(\theta)=\frac{a}{c}$\\
-$\sin(\theta)=\frac{a}{b}$\\
-$\cos(\theta)=\frac{c}{b}$\\
-Which makes the most sense to use?  List the given information:\\
-$c=300$\\
-$a$ not given\\
-$\frac{dc}{dt}=0$\\
-$\frac{da}{dt}=1$\\
-$\theta=\frac{\pi}{6}$\\
-$\frac{d\theta}{dt}=$unknown\\
-
-What equation makes the most sense?  The most given and unknowns are involved in $\tan(\theta)=\frac{a}{c}$.\\
-Take the derivative with respect to $t$: $\sec^2(\theta)\frac{d\theta}{dt}=\frac{1}{c}\frac{da}{dt}$\\
-Use knowns:\\
-$$\sec^2\bigg(\frac{\pi}{6}\bigg)\frac{d\theta}{dt}=\frac{1}{300}(1)$$\\
-
-$\sec(\frac{\pi}{6})=\frac{1}{\cos(\theta)}=\frac{2}{\sqrt{3}}$\\
-So, $$\bigg(\frac{2}{\sqrt{3}}\bigg)^2\frac{d\theta}{dt}=\frac{1}{300}$$
-$$\frac{d\theta}{dt}=\frac{1}{300}\bigg(\frac{3}{4}\bigg)=\frac{1}{400}$$ radians/sec}
+Suppose you are video recording the ascent of a hot air balloon.  The balloon is rising from a spot on the ground 300 ft away from your location, at a constant rate of 1 ft/sec.  When the camera is at an angle of $\frac{\pi}{6}$ from horizontal, what is the rate of change of the angle of the camera tracking the balloon?  Assume the camera is at ground level.
 \end{exercise}
 
 
