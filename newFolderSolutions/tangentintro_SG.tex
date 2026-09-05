@@ -11,21 +11,49 @@
 
 
 \begin{exercise}
-If a ball is thrown upwards into the air with a velocity of 40 ft/s, its height in feet $t$ seconds later is given by $y=40t-16t^2$.  
- Find the average velocity for the time period beginning at 2 seconds and lasting 
-    \begin{enumerate}
-        \item 0.5 seconds\\
-        \textcolor{blue}{ $\frac{f(2.5)-f(2)}{2.5-2}=\frac{0-16}{.5}=-32$}
-        \item 0.1 seconds\\
-        \textcolor{blue}{ $\frac{f(2.1)-f(2)}{2.1-2}=\frac{13.44-16}{.1}=-25.6$} 
-        \item 0.05 seconds\\
-        \textcolor{blue}{ $\frac{f(2.05)-f(2)}{2.05-2}=\frac{14.76-16}{.05}=-24.8$}
-        \item 0.01 seconds\\
-        \textcolor{blue}{ $\frac{f(2.01)-f(2)}{2.01-2}\approx \frac{15.76-16}{.01}=-24$} 
-    \end{enumerate}
-Estimate the instantaneous velocity of the same ball when $t=2$ using your work from question 1.  Explain what your answer says about what is happening to the ball at $t=2$. \\
-\textcolor{blue}{ The average velocity at $t=2$ is around -24 ft/s, meaning that the ball is coming back downwards at a rate of 24 feet per second. }
+% If a ball is thrown upwards into the air with a velocity of 40 ft/s, its height in feet $t$ seconds later is given by $y=40t-16t^2$.  
+%  Find the average velocity for the time period beginning at 2 seconds and lasting 
+%     \begin{enumerate}
+%         \item 0.5 seconds\\
+%         \textcolor{blue}{ $\frac{f(2.5)-f(2)}{2.5-2}=\frac{0-16}{.5}=-32$}
+%         \item 0.1 seconds\\
+%         \textcolor{blue}{ $\frac{f(2.1)-f(2)}{2.1-2}=\frac{13.44-16}{.1}=-25.6$} 
+%         \item 0.05 seconds\\
+%         \textcolor{blue}{ $\frac{f(2.05)-f(2)}{2.05-2}=\frac{14.76-16}{.05}=-24.8$}
+%         \item 0.01 seconds\\
+%         \textcolor{blue}{ $\frac{f(2.01)-f(2)}{2.01-2}\approx \frac{15.76-16}{.01}=-24$} 
+%     \end{enumerate}
+% Estimate the instantaneous velocity of the same ball when $t=2$ using your work from question 1.  Explain what your answer says about what is happening to the ball at $t=2$. \\
+% \textcolor{blue}{ The average velocity at $t=2$ is around -24 ft/s, meaning that the ball is coming back downwards at a rate of 24 feet per second. }
+% \textcolor{orange}{Try to avoid reinforcing students' idea that this is a viable way to find the exact instantaneous rate of change. Point out the \textit{estimate} part of the question if students seem to be relying on this as an exact answer.  Some students will also know these formulas (and potentially even the instantaneous rate of change formula) from physics.  Encourage them to use the mathematical means they've learned rather than just pulling out the physics formulas. \textit{Checking} their work with these formulas is encouraged!}
+Label the graphs below with the formula for the function whose graph is shown. Also, determine the domain and range of each function (which might help in identifying the formula). Assume curves extend infinitely beyond the window shown. Finally, label the function as: \textbf{A Power Function, Linear, Quadratic, Polynomial, and/or Rational. List all that apply.}
 
+    \vspace{0.1cm}
+    Formula options: $f(x) = \frac{x^3 - 1}{x - 1}$, $f(x) = x^3 - 2x^2 - x + 2$, $f(x) = \frac{1}{x} = x^{-1}$
+    \begin{enumerate}
+       \item Formula:\textcolor{blue}{$f(x) = \frac{1}{x} = x^{-1}$}\\
+        Domain:\textcolor{blue}{$(-\infty,0)\cup(0,\infty)$}\\
+        Range:\textcolor{blue}{$(-\infty,0)\cup(0,\infty)$}\\
+        Type of Function: \textcolor{blue}{Rational, Power}
+        \item Formula: \textcolor{blue}{$f(x) = \frac{x^3 - 1}{x - 1}$}\\
+        Domain: \textcolor{blue}{$(-\infty,1)\cup(1,\infty)$}\\
+        Range: \textcolor{blue}{$(\infty,0)\cup(0,\infty)$}\\
+        Type of Function: \textcolor{blue}{Rational}
+        \item Formula: \textcolor{blue}{ $f(x) = x^3 - 2x^2 - x + 2$}\\
+        Domain: \textcolor{blue}{All real numbers}\\
+        Range:\textcolor{blue}{All real numbers}\\
+        Type of Function: \textcolor{blue}{Polynomial, (Rational)}
+        \item Formula: \textcolor{blue}{$f(x) = \frac{x^3 - 1}{x - 1}$}\\
+        Domain: \textcolor{blue}{$(-\infty,1)\cup(1,\infty)$}\\
+        Range: \textcolor{blue}{$(0.75,\infty)$}\\
+        Type of Function: \textcolor{blue}{Rational}
+    \end{enumerate}
+
+       \begin{image}
+        \includegraphics{Tangentintro.jpeg}
+    \end{image}
+    
+       
 \end{exercise}
 
 \begin{exercise} 
@@ -44,19 +72,19 @@ A secant line to the function $f$ is a line through the points $(x_1, f(x_1))$ a
 \end{exercise}
 
 \begin{exercise}
-  The position function for a falling ball is given by $s(t)=16-16t^2$, where $s$ is measured in feet and $t$ in seconds.
+  Suppose $f(x)=16-16x^2$.
   \begin{enumerate}
-    \item Find an expression for the average velocity of the ball on a time interval of the form $[0.5, 0.5+h]$ where $0<h<0.5$, or $[0.5+h,0.5]$ when $-0.5<h<0$ and $h\neq 0$.\\
-    \textcolor{blue}{Average velocity=$\frac{f(0.5+h)-f(0.5)}{0.5+h-(0.5)}=\frac{16-16(0.5+h)^2-16+16(0.5)^2}{h}$
+    \item Find an expression for the slope of the secant line on an interval of the form $[0.5, 0.5+h]$ where $0<h<0.5$, or $[0.5+h,0.5]$ when $-0.5<h<0$ and $h\neq 0$.\\
+    \textcolor{blue}{m=$\frac{f(0.5+h)-f(0.5)}{0.5+h-(0.5)}=\frac{16-16(0.5+h)^2-16+16(0.5)^2}{h}$
     $=\frac{16-4-16h-16h^2-16+4}{h}=\frac{-16h-16h^2}{h}=\frac{h(-16-16h)}{h}$\\
     $=-16-16h$}
-    \item Use this expression to compute the average velocity on $[0.5, 0.75]$ and $[0.4, 0.5]$.\\
+    \item Use this expression to compute the slope of the secant line on $[0.5, 0.75]$ and $[0.4, 0.5]$.\\
     \textcolor{blue}{On $[0.5,0.75]=[0.5,0.5+0.25]$, $h=0.25$\\
-    Average velocity$=-16-16(0.25)=-16-4=-20$ ft per sec\\
+    $m=-16-16(0.25)=-16-4=-20$ \\
     On $[0.4,0.5]=[0.5-0.1,0.5]$, $h=-0.1$\\
-    Average velocity$=-16-16(-0.1)=-16+1.6=-14.4$ ft per sec}
-    \item Make a conjecture about the instantaneous velocity at $t=0.5$. \\
-    \textcolor{blue}{We can't determine the instantaneous velocity at $t=0.5$ exactly, but we can conjecture that it is between -20 ft/sec and -14.4 ft/sec.  }
+    $m=-16-16(-0.1)=-16+1.6=-14.4$}
+    \item Make a conjecture about the slope of the tangent line at $t=0.5$. \\
+    \textcolor{blue}{We can't determine the slope of the tangent line at $t=0.5$ exactly, but we can conjecture that it is between -20 and -14.4 .  }
   \end{enumerate}
   Problem from Boelkins, Austin \& Schlicker (2018) \textit{Active Calculus 2.1}.
 \end{exercise}
