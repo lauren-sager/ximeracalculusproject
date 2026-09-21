@@ -202,7 +202,30 @@
     (Questions modified from Boelkins, et al., \textit{Active Calculus}, 1st ed.)
 \end{exercise}
 
+\begin{exercise}
+  Analyze the continuity of the function:\\
 
+\[ f(x) = 
+  \begin{cases} 
+     x^2+1 & \text{if } x < -3 \\ 
+     -2x+4 & \text{if } -3 \leq x < 2 \\
+     \dfrac{1}{2}x^2 & \text{if } x \geq 2 
+  \end{cases}  \]
+
+(When analyzing the continuity of a function, you should identify any places where the function is discontinuous, the type of discontinuity, and give a (brief) explanation or show work for anywhere the function is continuous.)\\
+\textcolor{blue}{When $x<-3$, the function is given by $x^2+1$, which is a polynomial and thus continuous.\\
+At $x=-3$,\\
+$\lim_{x\rightarrow -3^-}f(x)=\lim_{x\rightarrow -3^-}x^2+1=(-3)^2+1=10$\\
+$\lim_{x\rightarrow -3^+}f(x)=\lim_{x\rightarrow -3^+} -2x+4=-2(-3)+4=10$\\
+So $\lim_{x\rightarrow -3}f(x)=10=f(-3)$.  The function is continuous at $x=-3$.
+When $-3< x<2$, the function is given by $-2x+4$, which is a polynomial, and thus continuous.\\
+At $x=2$, \\
+$\lim_{x\rightarrow 2^-}f(x)=\lim_{x\rightarrow 2^-}-2x+4=-2(2)+4=0$\\
+$\lim_{x\rightarrow 2^+}f(x)=\lim_{x\rightarrow 2^+} \frac{1}{2}x^2=\frac12(2^2)=2$\\
+So $\lim_{x\rightarrow 2}f(x)$ DNE, and the function has a jump discontinuity at $x=2$.  
+When $x>2$, the function is given by $\frac12 x^2$, which is a polynomial and thus continuous.}
+
+\end{exercise}
 
 
 \end{document}
