@@ -48,7 +48,8 @@
     The position of a particle moving along a straight line is given by $s(t)=t^3-6t^2+9t$, where $t$ is measured in seconds and $s$ in meters.
     \begin{enumerate}
         \item Find the velocity of the particle at time $t$. (Use the limit definition to find the derivative.)\\
-        \textcolor{blue}{$v(t)=\lim_{h\rightarrow 0}\frac{(t+h)^3-6(t+h)^2+9(t+h)-(t^3-6t^2+9t)}{h}$\\
+        %\textcolor{blue}{
+            $v(t)=\lim_{h\rightarrow 0}\frac{(t+h)^3-6(t+h)^2+9(t+h)-(t^3-6t^2+9t)}{h}$\\
         $=\lim_{h\rightarrow 0}\frac{t^3+3t^2h+3th^2+h^3-6t^2-12th-6h^2+9t+9h-t^3+6t^2-9t}{h}$\\
         $=\lim_{h\rightarrow 0}\frac{h(3t^2+3th+h^2-12t-6h+9)}{h}$\\
         $=\lim_{h\rightarrow 0}3t^2+3th+h^2-12t-6h+9=3t^2-12t+9$}
@@ -59,13 +60,14 @@
         $3t^2-12t+9=0$\\
         $3(t^2-4t+3)=0$\\
         $3(t-3)(t-1)=0$\\
-        When $t=1,3$ seconds}
+        When $t=1,3$ seconds%}
         \item Find the acceleration at time $t$, then at $t=2$ seconds. (Use the limit definition to find the derivative.)\\
-        \textcolor{blue}{$a(t)=v'(t)=\lim_{h\rightarrow 0}\frac{3(t+h)^2-12(t+h)+9-(3t^2-12t+9)}{h}$\\
+        %\textcolor{blue}{
+        $a(t)=v'(t)=\lim_{h\rightarrow 0}\frac{3(t+h)^2-12(t+h)+9-(3t^2-12t+9)}{h}$\\
         $=\lim_{h\rightarrow 0}\frac{3t^2+6th+3h^2-12t-12h+9-3t^2+12t-9}{h}$\\
         $=\lim_{h\rightarrow 0}\frac{h(6t+3h-12)}{h}$\\
         $=\lim_{h\rightarrow 0} 6t+3h-12=6t-12$\\
-        $a(2)=6(2)-12=0 m/sec^2$}
+        $a(2)=6(2)-12=0 m/sec^2$%}
     \end{enumerate}
 \end{exercise}
 
