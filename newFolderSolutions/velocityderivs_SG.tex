@@ -1,0 +1,88 @@
+\documentclass{ximera}
+
+\title{Velocity and Applications of Derivatives}
+\author{MATH 425: Calculus I}
+
+\begin{document}
+\begin{abstract}
+   Working with the peers in your group, solve the following problems. Make sure to show and justify all your work. Make sure everyone in the group understands the solution and participates. Be prepared to report your answers to the whole class. 
+\end{abstract}
+\maketitle
+
+\begin{exercise}
+    \textbf{Warm up problem:} Find the derivative of $f(x)=4x^2-7x$ using the limit definition of the derivative.\\
+    \textcolor{blue}{Using $h\rightarrow 0$ definition: $f'(x)=\lim_{h\rightarrow 0}\frac{4(x+h)^2-7(x+h)-(4x^2-7x)}{h}$\\
+    $=\lim_{h\rightarrow 0} \frac{4x^2+8xh+4h^2-7x-7h-4x^2+7x}{h}$\\
+    $=\lim_{h\rightarrow 0}\frac{h(8x+4h-7)}{h}$
+    $=\lim_{h\rightarrow 0} 8x+4h-7=8x-7$\\
+    
+    Using $b\rightarrow x$ definition: $f'(x)=\lim_{b\rightarrow x}\frac{4b^2-7b-4x^2+7x}{b-x}$\\
+    $=\lim_{b\rightarrow x} \frac{4(b^2-x^2)-7(b-x)}{b-x}$\\
+    $=\lim_{b\rightarrow x} \frac{4(b-x)(b+x)-7(b-x)}{b-x}$\\
+    $=\lim_{b\rightarrow x} \frac{(b-x)(4(b+x)-7)}{b-x}$\\
+    $=\lim_{b\rightarrow x} 4(b+x)-7=4(2x)-7=8x-7$}
+\end{exercise}
+
+\begin{exercise}
+    One of the longest stretches of straight (and flat) road in North America can be found on the Great Plains in the state of North Dakota on state highway 46, which lies just south of interstate highway I-94 and runs through the town of Gackle.  A car leaves time (at time $t=0$) and heads east on highway 46; its postion in mles from Gackle at time $t$ in minutes is given by the graph of the function in the figure.  Three important points are labelled on the graph; where the function looks linear, assume it is a straight line.
+    \begin{center}
+        \desmos{bwkl25a63u}{800}{600}
+    \end{center}
+    The graph of $y=s(t)$, the position of the car along highway 46, which tells its distance from Gackle, ND, at time $t$ minutes.
+    \begin{enumerate}
+        \item In everyday language, describe the behavior of the car over the provided time interval. It may help to break your description down into the behavior on four distinct intervals: $[0,57]$, $[57,68]$, $[68,104]$ and after 104.\\
+        \textcolor{blue}{The car drives at a constant rate (approx 1.12 mi/min) for the first 57 minutes.  It then stops for 11 minutes (0 mi/min) from 57 to 68 minutes.  From minute 68 to 104, the car travels at a constant rate of about 1.19 mi/min, stopping again at minute 104.}
+        \item Find the slope of the line between the points $(0,0)$ and $(57, 63.8)$.  What are the units of this slope?  What does the slope represent?\\
+        \textcolor{blue}{The slope is $\frac{63.8-0}{57-0}\approx 1.12$ miles per minute.  This is the velocity, or the derivative of the position function.}
+        \item Find the velocity of the car on each interval: $[0,57]$, $[57,68]$, $[68,104]$ and after 104.\\
+        \textcolor{blue}{On $[0,57]$: velocity is approx 1.12 mi/min\\
+        On $[57,68]$: velocity is 0\\
+        On $[68, 104]$: velocity is approx 1.19 mi/min\\
+        After 104: velocity is 0.}
+        \item What is the instantaneous rate of change of the car's position at the moment $t=80$?  Explain what this value means.\\
+        \textcolor{blue}{The instantaneous rate of change of the car's position is the velocity, so at $t=80$, the velocity is approx 1.19 mi/min, as we are in the interval $[68, 104]$.}
+    \end{enumerate}
+\end{exercise}
+
+\begin{exercise}
+    The position of a particle moving along a straight line is given by $s(t)=t^3-6t^2+9t$, where $t$ is measured in seconds and $s$ in meters.
+    \begin{enumerate}
+        \item Find the velocity of the particle at time $t$. (Use the limit definition to find the derivative.)\\
+        \textcolor{blue}{$v(t)=\lim_{h\rightarrow 0}\frac{(t+h)^3-6(t+h)^2+9(t+h)-(t^3-6t^2+9t)}{h}$\\
+        $=\lim_{h\rightarrow 0}\frac{t^3+3t^2h+3th^2+h^3-6t^2-12th-6h^2+9t+9h-t^3+6t^2-9t}{h}$\\
+        $=\lim_{h\rightarrow 0}\frac{h(3t^2+3th+h^2-12t-6h+9)}{h}$\\
+        $=\lim_{h\rightarrow 0}3t^2+3th+h^2-12t-6h+9=3t^2-12t+9$}
+        \item What is the velocity at $t=2$ seconds?\\
+        \textcolor{blue}{$v(2)=3(2^2)-12(2)+9=-3$ m/sec}
+        \item When is the particle momentarily at rest? \\
+        \textcolor{blue}{ $v(t)=0$ when the particle is at rest.\\
+        $3t^2-12t+9=0$\\
+        $3(t^2-4t+3)=0$\\
+        $3(t-3)(t-1)=0$\\
+        When $t=1,3$ seconds}
+        \item Find the acceleration at time $t$, then at $t=2$ seconds. (Use the limit definition to find the derivative.)\\
+        \textcolor{blue}{$a(t)=v'(t)=\lim_{h\rightarrow 0}\frac{3(t+h)^2-12(t+h)+9-(3t^2-12t+9)}{h}$\\
+        $=\lim_{h\rightarrow 0}\frac{3t^2+6th+3h^2-12t-12h+9-3t^2+12t-9}{h}$\\
+        $=\lim_{h\rightarrow 0}\frac{h(6t+3h-12)}{h}$\\
+        $=\lim_{h\rightarrow 0} 6t+3h-12=6t-12$\\
+        $a(2)=6(2)-12=0 m/sec^2$}
+    \end{enumerate}
+\end{exercise}
+
+\begin{exercise}
+    The temperature, $H$, in degrees Celsius, of a cup of coffee placed on the kitchen counter is given by $H=f(t)$, where $t$ is in minutes since the coffee was put on the counter.
+    \begin{enumerate}
+        \item Would you expect $f'(t)$ to be positive or negative?  why?\\
+        \textcolor{blue}{The coffee is cooling on the counter, so we expect the rate of change to be negative to reflect the loss of temperature.} 
+        \item What are the units of $f'(5)$?\\
+        \textcolor{blue}{The units are degrees Celsius per minute}
+        \item Suppose that $|f'(5)|=0.9$ and $f(5)=61$.  Write a sentence which describes the information you know about the coffee in plain language.\\
+        \textcolor{blue}{The coffee is 61 degrees Celsius at 5 minutes, and losing 0.9 degrees per minute at this instant.}
+    \end{enumerate}
+\end{exercise}
+
+Problems 2 and 4 adapted from Boelkins, et al., \textit{Active Calculus} and Problem 3 adpated from Stewart, et al., \textit{Calculus}.
+
+
+
+\end{document}
